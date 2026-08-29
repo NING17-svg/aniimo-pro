@@ -100,7 +100,6 @@ export const sitePages: PageContent[] = [
     ],
     faqIds: [],
     relatedPageIds: ["contact", "privacy-policy", "terms"],
-    relatedPageIds: ["contact", "privacy-policy", "terms"],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "internal",
     lastReviewed: "2026-06-18",
