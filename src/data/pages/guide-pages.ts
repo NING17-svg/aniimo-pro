@@ -1,9 +1,8 @@
 import { site } from "@/data/site";
 import type { PageContent } from "@/types/content";
 
-// Site Plan declares no /guides hub as a fixed page; this placeholder is kept
-// for the V3 template validator's fixture contract. Authoritative guides live
-// under the four Site Plan navigation groups.
+// Site Plan declares no /guides hub as a fixed page; this index points to
+// Aniimo's four guide clusters so visitors can find guides from one route.
 export const guidePages: PageContent[] = [
   {
     id: "guides",
@@ -19,7 +18,7 @@ export const guidePages: PageContent[] = [
     metaDescription:
       "Beginner's guide index for Aniimo, covering starter and Prismana, evolution, catching, and Heist.",
     summary:
-      "Guide index used by the V3 template validator. Aniimo's authoritative guides live under the four Site Plan navigation groups.",
+      "Browse Aniimo guides by Site Plan cluster: Launch status, Gameplay, World, and Reception.",
     hero: {
       eyebrow: "Guides",
       subtitle:

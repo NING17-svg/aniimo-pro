@@ -1,9 +1,9 @@
 import { site } from "@/data/site";
 import type { PageContent } from "@/types/content";
 
-// Site Plan declares entity_families: []. The wiki index is preserved for the
-// V3 template validator's fixture contract. It is excluded from the Site Plan
-// navigation and sitemap via the noindex meta in the template.
+// Site Plan declares no entity-driven /wiki hub; this index covers the four
+// Site Plan clusters so visitors can browse all Aniimo reference pages in
+// one place.
 export const wikiPages: PageContent[] = [
   {
     id: "wiki",
@@ -19,7 +19,7 @@ export const wikiPages: PageContent[] = [
     metaDescription:
       "Reference wiki index for Aniimo, covering platforms, mechanics, and launch status.",
     summary:
-      "Wiki index used by the V3 template validator. Aniimo's authoritative pages live under the four Site Plan navigation groups: Launch status, Gameplay, World, and Reception.",
+      "Browse Aniimo's reference pages by Site Plan cluster: Launch status, Gameplay, World, and Reception.",
     hero: {
       eyebrow: "Wiki",
       subtitle:
