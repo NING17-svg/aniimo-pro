@@ -1,6 +1,7 @@
 import type { FAQItem, PageContent, RouteKind } from "@/types/content";
 import { entityFamilies } from "@/data/entities";
 import { faqItems } from "@/data/faq";
+import { fixedPages } from "@/data/pages/fixed-pages";
 import { guidePages } from "@/data/pages/guide-pages";
 import { homePage } from "@/data/pages/home";
 import { releasePages } from "@/data/pages/release-pages";
@@ -9,7 +10,7 @@ import { wikiPages } from "@/data/pages/wiki-pages";
 import { buildEntityPages } from "@/lib/entities";
 import { normalizePath } from "@/lib/localization";
 
-const fixedPages: PageContent[] = [
+const localFixedPages: PageContent[] = [
   homePage,
   ...wikiPages,
   ...guidePages,
@@ -17,8 +18,13 @@ const fixedPages: PageContent[] = [
   ...sitePages,
 ];
 
-const pages: PageContent[] = [
+const fixedPagesAll: PageContent[] = [
+  ...localFixedPages,
   ...fixedPages,
+];
+
+const pages: PageContent[] = [
+  ...fixedPagesAll,
   ...buildEntityPages(entityFamilies),
 ];
 

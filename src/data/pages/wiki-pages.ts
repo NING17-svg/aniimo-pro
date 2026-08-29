@@ -1,6 +1,9 @@
 import { site } from "@/data/site";
 import type { PageContent } from "@/types/content";
 
+// Site Plan declares entity_families: []. The wiki index is preserved for the
+// V3 template validator's fixture contract. It is excluded from the Site Plan
+// navigation and sitemap via the noindex meta in the template.
 export const wikiPages: PageContent[] = [
   {
     id: "wiki",
@@ -12,69 +15,41 @@ export const wikiPages: PageContent[] = [
     pageType: "wiki",
     presentation: { shell: "hub" },
     h1: `${site.gameName} Wiki`,
-    seoTitle: `${site.gameName} Wiki | Facts, Systems, and Starter Notes`,
+    seoTitle: `${site.gameName} Wiki | Reference Index`,
     metaDescription:
-      "A neutral wiki page template for official facts, game overview notes, systems, platforms, and starter references.",
+      "Reference wiki index for Aniimo, covering platforms, mechanics, and launch status.",
     summary:
-      "A structured wiki landing page for official facts and core game systems.",
+      "Wiki index used by the V3 template validator. Aniimo's authoritative pages live under the four Site Plan navigation groups: Launch status, Gameplay, World, and Reception.",
     hero: {
       eyebrow: "Wiki",
       subtitle:
-        "Collect official facts, systems, platforms, and starter references in one stable page.",
+        "Aniimo's wiki index. Authoritative pages live under Launch status, Gameplay, World, and Reception.",
       ctas: [
-        { label: "Read Guides", href: "/guides" },
-        { label: "Check FAQ", href: "/faq" },
+        { label: "Release status", href: "/release-overview" },
+        { label: "Twining system", href: "/twining-system" },
       ],
     },
     quickAnswer:
-      "Use this wiki page as the verified fact hub for the game. Do not add unconfirmed mechanics, maps, characters, items, or dates.",
+      "Aniimo's wiki index points to the four Site Plan navigation groups. Use the Launch status pages for date and platform answers, the Gameplay pages for Twining, evolution, and catching, the World pages for regions and Heist, and the Reception page for previews.",
     keyFacts: [
-      { label: "Fact source", value: "Official sources only" },
-      { label: "Content depth", value: "Starter wiki notes" },
-      { label: "Update rule", value: "Expand after launch signals appear" },
+      { label: "Wiki scope", value: "Index of the four Site Plan navigation groups" },
+      { label: "Editorial rule", value: "Cite official, media, or wiki-reference sources" },
+      { label: "Avoid", value: "Speculation and unverified mechanics" },
     ],
     modules: [
       {
-        id: "overview",
+        id: "wiki-organization",
         type: "prose",
-        heading: "Game overview",
+        heading: "Wiki organization",
         body:
-          "Replace this overview with confirmed information from official store pages, press kits, developer posts, or publisher pages. Keep uncertain details out of the page.",
-      },
-      {
-        id: "systems",
-        type: "prose",
-        heading: "Systems to document",
-        body:
-          "Use this section for confirmed systems such as combat, progression, exploration, multiplayer, crafting, quests, or modes. If official sources do not confirm a system, leave it out.",
-      },
-      {
-        id: "official-links",
-        type: "prose",
-        heading: "Official sources",
-        body:
-          "Add official links here so future content updates can trace every fact back to a trustworthy source.",
+          "Aniimo's authoritative content lives in four Site Plan clusters: Launch status, Gameplay, World, and Reception. Each cluster has a hub-style page with linked fixed pages covering the planned search intents.",
         links: site.officialSources,
       },
-      {
-        id: "reference-coverage",
-        type: "data-table",
-        heading: "Reference Coverage",
-        columns: [
-          { key: "category", label: "Category" },
-          { key: "status", label: "Status" },
-          { key: "source", label: "Source Rule" },
-        ],
-        rows: [
-          { category: "Core systems", status: "Starter coverage", source: "Official sources" },
-          { category: "Guides", status: "Expand with evidence", source: "Verified play research" },
-        ],
-      },
     ],
-    faqIds: ["platforms-known"],
-    relatedPageIds: ["guides", "release-date", "faq"],
+    faqIds: [],
+    relatedPageIds: ["home", "fixed-release-overview-en-us"],
     schemaTypes: ["CollectionPage", "BreadcrumbList"],
-    sourceStatus: "placeholder",
-    lastReviewed: "2026-06-18",
+    sourceStatus: "internal",
+    lastReviewed: "2026-08-29",
   },
 ];

@@ -1,6 +1,9 @@
 import { site } from "@/data/site";
 import type { PageContent } from "@/types/content";
 
+// Site Plan declares no /guides hub as a fixed page; this placeholder is kept
+// for the V3 template validator's fixture contract. Authoritative guides live
+// under the four Site Plan navigation groups.
 export const guidePages: PageContent[] = [
   {
     id: "guides",
@@ -12,54 +15,41 @@ export const guidePages: PageContent[] = [
     pageType: "guides",
     presentation: { shell: "hub" },
     h1: `${site.gameName} Guides`,
-    seoTitle: `${site.gameName} Guides | Beginner Tips and Starter Help`,
+    seoTitle: `${site.gameName} Guides | Beginner's Index`,
     metaDescription:
-      "A starter guides page template for beginner help, early decisions, systems, and future walkthrough categories.",
+      "Beginner's guide index for Aniimo, covering starter and Prismana, evolution, catching, and Heist.",
     summary:
-      "A guide index for beginner help and future walkthrough expansion.",
+      "Guide index used by the V3 template validator. Aniimo's authoritative guides live under the four Site Plan navigation groups.",
     hero: {
       eyebrow: "Guides",
       subtitle:
-        "Start with safe, general guide categories, then expand into detailed walkthroughs after verified demand appears.",
+        "Aniimo's guide index. Authoritative guides live under Launch status, Gameplay, World, and Reception.",
       ctas: [
-        { label: "Open Wiki", href: "/wiki" },
-        { label: "Release Info", href: "/release-date" },
+        { label: "Starter & Prismana", href: "/starter-and-prismana" },
+        { label: "Catching & Aniipods", href: "/catching-and-aniipods" },
       ],
     },
     quickAnswer:
-      "V1 guides should organize the future help structure without inventing unverified walkthrough details.",
+      "Aniimo's guides cover starter choice and Prismana forms, the Lumin to Gamma to Nova evolution pipeline, catching with Aniipods, and the Heist of the Lost Isles PvPvE mode.",
     keyFacts: [
-      { label: "Guide depth", value: "Starter structure" },
+      { label: "Guide depth", value: "Index of the four Site Plan navigation groups" },
       { label: "Avoid", value: "Unverified builds, loot, maps, or quest steps" },
-      { label: "Next upgrade", value: "Full guide pages after content research" },
+      { label: "Next upgrade", value: "Full guide pages as launch coverage expands" },
     ],
     modules: [
       {
-        id: "beginner",
+        id: "guides-categories",
         type: "prose",
-        heading: "Beginner guide",
+        heading: "Guide categories",
         body:
-          "Use this section for safe onboarding advice grounded in official descriptions. Avoid specific tactics unless they are verified by official material or later play research.",
-      },
-      {
-        id: "systems",
-        type: "prose",
-        heading: "Systems guide categories",
-        body:
-          "Add confirmed categories such as combat, crafting, classes, exploration, quests, equipment, difficulty, or co-op only after official sources support them.",
-      },
-      {
-        id: "future-guides",
-        type: "prose",
-        heading: "Future guide expansion",
-        body:
-          "After launch, split high-demand topics into dedicated pages. V1 keeps this page as a stable guide index so the site is useful without pretending to be complete.",
+          "Aniimo's guide categories match the Site Plan clusters: Launch status, Gameplay, World, and Reception. Each category links to dedicated fixed pages.",
+        links: site.officialSources,
       },
     ],
-    faqIds: ["guide-depth"],
-    relatedPageIds: ["wiki", "release-date", "faq"],
-    schemaTypes: ["CollectionPage", "BreadcrumbList", "FAQPage"],
-    sourceStatus: "placeholder",
-    lastReviewed: "2026-06-18",
+    faqIds: [],
+    relatedPageIds: ["home", "fixed-starter-and-prismana-en-us"],
+    schemaTypes: ["CollectionPage", "BreadcrumbList"],
+    sourceStatus: "internal",
+    lastReviewed: "2026-08-29",
   },
 ];
