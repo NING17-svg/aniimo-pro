@@ -529,8 +529,10 @@ for (const page of getAllPages()) {
   }
 }
 
-const heroFixturePage = getAllPages().find((page) => page.id === "guides");
-if (!heroFixturePage) fail("guide fixture page is missing for review-date rendering validation");
+const heroFixturePage = getAllPages().find(
+  (page) => page.id === "fixed-release-overview-en-us",
+);
+if (!heroFixturePage) fail("content fixture page is missing for review-date rendering validation");
 const pageHeroMarkup = renderToStaticMarkup(
   createElement(PageHero, { page: heroFixturePage }),
 );
@@ -568,7 +570,7 @@ for (const locale of site.locales) {
 }
 
 const germanSearchFixture = {
-  ...getAllPages().find((page) => page.id === "guides")!,
+  ...getAllPages().find((page) => page.id === "fixed-release-overview-en-us")!,
   id: "fixture-guides-de",
   locale: "de-DE",
   slug: "de/guides",
@@ -596,14 +598,14 @@ if (
 
 const recentFixture = [
   {
-    ...getAllPages().find((page) => page.id === "guides")!,
+    ...getAllPages().find((page) => page.id === "fixed-release-overview-en-us")!,
     id: "recent-z",
     slug: "z",
     url: "/z",
     lastReviewed: "2026-08-01",
   },
   {
-    ...getAllPages().find((page) => page.id === "wiki")!,
+    ...getAllPages().find((page) => page.id === "fixed-platforms-and-versions-en-us")!,
     id: "recent-a",
     slug: "a",
     url: "/a",

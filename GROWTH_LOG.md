@@ -6,6 +6,14 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-08-30 - Route manifest aligned with the approved launch plan
+
+- Task: Remove the template-only `/guides` and `/wiki` routes and classify `/` as the homepage route.
+- Files changed: Homepage route metadata, central page registry, and content index.
+- URLs affected: `/guides` and `/wiki` removed; `/` retained.
+- SEO/GEO changed: The public route inventory now contains only routes declared by the Aniimo launch content package.
+- Verification: Regenerate the route manifest and run the V3 route-contract validator plus the normal site checks.
+
 ### 2026-08-12 - Static discovery and review freshness baseline added
 
 - Task: Add locale-aware static search, automatic recent updates, visible review dates, and browser metadata/security defaults to the shared template.

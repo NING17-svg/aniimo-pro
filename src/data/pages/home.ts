@@ -1,11 +1,10 @@
-import { site } from "@/data/site";
 import type { PageContent } from "@/types/content";
 
 export const homePage: PageContent = {
   id: "home",
   translationKey: "home",
   locale: "en-US",
-  routeKind: "fixed",
+  routeKind: "home",
   slug: "",
   url: "/",
   pageType: "home",

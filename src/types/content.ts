@@ -7,7 +7,7 @@ import type {
 } from "@/types/theme";
 
 export type PageType = "home" | "wiki" | "guides" | "release" | "faq" | "site" | "entity";
-export type RouteKind = "fixed" | "tool" | "entity-hub" | "entity-detail";
+export type RouteKind = "home" | "fixed" | "tool" | "entity-hub" | "entity-detail";
 
 export type SchemaType =
   | "WebSite"
