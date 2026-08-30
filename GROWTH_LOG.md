@@ -6,6 +6,13 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-08-30 - Bing ownership verification configured
+
+- Task: Add the public Bing Webmaster ownership code supplied by the verified API account.
+- Files changed: `wrangler.jsonc` and this log.
+- URLs affected: `/` metadata only; no route changes.
+- Verification: Build and rendered SEO validation must expose exactly one matching `msvalidate.01` tag before Bing verification and sitemap submission.
+
 ### 2026-08-30 - Route manifest aligned with the approved launch plan
 
 - Task: Remove the template-only `/guides` and `/wiki` routes and classify `/` as the homepage route.
