@@ -11,7 +11,7 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 - Task: Add the public Bing Webmaster ownership code supplied by the verified API account.
 - Files changed: `wrangler.jsonc` and this log.
 - URLs affected: `/` metadata only; no route changes.
-- Verification: Build and rendered SEO validation must expose exactly one matching `msvalidate.01` tag before Bing verification and sitemap submission.
+- Verification: Local build and rendered SEO validation expose exactly one matching `msvalidate.01` tag; the same public value was read back from the Cloudflare production trigger build environment before the final Git push.
 
 ### 2026-08-30 - Route manifest aligned with the approved launch plan
 
