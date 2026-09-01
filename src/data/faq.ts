@@ -46,7 +46,7 @@ export const faqItems: FAQItem[] = [
     id: "home-pc-spec",
     question: "Can my PC run Aniimo?",
     answer:
-      "The current English Steam page recommends 12 GB of RAM, a DirectX 12 GPU, and approximately 45 GB of free storage. Minimum specs have been raised since the initial listing, so older regional pages no longer reflect the official spec.",
+      "The current English Steam page lists an Intel i7-9700 or AMD Ryzen 5 3600X with a GTX 1060 or Radeon RX 6600 and 12 GB of RAM as the minimum, and an Intel Core i7-12700F or AMD Ryzen 7700X with an RTX 3070 8G or Radeon RX 6800 and 16 GB of RAM as the recommended spec. Both tiers need 45 GB of storage, and older regional pages showing 8 GB / 30 GB no longer reflect the official spec.",
     pageIds: ["home", "faq"],
     category: "platform",
     schemaEligible: true,
@@ -149,7 +149,17 @@ export const faqItems: FAQItem[] = [
     id: "spec-min-ram",
     question: "What is the minimum RAM for Aniimo on PC?",
     answer:
-      "The recommended spec lists 12 GB of RAM. Minimum RAM is not announced as of 2026-08-29.",
+      "The current English Steam page lists 12 GB of RAM for the minimum spec and 16 GB of RAM for the recommended spec. Minimum RAM is no longer unannounced, and older regional pages showing 8 GB are superseded.",
+    pageIds: ["fixed-system-requirements-en-us"],
+    category: "platform",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "spec-cpu-gpu",
+    question: "Which CPU and GPU does Aniimo need on PC?",
+    answer:
+      "The minimum spec asks for an Intel i7-9700 or AMD Ryzen 5 3600X or above with a GTX 1060 or AMD Radeon RX 6600. The recommended spec asks for an Intel Core i7-12700F or AMD Ryzen 7700X or above with an NVIDIA GeForce RTX 3070 8G or above or an AMD Radeon RX 6800 or above. Both tiers require a 64-bit processor and operating system.",
     pageIds: ["fixed-system-requirements-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -159,7 +169,7 @@ export const faqItems: FAQItem[] = [
     id: "spec-storage",
     question: "How much storage does Aniimo need on PC?",
     answer:
-      "The current English Steam page lists approximately 45 GB of free storage as the recommended spec, raised from 30 GB on older regional pages.",
+      "The current English Steam page lists 45 GB of available space for both the minimum and recommended tiers, raised from 30 GB on older regional pages. An SSD is recommended for shader and streaming performance.",
     pageIds: ["fixed-system-requirements-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -179,7 +189,7 @@ export const faqItems: FAQItem[] = [
     id: "spec-regional-pages",
     question: "Which Steam page is authoritative for Aniimo PC specs?",
     answer:
-      "The current English Steam page is authoritative; older regional pages still show 8 GB of RAM and 30 GB of storage and are not current.",
+      "The current English Steam page is authoritative; older regional pages still show 8 GB of RAM and 30 GB of storage, sometimes with blank CPU and GPU rows, and are not current.",
     pageIds: ["fixed-system-requirements-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -210,7 +220,27 @@ export const faqItems: FAQItem[] = [
     id: "preorder-rewards",
     question: "What does pre-registering for Aniimo unlock?",
     answer:
-      "Pre-registration on the official site, Steam, or Epic Games Store unlocks a reward ladder that includes a Smoky Stone-themed Aniipod, additional cosmetics, and currency bundles that unlock with milestones.",
+      "Pre-registering on the official aniimo.com site claims the Susuta egg, and every pre-registered player shares the global milestone ladder: Glimmer x200 at 10M sign-ups, Aniipod Ultra x2 at 15M, the \"Companion Promise\" limited avatar frame at 20M, and the \"Sunlit Meadow\" limited outfit at 30M. The Perfect Egg is separate and comes from multi-day logins rather than from pre-registration.",
+    pageIds: ["fixed-pre-order-and-editions-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "preorder-platform-links",
+    question: "Where do I pre-register for Aniimo on my platform?",
+    answer:
+      "The official site links six storefronts: the PlayStation Store concept page, the Xbox Store listing, Steam (AppID 4126040), the Epic Games Store page, the Apple App Store listing, and an official Google Play link. Storefront pre-registration queues the free-to-play download; it does not replace the aniimo.com form that claims the Susuta egg.",
+    pageIds: ["fixed-pre-order-and-editions-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "preorder-milestone-timing",
+    question: "When do Aniimo milestone rewards unlock?",
+    answer:
+      "Milestone rewards pay out in the live game at launch, not during the closed beta. Closed Beta 3 progress was reset before launch, so nothing claimed in the beta build carries these rewards. The exact in-game claim screen and any claim deadline are not announced as of 2026-09-02.",
     pageIds: ["fixed-pre-order-and-editions-en-us"],
     category: "release",
     schemaEligible: true,
@@ -220,7 +250,7 @@ export const faqItems: FAQItem[] = [
     id: "preorder-monetization",
     question: "How does Aniimo monetize?",
     answer:
-      "Aniimo is free-to-play with optional in-app purchases. The store stocks cosmetics and convenience items; specific paid bundles and season pass plans are not announced as of 2026-08-29.",
+      "Aniimo is free-to-play with optional in-app purchases. The store stocks cosmetics and convenience items; specific paid bundles and season pass plans are not announced as of 2026-09-02.",
     pageIds: ["fixed-pre-order-and-editions-en-us"],
     category: "release",
     schemaEligible: true,
@@ -241,9 +271,29 @@ export const faqItems: FAQItem[] = [
     id: "beta-progress-carry",
     question: "Does Closed Beta 3 progress carry over to launch?",
     answer:
-      "Closed Beta 3 progress did not carry forward to launch. Beta accounts were reset before launch.",
+      "Closed Beta 3 progress did not carry forward to launch. Beta accounts were reset before launch, so the creatures added in that build and any traded Aniimo have to be re-earned in the live game.",
     pageIds: ["fixed-closed-beta-and-signups-en-us"],
     category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "beta-trading-system",
+    question: "How does the Aniimo trading system work?",
+    answer:
+      "Closed Beta 3 introduced a trading system that lets players exchange Aniimo with one another, so roster gaps can be filled by trade instead of only by wild catches or reward eggs. Use the Aniilog capture log to see which forms you are still missing before opening a trade. Trade restrictions, cooldowns, whether eggs and Prismana forms are tradable, and whether trading ships in the launch build are not announced as of 2026-09-02.",
+    pageIds: ["fixed-closed-beta-and-signups-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "beta-new-creatures",
+    question: "Which creatures did Aniimo Closed Beta 3 add?",
+    answer:
+      "Closed Beta 3 added Bubbeep, Popapus, Mophling, and Sausite as new Aniimo species, Budsquire and Thornblade as additional creature forms, and the co-op bosses Bubbask and Coraliz. Their elements, roles, and evolution lines are not published as of 2026-09-02.",
+    pageIds: ["fixed-closed-beta-and-signups-en-us"],
+    category: "gameplay",
     schemaEligible: true,
     sourceStatus: "official",
   },
@@ -251,7 +301,7 @@ export const faqItems: FAQItem[] = [
     id: "beta-future-windows",
     question: "Will there be more Aniimo betas?",
     answer:
-      "Future beta windows are not announced as of 2026-08-29.",
+      "Future beta windows are not announced as of 2026-09-02. Closed Beta 3 was the last announced test before the 15-16 September 2026 launch, so pre-registration on the official site, the Steam news page, and the official Discord are the channels to watch.",
     pageIds: ["fixed-closed-beta-and-signups-en-us"],
     category: "release",
     schemaEligible: true,
@@ -303,7 +353,27 @@ export const faqItems: FAQItem[] = [
     id: "starter-which-pick",
     question: "Which Aniimo starter should I pick?",
     answer:
-      "Pick the starter whose element and movement type match your preferred early-game region. The official list is subject to change per developer as of 2026-08-29.",
+      "Pick the form whose movement type covers your first region: Budclaw is described as a crab-like Aniimo that is great at burrowing, while Celestis and Nimbi are flying forms. Emberpup and Chirpi read as combat-forward picks. Which of these is actually offered on the starter screen is not announced as of 2026-09-02, and the list is subject to change per developer.",
+    pageIds: ["fixed-starter-and-prismana-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "starter-named-roster",
+    question: "Which Aniimo have been named so far?",
+    answer:
+      "Pre-launch coverage names Budclaw (crab-like, great at burrowing), Celestis and Nimbi (flying forms), Emberpup (a fiery little bruiser) and Chirpi (a feisty bird). Closed Beta 3 added Bubbeep, Popapus, Mophling, Sausite, Budsquire, and Thornblade, plus the co-op bosses Bubbask and Coraliz.",
+    pageIds: ["fixed-starter-and-prismana-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "starter-emberpup-line",
+    question: "What does Emberpup evolve into?",
+    answer:
+      "The CBR interview states that Emberpup evolves to Flameruff and then Scorchhowl, with Interlupa now part of the same family. It is the only Aniimo evolution chain named end-to-end in pre-launch coverage; per-step requirements are not confirmed as of 2026-09-02.",
     pageIds: ["fixed-starter-and-prismana-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -321,9 +391,9 @@ export const faqItems: FAQItem[] = [
   },
   {
     id: "perfect-egg-pre-register",
-    question: "Do I keep the Perfect Egg if I did not pre-register?",
+    question: "Do I get the Perfect Egg from pre-registering?",
     answer:
-      "The Perfect Egg is tied to the live Aniimo pre-registration window on aniimo.com, Steam, and the Epic Games Store. As of 2026-08-29, pre-registration is still open ahead of the 15-16 September 2026 global unlock.",
+      "No. The official site lists the Perfect Egg as a random egg obtained through multi-day logins, not as a pre-registration claim. Pre-registering on aniimo.com claims the Susuta egg instead.",
     pageIds: ["fixed-starter-and-prismana-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -333,7 +403,7 @@ export const faqItems: FAQItem[] = [
     id: "susuta-egg-replace-starter",
     question: "Does the Susuta egg replace my starter?",
     answer:
-      "No. The Susuta egg is a quest reward that hatches into an early-game Aniimo that complements your starter.",
+      "No. The Susuta egg is the mysterious egg claimed by pre-registering on the official aniimo.com site, and it arrives as extra roster support alongside the starter you already chose.",
     pageIds: ["fixed-starter-and-prismana-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -345,6 +415,26 @@ export const faqItems: FAQItem[] = [
     question: "What is the Aniimo evolution pipeline?",
     answer:
       "Every Aniimo follows Lumin to Gamma to Nova. Weather, regional, Sparkling, and Prismana variants are layered on top of that pipeline.",
+    pageIds: ["fixed-evolution-and-stages-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "evolution-emberpup-line",
+    question: "Is there a confirmed Aniimo evolution line?",
+    answer:
+      "Yes, one. The CBR interview states that Emberpup evolves to Flameruff and then Scorchhowl, with Interlupa now part of the same family. No other Aniimo line has published stage names as of 2026-09-02.",
+    pageIds: ["fixed-evolution-and-stages-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "evolution-beta-additions",
+    question: "Do the Closed Beta 3 creatures have known evolution lines?",
+    answer:
+      "Not yet. Bubbeep, Popapus, Mophling, and Sausite were added as new species, and Budsquire and Thornblade as additional forms, but their stages and evolution lines are not published as of 2026-09-02. Bubbask and Coraliz are presented as co-op bosses rather than as catchable lines.",
     pageIds: ["fixed-evolution-and-stages-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -364,7 +454,7 @@ export const faqItems: FAQItem[] = [
     id: "evolution-sparkling",
     question: "What is a Sparkling variant?",
     answer:
-      "A Sparkling variant is a rare palette-swapped form with a shifted appearance. The full Sparkling roster is not officially published as of 2026-08-29.",
+      "A Sparkling variant is a rare palette-swapped form with a shifted appearance. The full Sparkling roster is not officially published as of 2026-09-02.",
     pageIds: ["fixed-evolution-and-stages-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -374,7 +464,7 @@ export const faqItems: FAQItem[] = [
     id: "evolution-trigger",
     question: "How do I evolve my Aniimo?",
     answer:
-      "Specific evolution conditions are not fully confirmed as of 2026-08-29. Higher forms are reached through encounter conditions, weather, regional location, and reward tracks.",
+      "Specific evolution conditions are not fully confirmed as of 2026-09-02. Higher forms are reached through encounter conditions, weather, regional location, and reward tracks.",
     pageIds: ["fixed-evolution-and-stages-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -488,7 +578,37 @@ export const faqItems: FAQItem[] = [
     id: "heist-squad-size",
     question: "How big is a Heist of the Lost Isles squad?",
     answer:
-      "Each Heist match uses a 3-player squad.",
+      "Each Heist match uses a 3-player squad. The Diamond Egg Heist shown in Closed Beta 3 puts up to six of those three-player teams in the same match.",
+    pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "heist-diamond-egg-format",
+    question: "What is the Diamond Egg Heist format?",
+    answer:
+      "Twisted Voxel describes the Diamond Egg Heist as pitting up to six teams of three players against one another: teams must secure a valuable diamond egg and safely escort it while defending against rival groups attempting to steal it. Whether it sits inside Heist of the Lost Isles or is a separate mode is not announced as of 2026-09-02.",
+    pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "heist-squad-composition",
+    question: "What is the best Heist squad composition?",
+    answer:
+      "With only three slots, cover one damage answer, one survival answer, and one disruption answer: typically one DPS, one Heal or Support, and one Break or Regen. Spread element coverage across the three players rather than stacking one element, since Twining lets each player swap into a caught Aniimo's element mid-fight. Specific element multipliers are not announced as of 2026-09-02.",
+    pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "heist-co-op-bosses",
+    question: "Who are Bubbask and Coraliz?",
+    answer:
+      "Bubbask and Coraliz are boss creatures added in Closed Beta 3 that players team up to battle, with challenges designed around group play. Whether they appear inside Heist of the Lost Isles, the Diamond Egg Heist, or a separate co-op activity is not announced as of 2026-09-02.",
     pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -498,7 +618,7 @@ export const faqItems: FAQItem[] = [
     id: "heist-rewards",
     question: "What rewards does Heist of the Lost Isles offer?",
     answer:
-      "Reward structure and rank system for Heist of the Lost Isles are not announced as of 2026-08-29.",
+      "Reward structure and rank system for Heist of the Lost Isles are not announced as of 2026-09-02.",
     pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -508,7 +628,7 @@ export const faqItems: FAQItem[] = [
     id: "heist-solo-play",
     question: "Can I play Heist of the Lost Isles solo?",
     answer:
-      "Solo play support is not announced as of 2026-08-29. Solo play is supported through the open-world PvE loop rather than Heist.",
+      "Solo play support is not announced as of 2026-09-02. Solo play is supported through the open-world PvE loop rather than Heist.",
     pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
     category: "gameplay",
     schemaEligible: true,

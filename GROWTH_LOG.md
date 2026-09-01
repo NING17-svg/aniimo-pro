@@ -6,6 +6,16 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-09-02 - Pre-launch hub refresh: starter, evolution, pre-order, Heist, PC specs, beta-trading
+
+- Task: Refresh five pre-launch answer pages with public-source evidence captured on 2026-09-02; add a homepage pre-launch hub linking the updated pages.
+- Files changed: `src/data/pages/home.ts`, `src/data/pages/fixed-pages.ts`, `src/data/faq.ts`, and this log.
+- URLs affected: `/`, `/starter-and-prismana`, `/evolution-and-stages`, `/pre-order-and-editions`, `/heist-of-the-lost-isles`, `/system-requirements`, `/closed-beta-and-signups`. No URLs added or removed; `CONTENT_INDEX.md` URL responsibilities unchanged.
+- Source coverage: ComicBook.com preview, CBR interview, GameHaunt release overview, official Aniimo site, English Steam store page, Twisted Voxel Closed Beta 3 coverage — all re-checked `2026-09-02`.
+- Fact corrections: Steam now lists DirectX 11 (not 12); Perfect Egg is a multi-day login reward rather than a pre-registration reward; both corrections recorded in the in-page `Fact boundary — 2026-09-02` callouts. Starter sources split per name (CBR vs ComicBook.com) instead of a single-attribution summary.
+- FAQ growth: 58 to 68 items; ten new questions covering CPU/GPU strings, per-platform pre-order links, milestone timing, trading, Closed Beta 3 creatures, named starter roster, Emberpup evolution line, Beta 3 evolution roster, Diamond Egg Heist six-team format, squad composition, and co-op bosses.
+- Verification: `npm run verify` (typecheck, lint, template validation, content validation, IndexNow URL validation, static export, rendered SEO validation) before push.
+
 ### 2026-08-30 - Adsterra six-unit codes integrated
 
 - Task: Populate the fixed Adsterra ad units in `src/data/ads.ts` with the six real codes from the Adsterra publisher dashboard.

@@ -57,7 +57,14 @@ export const homePage: PageContent = {
       type: "prose",
       heading: "PC System Requirements and Storage",
       body:
-        "The current English Steam page lists 12 GB of RAM and approximately 45 GB of free storage for the recommended spec. The minimum specification has been tightened from older regional pages that previously showed 8 GB of RAM and 30 GB of storage. Controller support is confirmed for Xbox and PlayStation pads, and the game targets DirectX 12 on Windows 10 and Windows 11.\n\nSee the [Aniimo PC system requirements](/system-requirements) page for the full minimum vs recommended table.",
+        "The current English Steam page now names CPU and GPU models. The minimum spec is an Intel i7-9700 or AMD Ryzen 5 3600X or above with a GTX 1060 or AMD Radeon RX 6600 and 12 GB of RAM; the recommended spec is an Intel Core i7-12700F or AMD Ryzen 7700X or above with an NVIDIA GeForce RTX 3070 8G or AMD Radeon RX 6800 and 16 GB of RAM. Both tiers list 45 GB of available space, a 64-bit Windows 10 or newer install, and a broadband connection. Older regional pages that showed 8 GB of RAM and 30 GB of storage are superseded, and controller support is confirmed for Xbox and PlayStation pads.\n\nSee the [Aniimo PC system requirements](/system-requirements) page for the full minimum vs recommended table.",
+    },
+    {
+      id: "home-prelaunch-hub",
+      type: "prose",
+      heading: "Pre-Launch Answer Hub: Five Updated Guides",
+      body:
+        "These five pages carry the current pre-launch answers, refreshed on 2026-09-02:\n\n- Starter roster and named forms — Budclaw, Celestis, Nimbi, Emberpup, and Chirpi with movement notes: [Aniimo starter and Prismana](/starter-and-prismana).\n- Evolution lines — the named Emberpup to Flameruff to Scorchhowl chain plus Interlupa, and the Closed Beta 3 roster additions: [Aniimo evolution and stages](/evolution-and-stages).\n- Pre-registration rewards — the Susuta egg, the Perfect Egg, the 10M to 30M milestone ladder, and per-platform storefront links for PS5, Xbox, Steam, Epic, App Store, and Google Play: [Aniimo pre-order and editions](/pre-order-and-editions).\n- Squad strategy — 3-player role coverage, the six-team Diamond Egg Heist, and the Bubbask and Coraliz co-op bosses: [Aniimo Heist of the Lost Isles](/heist-of-the-lost-isles).\n- PC specs, trading, and future betas — the Steam CPU and GPU model strings on [Aniimo PC system requirements](/system-requirements), and the trading system, beta reset, and sign-up channels on [Aniimo closed beta and sign-ups](/closed-beta-and-signups).",
     },
     {
       id: "home-twining",
@@ -116,9 +123,12 @@ export const homePage: PageContent = {
     "fixed-system-requirements-en-us",
     "fixed-platforms-and-versions-en-us",
     "fixed-heist-of-the-lost-isles-en-us",
+    "fixed-starter-and-prismana-en-us",
+    "fixed-pre-order-and-editions-en-us",
+    "fixed-closed-beta-and-signups-en-us",
     "fixed-review-and-reception-en-us",
   ],
   schemaTypes: ["WebSite", "BreadcrumbList", "FAQPage"],
   sourceStatus: "official",
-  lastReviewed: "2026-08-29",
+  lastReviewed: "2026-09-02",
 };

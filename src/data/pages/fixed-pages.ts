@@ -264,26 +264,26 @@ export const fixedPages: PageContent[] = [
     seoTitle:
       "Aniimo PC System Requirements: Minimum and Recommended Specs",
     metaDescription:
-      "Check Aniimo PC minimum and recommended specifications, controller support, and download size.",
+      "Check Aniimo PC minimum and recommended CPU, GPU, RAM, and storage requirements from the current English Steam page, plus controller support.",
     summary:
-      "Aniimo PC system requirements target DirectX 12 on Windows 10 and Windows 11, recommend 12 GB of RAM and approximately 45 GB of storage, and support Xbox and PlayStation controllers on Steam.",
+      "The current English Steam page lists Aniimo PC minimum requirements as Intel i7-9700 / AMD Ryzen 5 3600X, 12 GB RAM, and GTX 1060 / Radeon RX 6600, with a recommended spec of Intel Core i7-12700F / AMD Ryzen 7700X, 16 GB RAM, and RTX 3070 8G / Radeon RX 6800. Both tiers list 45 GB of storage and a 64-bit Windows 10 or newer install.",
     hero: {
       eyebrow: "PC system requirements",
       subtitle:
-        "Aniimo targets DirectX 12 with a recommended spec of 12 GB RAM and 45 GB of storage. Older regional Steam pages still show 8 GB / 30 GB; the current English Steam page is authoritative.",
+        "The current English Steam page now names CPU and GPU models: Intel i7-9700 / Ryzen 5 3600X with a GTX 1060 / RX 6600 for minimum, and Intel Core i7-12700F / Ryzen 7700X with an RTX 3070 8G / RX 6800 for recommended. Older regional Steam pages that show 8 GB RAM and 30 GB storage are superseded.",
       ctas: [
         { label: "Platforms & Versions", href: "/platforms-and-versions" },
         { label: "Release Overview", href: "/release-overview" },
       ],
     },
     quickAnswer:
-      "Aniimo targets DirectX 12 on Windows 10 and Windows 11. The current English Steam page lists a recommended spec of 12 GB of RAM, a DirectX 12 GPU, and approximately 45 GB of free storage. Controller support covers Xbox and PlayStation pads. Older regional Steam pages that show 8 GB / 30 GB are superseded by the current English Steam page.",
+      "The current English Steam page lists Aniimo PC minimum requirements as 64-bit Windows 10, an Intel i7-9700 or AMD Ryzen 5 3600X or above, 12 GB of RAM, a GTX 1060 or AMD Radeon RX 6600, DirectX 11, and 45 GB of available space. The recommended spec raises that to Windows 10 or above, an Intel Core i7-12700F or AMD Ryzen 7700X or above, 16 GB of RAM, and an NVIDIA GeForce RTX 3070 8G or above or AMD Radeon RX 6800 or above. Both tiers need a broadband internet connection, and older regional Steam pages that show 8 GB / 30 GB are superseded.",
     keyFacts: [
-      { label: "Operating system", value: "Windows 10 / Windows 11 (64-bit)" },
-      { label: "Graphics API", value: "DirectX 12" },
-      { label: "Recommended RAM", value: "12 GB" },
-      { label: "Recommended storage", value: "Approx. 45 GB free" },
-      { label: "Controller support", value: "Xbox and PlayStation pads" },
+      { label: "Operating system", value: "Windows 10 or above (64-bit)" },
+      { label: "Minimum CPU / GPU", value: "Intel i7-9700 or Ryzen 5 3600X / GTX 1060 or RX 6600" },
+      { label: "Recommended CPU / GPU", value: "Intel Core i7-12700F or Ryzen 7700X / RTX 3070 8G or RX 6800" },
+      { label: "RAM", value: "12 GB minimum, 16 GB recommended" },
+      { label: "Storage", value: "45 GB available space (SSD recommended)" },
       { label: "Authoritative source", value: "Current English Steam page" },
     ],
     modules: [
@@ -297,21 +297,36 @@ export const fixedPages: PageContent[] = [
           { key: "recommended", label: "Recommended" },
         ],
         rows: [
-          { field: "Operating system", minimum: "Windows 10 (64-bit)", recommended: "Windows 11 (64-bit)" },
-          { field: "CPU", minimum: "Not announced as of 2026-08-29", recommended: "Not announced as of 2026-08-29" },
-          { field: "RAM", minimum: "Not announced as of 2026-08-29", recommended: "12 GB" },
-          { field: "Graphics", minimum: "DirectX 12 compatible", recommended: "DirectX 12 compatible" },
-          { field: "DirectX", minimum: "DirectX 12", recommended: "DirectX 12" },
-          { field: "Storage", minimum: "Approx. 45 GB free", recommended: "Approx. 45 GB free SSD recommended" },
+          { field: "Operating system", minimum: "Windows 10 (64-bit)", recommended: "Windows 10 or above (64-bit)" },
+          { field: "CPU", minimum: "Intel i7-9700 / AMD Ryzen 5 3600X or above", recommended: "Intel Core i7-12700F / AMD Ryzen 7700X or above" },
+          { field: "RAM", minimum: "12 GB", recommended: "16 GB" },
+          { field: "Graphics", minimum: "GTX 1060 / AMD Radeon RX 6600", recommended: "NVIDIA GeForce RTX 3070 8G or above / AMD Radeon RX 6800 or above" },
+          { field: "DirectX", minimum: "Version 11", recommended: "Version 11" },
+          { field: "Network", minimum: "Broadband internet connection", recommended: "Broadband internet connection" },
+          { field: "Storage", minimum: "45 GB available space", recommended: "45 GB available space; SSD recommended" },
           { field: "Controller", minimum: "Xbox / PlayStation pads supported", recommended: "Xbox / PlayStation pads supported" },
         ],
+      },
+      {
+        id: "spec-cpu-gpu",
+        type: "prose",
+        heading: "CPU and GPU Model Strings",
+        body:
+          "The current English Steam page now names specific CPU and GPU models instead of leaving them unannounced. The minimum tier asks for an Intel i7-9700 or AMD Ryzen 5 3600X or above paired with a GTX 1060 or AMD Radeon RX 6600. The recommended tier asks for an Intel Core i7-12700F or AMD Ryzen 7700X or above paired with an NVIDIA GeForce RTX 3070 8G or above or an AMD Radeon RX 6800 or above.\n\nBoth tiers require a 64-bit processor and a 64-bit operating system, and both list a broadband internet connection. If your CPU sits between the two named tiers, the minimum row is the floor Steam publishes; Steam does not publish a separate mid-tier target as of 2026-09-02.",
+      },
+      {
+        id: "spec-ram",
+        type: "prose",
+        heading: "RAM: 12 GB Minimum, 16 GB Recommended",
+        body:
+          "Minimum RAM is no longer unannounced: the current English Steam page lists 12 GB of RAM for the minimum tier and 16 GB of RAM for the recommended tier. The 12 GB figure previously appeared on this page as a recommended value; it is now the published minimum, and 16 GB is the published recommendation. Older regional Steam pages that show 8 GB of RAM are superseded.",
       },
       {
         id: "spec-storage",
         type: "prose",
         heading: "Download Size Notes",
         body:
-          "The current English Steam page lists approximately 45 GB of free storage as the recommended spec, raised from the 30 GB shown on older regional pages. Treat the 45 GB figure as authoritative and leave additional headroom for shader caches and post-launch patches.",
+          "The current English Steam page lists 45 GB of available space for both the minimum and the recommended tier, raised from the 30 GB shown on older regional pages. Treat the 45 GB figure as authoritative, keep it on an SSD for shader and streaming performance, and leave additional headroom for shader caches and post-launch patches.",
       },
       {
         id: "spec-controller",
@@ -325,26 +340,27 @@ export const fixedPages: PageContent[] = [
         type: "prose",
         heading: "Regional Page Inconsistency",
         body:
-          "Older regional Steam pages still show 8 GB of RAM and 30 GB of storage for Aniimo. The current English Steam page is the authoritative reference and supersedes regional drift; if the local page disagrees, defer to the English page and flag the inconsistency in any support request.",
+          "Older regional Steam pages still show 8 GB of RAM and 30 GB of storage for Aniimo, and some still leave the CPU and GPU rows blank. Those pages are superseded: the current English Steam page is the authoritative reference with 12 GB minimum RAM, 16 GB recommended RAM, 45 GB of storage, and named CPU and GPU models. If the local page disagrees, defer to the English page and flag the inconsistency in any support request.",
       },
       {
         id: "spec-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-08-29",
+        title: "Fact boundary — 2026-09-02",
         body:
-          "CPU model strings and minimum RAM are not announced as of 2026-08-29 in the current English Steam page; minimum figures may tighten again before launch. The 45 GB storage figure is the recommended spec and may change with patches. Older regional Steam pages still show 8 GB / 30 GB and are not authoritative.",
+          "The CPU, GPU, RAM, DirectX, network, and storage values on this page are read from the current English Steam page on 2026-09-02, which lists DirectX Version 11 for both tiers; the DirectX 12 value captured here on 2026-08-29 is superseded. Steam publishes only minimum and recommended tiers, so no mid-tier or ultra/4K target exists as of 2026-09-02. Target frame rate, resolution, and upscaling support per spec tier are not announced as of 2026-09-02, and the published figures may change again before the 15-16 September 2026 launch. Older regional Steam pages still show 8 GB / 30 GB and are not authoritative.",
       },
       {
         id: "spec-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-08-29` — authoritative PC spec, 12 GB recommended RAM, 45 GB storage, DirectX 12.",
+          "- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-02` — authoritative PC spec: Intel i7-9700 / Ryzen 5 3600X and GTX 1060 / RX 6600 with 12 GB RAM minimum, Intel Core i7-12700F / Ryzen 7700X and RTX 3070 8G / RX 6800 with 16 GB RAM recommended, DirectX 11, broadband connection, and 45 GB storage.\n- [GameHaunt release overview](https://gamehaunt.com/aniimo-release-date-platforms-and-everything-we-know-2026) — `media/interview` — checked `2026-09-02` — pre-launch PC performance context; the article publishes no PC requirement table of its own.",
       },
     ],
     faqIds: [
       "spec-min-ram",
+      "spec-cpu-gpu",
       "spec-storage",
       "spec-controller",
       "spec-regional-pages",
@@ -355,7 +371,7 @@ export const fixedPages: PageContent[] = [
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-08-29",
+    lastReviewed: "2026-09-02",
   },
   {
     id: "fixed-pre-order-and-editions-en-us",
@@ -370,43 +386,122 @@ export const fixedPages: PageContent[] = [
     seoTitle:
       "Aniimo Pre-order and Editions: Pre-registration Rewards and Monetization",
     metaDescription:
-      "Understand Aniimo pre-registration rewards, free launch items, monetization model, and whether a paid edition exists.",
+      "Separate the Aniimo Susuta egg, Perfect Egg, and 10M-30M global milestone rewards, and pre-register on PS5, Xbox, Steam, Epic, App Store, or Google Play.",
     summary:
-      "Aniimo is free-to-play with no paid Standard or Deluxe edition. Pre-registration on the official site, Steam, or Epic Games Store unlocks a reward ladder; three launch-day items (Sparkling Cube, Aniipod Ultra, Tumbler) are granted to all players free.",
+      "Aniimo is free-to-play with no paid Standard or Deluxe edition. Pre-registration rewards split into three separate tracks: the Susuta egg claimed through official-site pre-registration, the Perfect Egg from multi-day logins, and the global milestone ladder at 10M, 15M, 20M, and 30M sign-ups. Pre-registration is open on PS5, Xbox, Steam, Epic, the App Store, and Google Play.",
     hero: {
       eyebrow: "Pre-order and editions",
       subtitle:
-        "Aniimo uses a free-to-play model with optional in-app purchases. There is no paid Standard or Deluxe edition; the reward ladder is the only launch incentive.",
+        "Aniimo uses a free-to-play model with optional in-app purchases and no paid edition. Three separate reward tracks run before launch — the Susuta egg, the Perfect Egg, and the global milestone ladder — and each storefront has its own pre-registration button.",
       ctas: [
         { label: "Closed Beta", href: "/closed-beta-and-signups" },
         { label: "Platforms & Versions", href: "/platforms-and-versions" },
       ],
     },
     quickAnswer:
-      "Aniimo uses a free-to-play model with optional in-app purchases, so no paid pre-order tier or Deluxe edition exists. Players pre-register on the official site, Steam, or Epic Games Store to claim the reward ladder, which includes a Smoky Stone-themed Aniipod, additional cosmetics, and currency bundles that unlock with milestones. Three launch-day items (Sparkling Cube, Aniipod Ultra, Tumbler) are granted to all players free.",
+      "Aniimo uses a free-to-play model with optional in-app purchases, so no paid pre-order tier or Deluxe edition exists. Pre-registration rewards come from three separate tracks: the Susuta egg, claimed by pre-registering on the official aniimo.com site; the Perfect Egg, a random egg granted through multi-day logins; and the global milestone ladder, which pays Glimmer x200 at 10M sign-ups, Aniipod Ultra x2 at 15M, the \"Companion Promise\" limited avatar frame at 20M, and the \"Sunlit Meadow\" limited outfit at 30M. Pre-register on PS5, Xbox, Steam, Epic Games Store, the App Store, or Google Play; milestone rewards are delivered in-game at launch, not during the closed beta.",
     keyFacts: [
       { label: "Base price", value: "Free-to-play" },
       { label: "Pre-order tier", value: "Not applicable (F2P)" },
-      { label: "Pre-registration rewards", value: "Smoky Stone Aniipod, cosmetics, currency" },
-      { label: "Launch-day free items", value: "Sparkling Cube, Aniipod Ultra, Tumbler" },
-      { label: "Paid edition", value: "Not announced as of 2026-08-29" },
-      { label: "Monetization", value: "In-app purchases" },
+      { label: "Susuta egg", value: "Official-site pre-registration claim" },
+      { label: "Perfect Egg", value: "Random egg from multi-day logins" },
+      { label: "Milestone ladder", value: "10M, 15M, 20M, 30M global sign-ups" },
+      { label: "Pre-registration storefronts", value: "PS5, Xbox, Steam, Epic, App Store, Google Play" },
     ],
     modules: [
       {
+        id: "preorder-reward-tracks",
+        type: "data-table",
+        heading: "Three Separate Pre-Registration Reward Tracks",
+        columns: [
+          { key: "track", label: "Track" },
+          { key: "reward", label: "Reward" },
+          { key: "howToGet", label: "How you earn it" },
+          { key: "delivery", label: "Delivery" },
+        ],
+        rows: [
+          {
+            track: "Official-site pre-registration",
+            reward: "Susuta egg (mysterious egg)",
+            howToGet: "Pre-register an account on aniimo.com",
+            delivery: "In-game after the 15-16 September 2026 launch",
+          },
+          {
+            track: "Multi-day login",
+            reward: "Perfect Egg (random)",
+            howToGet: "Log in across multiple days once the game is live",
+            delivery: "In-game login track, not a pre-registration claim",
+          },
+          {
+            track: "Global milestone ladder",
+            reward: "Glimmer x200, Aniipod Ultra x2, avatar frame, outfit",
+            howToGet: "Total global pre-registration count crosses 10M / 15M / 20M / 30M",
+            delivery: "In-game at launch for every pre-registered account",
+          },
+        ],
+      },
+      {
         id: "preorder-rewards",
         type: "data-table",
-        heading: "Pre-registration Reward Ladder",
+        heading: "Global Milestone Ladder",
         columns: [
           { key: "milestone", label: "Milestone" },
           { key: "reward", label: "Reward" },
           { key: "status", label: "Status" },
         ],
         rows: [
-          { milestone: "Sign-up confirmation", reward: "Smoky Stone-themed Aniipod", status: "Confirmed" },
-          { milestone: "Tier 1 milestone", reward: "Cosmetic bundle", status: "Confirmed" },
-          { milestone: "Tier 2 milestone", reward: "Currency bundle", status: "Confirmed" },
-          { milestone: "Tier 3 milestone", reward: "Bonus cosmetic", status: "Confirmed" },
+          { milestone: "10,000,000 pre-registrations", reward: "Glimmer x200", status: "Threshold passed as of 2026-09-02" },
+          { milestone: "15,000,000 pre-registrations", reward: "Aniipod Ultra x2", status: "Threshold passed as of 2026-09-02" },
+          { milestone: "20,000,000 pre-registrations", reward: "\"Companion Promise\" limited avatar frame", status: "Threshold passed as of 2026-09-02" },
+          { milestone: "30,000,000 pre-registrations", reward: "\"Sunlit Meadow\" limited outfit", status: "Threshold passed as of 2026-09-02" },
+        ],
+      },
+      {
+        id: "preorder-eggs",
+        type: "prose",
+        heading: "Susuta Egg vs Perfect Egg vs Milestone Rewards",
+        body:
+          "These three rewards are often mixed together, but the official site keeps them separate.\n\nThe Susuta egg is the mysterious egg tied to pre-registering on aniimo.com. It is an account-level claim: complete the official-site pre-registration form and it lands in your account for the launch build.\n\nThe Perfect Egg is a random egg obtained through multi-day logins rather than through the pre-registration form. Signing up early does not grant it; you earn it by logging in across several days once the game is live.\n\nThe global milestone ladder is shared by every pre-registered player. It does not depend on which storefront you used or how early you signed up — it depends only on the worldwide pre-registration count. The official pre-registration counter showed 30,104,220 sign-ups when checked on 2026-09-02, which is past every published milestone threshold, so all four tiers are on the launch payout list.",
+      },
+      {
+        id: "preorder-platforms",
+        type: "data-table",
+        heading: "Per-Platform Pre-Registration Storefronts",
+        columns: [
+          { key: "platform", label: "Platform" },
+          { key: "storefront", label: "Where to pre-register" },
+          { key: "notes", label: "Notes" },
+        ],
+        rows: [
+          { platform: "PlayStation 5", storefront: "PlayStation Store — https://store.playstation.com/concept/10018491", notes: "Concept page; free-to-play download at launch" },
+          { platform: "Xbox Series X|S", storefront: "Xbox Store — https://www.xbox.com/games/store/aniimo/9pk8phlcqdf6", notes: "Store listing with the Xbox pre-registration button" },
+          { platform: "PC (Steam)", storefront: "Steam — https://store.steampowered.com/app/4126040/Aniimo", notes: "AppID 4126040; also hosts the PC spec table" },
+          { platform: "PC (Epic Games Store)", storefront: "Epic Games Store — https://store.epicgames.com/p/aniimo-759396", notes: "Second PC storefront for the same launch build" },
+          { platform: "iOS", storefront: "App Store — https://apps.apple.com/app/aniimo/id6759098797", notes: "Apple pre-registration entry for iPhone and iPad" },
+          { platform: "Android", storefront: "Google Play — https://aniimo.onelink.me/AtO3/sm4nlhoy", notes: "Official site routes Android sign-ups through this link" },
+        ],
+      },
+      {
+        id: "preorder-claim-steps",
+        type: "steps",
+        heading: "How to Claim Before Launch",
+        items: [
+          {
+            title: "Pre-register on aniimo.com for the Susuta egg",
+            body: "The Susuta egg is tied to the official-site pre-registration form, not to a storefront button. Complete it once with the account you plan to play on so the egg is attached before the 15-16 September 2026 unlock.",
+          },
+          {
+            title: "Add the storefront you will actually install from",
+            body: "Pre-register on the platform you will play on: PlayStation Store, Xbox Store, Steam, Epic Games Store, the App Store, or the official Google Play link. Storefront pre-registration is what puts the free-to-play download in your library on launch day; it does not replace the official-site form.",
+          },
+          {
+            title: "Expect milestone rewards at launch, not during beta",
+            body: "The milestone ladder pays out in the live game after launch. Closed Beta 3 progress did not carry forward, so nothing you did in the beta build holds these rewards. The exact in-game claim screen and any claim deadline are not announced as of 2026-09-02.",
+          },
+          {
+            title: "Keep the Perfect Egg on your login plan",
+            body: "The Perfect Egg comes from multi-day logins after launch, so budget a few consecutive play sessions at release instead of expecting it from the pre-registration form.",
+          },
         ],
       },
       {
@@ -414,52 +509,55 @@ export const fixedPages: PageContent[] = [
         type: "prose",
         heading: "Free Launch-Day Items",
         body:
-          "Three items are granted to every player at launch regardless of pre-registration: a Sparkling Cube, an Aniipod Ultra, and a Tumbler. These grant early-game capture and crafting utility and are not gated behind paid tiers.",
+          "Three items are granted to every player at launch regardless of pre-registration: a Sparkling Cube, an Aniipod Ultra, and a Tumbler. These grant early-game capture and crafting utility and are not gated behind paid tiers. They are separate from the Aniipod Ultra x2 paid out by the 15M milestone tier.",
       },
       {
         id: "preorder-monetization",
         type: "prose",
         heading: "Monetization Model",
         body:
-          "Aniimo is free-to-play with optional in-app purchases. The store will stock cosmetics and convenience items, but specific paid bundles, season pass structure, and battle pass plans are not announced as of 2026-08-29.",
+          "Aniimo is free-to-play with optional in-app purchases. The store will stock cosmetics and convenience items, but specific paid bundles, season pass structure, and battle pass plans are not announced as of 2026-09-02.",
       },
       {
         id: "preorder-editions",
         type: "prose",
         heading: "Paid Edition Status",
         body:
-          "A paid Standard, Deluxe, or Premium edition is not announced as of 2026-08-29. The base game is free; any future paid edition would have to be confirmed on the official Aniimo site or Steam store.",
+          "A paid Standard, Deluxe, or Premium edition is not announced as of 2026-09-02. The base game is free; any future paid edition would have to be confirmed on the official Aniimo site or Steam store.",
       },
       {
         id: "preorder-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-08-29",
+        title: "Fact boundary — 2026-09-02",
         body:
-          "Specific IAP bundles, season pass plans, and any paid edition are not announced as of 2026-08-29. Reward ladder details are summarized from the official Aniimo site and may be updated before launch.",
+          "The milestone ladder rewards (Glimmer x200, Aniipod Ultra x2, \"Companion Promise\" avatar frame, \"Sunlit Meadow\" outfit) and the four thresholds are read from the official Aniimo site and GameHaunt's release overview. The 30,104,220 pre-registration count is the figure displayed on the official site on 2026-09-02 and keeps moving. Any milestone above 30M is not announced as of 2026-09-02. The in-game claim flow, claim window, and whether rewards are per-account or per-platform are not announced as of 2026-09-02. Specific IAP bundles, season pass plans, and any paid edition are not announced as of 2026-09-02.",
       },
       {
         id: "preorder-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo Official Site](https://www.aniimo.com/) — `official/store` — checked `2026-08-29` — confirms pre-registration reward ladder and F2P model.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-08-29` — confirms F2P model and free launch items.",
+          "- [Aniimo Official Site](https://www.aniimo.com/) — `official/store` — checked `2026-09-02` — confirms the Susuta egg pre-registration claim, the Perfect Egg multi-day login track, the 10M/15M/20M/30M milestone rewards, the displayed sign-up count, and the six per-platform pre-registration links.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-02` — confirms the free-to-play model and the Steam pre-registration entry point.\n- [GameHaunt release overview](https://gamehaunt.com/aniimo-release-date-platforms-and-everything-we-know-2026) — `media/interview` — checked `2026-09-02` — independent confirmation of the 10M/15M/20M/30M milestone ladder and its rewards.",
       },
     ],
     faqIds: [
       "preorder-cost",
       "preorder-edition",
       "preorder-rewards",
+      "preorder-platform-links",
+      "preorder-milestone-timing",
       "preorder-monetization",
     ],
     relatedPageIds: [
       "fixed-release-overview-en-us",
       "fixed-closed-beta-and-signups-en-us",
       "fixed-platforms-and-versions-en-us",
+      "fixed-starter-and-prismana-en-us",
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-08-29",
+    lastReviewed: "2026-09-02",
   },
   {
     id: "fixed-closed-beta-and-signups-en-us",
@@ -474,27 +572,27 @@ export const fixedPages: PageContent[] = [
     seoTitle:
       "Aniimo Closed Beta: Sign-ups, Beta 3, and Future Test Windows",
     metaDescription:
-      "Learn how to sign up for Aniimo closed beta, beta windows, sign-up channels, and how beta access relates to launch.",
+      "Aniimo Closed Beta 3 added the trading system, new creatures, and co-op bosses. See sign-up channels, the beta-to-launch reset, and future test windows.",
     summary:
-      "Aniimo Closed Beta 3 ran 2026-07-09 to 2026-07-25 on PC. Sign-up channels include the Steam news page, the official Aniimo Discord, and the official site. Future beta windows are not announced as of 2026-08-29.",
+      "Aniimo Closed Beta 3 ran 2026-07-09 to 2026-07-25 and added the Aniimo trading system, the Diamond Egg Heist, co-op bosses Bubbask and Coraliz, new creatures (Bubbeep, Popapus, Mophling, Sausite) with the Budsquire and Thornblade forms, and expanded mobile RV Homeland decoration. Beta progress did not carry to launch, and future beta windows are not announced as of 2026-09-02.",
     hero: {
       eyebrow: "Closed beta and sign-ups",
       subtitle:
-        "Closed Beta 3 covered the pre-launch Twining and Aniipod mechanics. New sign-up windows are not announced as of 2026-08-29.",
+        "Closed Beta 3 introduced the Aniimo trading system, four new creatures plus the Budsquire and Thornblade forms, co-op bosses Bubbask and Coraliz, and the six-team Diamond Egg Heist. Progress reset before launch, and new sign-up windows are not announced as of 2026-09-02.",
       ctas: [
         { label: "Pre-order & Editions", href: "/pre-order-and-editions" },
         { label: "Release Overview", href: "/release-overview" },
       ],
     },
     quickAnswer:
-      "Aniimo Closed Beta 3 ran on PC from 2026-07-09 to 2026-07-25. Sign-ups were handled through the Steam news page, the official Aniimo Discord, and the official site. Pre-registration on the official site is the recommended channel for future beta access, and additional testing windows are not announced as of 2026-08-29.",
+      "Aniimo Closed Beta 3 ran from 2026-07-09 to 2026-07-25 on PC (including Steam), iOS, and Android, and was the build that added the Aniimo trading system for exchanging Aniimo with other players, the Diamond Egg Heist competitive mode, co-op bosses Bubbask and Coraliz, four new creatures (Bubbeep, Popapus, Mophling, Sausite), the Budsquire and Thornblade forms, and more Homeland personalization through the mobile RV-style base. Sign-ups ran through the Steam news page, the official Aniimo Discord, and the official site. Beta progress did not carry forward to launch, and additional testing windows are not announced as of 2026-09-02.",
     keyFacts: [
       { label: "Closed Beta 3 window", value: "2026-07-09 to 2026-07-25" },
-      { label: "Beta platform", value: "PC (Steam)" },
-      { label: "Sign-up channels", value: "Steam news, Discord, official site" },
-      { label: "Future beta", value: "Not announced as of 2026-08-29" },
-      { label: "Beta-to-launch benefits", value: "Not announced as of 2026-08-29" },
-      { label: "Pre-registration", value: "Recommended for future beta eligibility" },
+      { label: "Headline addition", value: "Aniimo trading system" },
+      { label: "New creatures", value: "Bubbeep, Popapus, Mophling, Sausite" },
+      { label: "New forms", value: "Budsquire, Thornblade" },
+      { label: "Co-op bosses", value: "Bubbask, Coraliz" },
+      { label: "Future beta", value: "Not announced as of 2026-09-02" },
     ],
     modules: [
       {
@@ -502,50 +600,80 @@ export const fixedPages: PageContent[] = [
         type: "prose",
         heading: "Closed Beta 3 Summary",
         body:
-          "Closed Beta 3 ran from 2026-07-09 to 2026-07-25 on Steam and covered the pre-launch Twining merge mechanic, Aniipod capture, and Heist of the Lost Isles core loop. Beta access was granted via Steam key requests, Discord whitelists, and official site form entries.",
+          "Closed Beta 3 ran from 2026-07-09 to 2026-07-25 on PC (including Steam), iOS, and Android, and covered the pre-launch Twining merge mechanic, Aniipod capture, and the Heist of the Lost Isles core loop. Beta access was granted via Steam key requests, Discord whitelists, and official site form entries.\n\nThis was the feature-heaviest test so far: Pawprint Studio used it to introduce the Aniimo trading system, the competitive Diamond Egg Heist, group-play boss encounters, a batch of new creatures and forms, and a wider Homeland decoration catalog.",
+      },
+      {
+        id: "beta-additions",
+        type: "data-table",
+        heading: "What Closed Beta 3 Added",
+        columns: [
+          { key: "addition", label: "Addition" },
+          { key: "detail", label: "Detail" },
+          { key: "status", label: "Launch status" },
+        ],
+        rows: [
+          { addition: "Aniimo trading system", detail: "Players can exchange Aniimo with one another", status: "Introduced in beta; launch rules not announced as of 2026-09-02" },
+          { addition: "New Aniimo species", detail: "Bubbeep, Popapus, Mophling, Sausite", status: "Added to the beta roster" },
+          { addition: "Additional creature forms", detail: "Budsquire, Thornblade", status: "Added to the beta roster" },
+          { addition: "Co-op bosses", detail: "Bubbask and Coraliz, designed around group play", status: "Group-play encounters in the beta build" },
+          { addition: "Diamond Egg Heist", detail: "Up to six teams of three players contest one diamond egg", status: "Competitive objective mode in the beta build" },
+          { addition: "Homeland personalization", detail: "Mobile RV-style base with more Aniimo-themed decorations", status: "Expanded decoration catalog in the beta build" },
+        ],
+      },
+      {
+        id: "beta-trading",
+        type: "prose",
+        heading: "The Aniimo Trading System",
+        body:
+          "The trading system lets players exchange Aniimo with one another, which changes how roster gaps get filled. Instead of relying only on wild catches, weather-gated spawns, and reward eggs, a player can trade for a form they have not encountered.\n\nThat makes the Aniilog capture log the practical planning tool for trading: it records which forms you have caught by region and weather and surfaces the ones still missing, so you know what to ask for before you open a trade. See the [Aniimo catching and Aniipods](/catching-and-aniipods) page for how the Aniilog tracks each entry.\n\nTrading also feeds the Homeland layer. Closed Beta 3 moved Homeland access onto a mobile RV-style base with more personalization options and a wider selection of Aniimo-themed decorations, so a traded roster changes both who fights with you and who lives in your base. See the [Aniimo Homeland and Housing](/homeland-and-housing) page for the base-building and Homeland Skills layer.\n\nTrade restrictions, cooldowns, level or region gates, whether eggs and Prismana forms are tradable, and whether trading ships in the launch build are not announced as of 2026-09-02.",
       },
       {
         id: "beta-signup",
         type: "prose",
         heading: "Sign-up Channels",
         body:
-          "Players who want future beta access should pre-register an account on the official Aniimo site, follow the Aniimo Steam news page, and join the official Aniimo Discord. New beta windows will be announced through those channels; future dates are not announced as of 2026-08-29.",
+          "Players who want future beta access should pre-register an account on the official Aniimo site, follow the Aniimo Steam news page, and join the official Aniimo Discord. New beta windows will be announced through those channels; future dates are not announced as of 2026-09-02.\n\nBecause Closed Beta 3 was the last announced test before the 15-16 September 2026 launch, the practical path for most players is pre-registration rather than another beta. The per-platform pre-registration links are listed on the [Aniimo pre-order and editions](/pre-order-and-editions) page.",
       },
       {
         id: "beta-launch",
         type: "prose",
         heading: "Beta to Launch Relationship",
         body:
-          "Closed Beta 3 progress did not carry forward to launch. Beta accounts were reset before launch and beta-only rewards are not announced as of 2026-08-29. Players who participated in Closed Beta 3 should expect a clean launch state.",
+          "Closed Beta 3 progress did not carry forward to launch. Beta accounts were reset before launch and beta-only rewards are not announced as of 2026-09-02. Players who participated in Closed Beta 3 should expect a clean launch state: the creatures added in that build (Bubbeep, Popapus, Mophling, Sausite, Budsquire, Thornblade) have to be caught again, traded Aniimo do not persist, and Homeland decoration progress starts over.\n\nPre-registration rewards are the one pre-launch item track that is meant to land in the live game, and they pay out at launch rather than in the beta build.",
       },
       {
         id: "beta-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-08-29",
+        title: "Fact boundary — 2026-09-02",
         body:
-          "Future beta windows are not announced as of 2026-08-29. Beta-only rewards and any carry-over to launch are not announced as of 2026-08-29.",
+          "The Closed Beta 3 additions on this page (trading system, Bubbeep, Popapus, Mophling, Sausite, Budsquire, Thornblade, Bubbask, Coraliz, Diamond Egg Heist, mobile RV Homeland decoration) come from Twisted Voxel's beta coverage and describe the beta build, not a confirmed launch feature list. Whether trading, the Diamond Egg Heist, and the co-op bosses ship unchanged at launch is not announced as of 2026-09-02. Trading rules, restrictions, and cooldowns are not announced as of 2026-09-02. Future beta windows, beta-only rewards, and any carry-over to launch are not announced as of 2026-09-02.",
       },
       {
         id: "beta-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo Steam News](https://store.steampowered.com/news/app/4126040) — `official/store` — checked `2026-08-29` — confirms Closed Beta 3 sign-up announcement.\n- [Aniimo Official Site](https://www.aniimo.com/) — `official/store` — checked `2026-08-29` — confirms pre-registration and beta entry points.\n- [Twisted Voxel — Aniimo beta](https://twistedvoxel.com/aniimo-set-for-q3-2026-launch-new-beta-announced/) — `media/interview` — checked `2026-08-29` — beta window context.",
+          "- [Aniimo Steam News](https://store.steampowered.com/news/app/4126040) — `official/store` — checked `2026-09-02` — confirms Closed Beta 3 sign-up announcement.\n- [Aniimo Official Site](https://www.aniimo.com/) — `official/store` — checked `2026-09-02` — confirms pre-registration and beta entry points.\n- [Twisted Voxel — Aniimo Q3 2026 launch and new beta](https://twistedvoxel.com/aniimo-set-for-q3-2026-launch-new-beta-announced/) — `media/interview` — checked `2026-09-02` — confirms the trading system, the new species Bubbeep, Popapus, Mophling and Sausite, the Budsquire and Thornblade forms, co-op bosses Bubbask and Coraliz, the six-teams-of-three Diamond Egg Heist, and the mobile RV-style Homeland decoration expansion.\n- [GameHaunt release overview](https://gamehaunt.com/aniimo-release-date-platforms-and-everything-we-know-2026) — `media/interview` — checked `2026-09-02` — confirms the global closed beta start on 2026-07-09.",
       },
     ],
     faqIds: [
       "beta-sign-up",
       "beta-progress-carry",
+      "beta-trading-system",
+      "beta-new-creatures",
       "beta-future-windows",
     ],
     relatedPageIds: [
       "fixed-release-overview-en-us",
       "fixed-pre-order-and-editions-en-us",
+      "fixed-heist-of-the-lost-isles-en-us",
+      "fixed-catching-and-aniipods-en-us",
+      "fixed-homeland-and-housing-en-us",
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-08-29",
+    lastReviewed: "2026-09-02",
   },
   {
     id: "fixed-twining-system-en-us",
@@ -672,13 +800,13 @@ export const fixedPages: PageContent[] = [
     seoTitle:
       "Aniimo starter guide: choose your first Aniimo and Prismana form",
     metaDescription:
-      "Aniimo starter choice shapes the early game. Learn what Prismana forms do, how the Susuta egg and Perfect Egg rewards fit, and how to build your first team.",
+      "Aniimo starter picks: compare Budclaw, Celestis, Nimbi, Emberpup, and Chirpi by movement type, see the Emberpup evolution line, and place the Susuta and Perfect Egg rewards.",
     summary:
-      "The Aniimo starter is the creature you pick at the start of the game. Prismana forms are alternate-color variants with slightly different stats that evolve along the same Lumin to Gamma to Nova path as standard forms. The Susuta egg and the Perfect Egg (pre-registration reward) feed into your roster rather than replace your starter.",
+      "The named Aniimo forms visible in pre-launch coverage are Budclaw (crab-like, burrowing), Celestis and Nimbi (flying), Emberpup (fiery bruiser), and Chirpi (feisty bird). Emberpup is the worked evolution example: Emberpup to Flameruff to Scorchhowl, with Interlupa now part of the same family. Prismana forms are alternate-color variants that evolve along the same Lumin to Gamma to Nova path, and the Susuta egg and Perfect Egg support your roster rather than replacing your starter.",
     hero: {
       eyebrow: "Starter & Prismana",
       subtitle:
-        "Pick the starter whose element and movement type fit your early-game region, then layer Prismana variants and the Susuta/Perfect Egg rewards into a balanced roster.",
+        "Pick the starter whose movement type and role fit your first Idyll puzzles, then use the Emberpup to Flameruff to Scorchhowl line to see how far a single pick can go. The Susuta egg and Perfect Egg are roster support, not starter replacements.",
       ctas: [
         { label: "Twining System", href: "/twining-system" },
         { label: "Evolution & Stages", href: "/evolution-and-stages" },
@@ -686,65 +814,100 @@ export const fixedPages: PageContent[] = [
       ],
     },
     quickAnswer:
-      "Your Aniimo starter is the creature you pick at the start of the game and the basis for early progression. Prismana forms are alternate-color variants with slightly different stats, tied to specific encounters or reward tracks; they evolve along the same Lumin to Gamma to Nova path as standard forms. The Susuta egg and the Perfect Egg (pre-registration reward) feed straight into your roster, supporting rather than replacing your starter.",
+      "Your Aniimo starter is the creature you pick at the start of the game and the basis for early progression. The named forms surfaced in pre-launch coverage are Budclaw, a crab-like Aniimo that is great at burrowing; Celestis and Nimbi, both flying forms; Emberpup, described as a fiery little bruiser; and Chirpi, a feisty bird. Emberpup shows how far one pick travels: it evolves to Flameruff and then Scorchhowl, with Interlupa now part of the same family. Prismana forms are alternate-color variants with slightly different stats that follow the same Lumin to Gamma to Nova path, and the Susuta egg (official-site pre-registration) plus the Perfect Egg (multi-day logins) feed your roster rather than replacing your starter.",
     keyFacts: [
-      { label: "Starter role", value: "First Aniimo; sets early element and role" },
+      { label: "Named forms in coverage", value: "Budclaw, Celestis, Nimbi, Emberpup, Chirpi" },
+      { label: "Worked evolution line", value: "Emberpup → Flameruff → Scorchhowl (+ Interlupa)" },
+      { label: "Movement examples", value: "Budclaw burrows; Celestis and Nimbi fly" },
       { label: "Prismana forms", value: "Alternate-color variants; same Lumin to Nova pipeline" },
-      { label: "Susuta egg", value: "Quest reward; strong early-game complement" },
-      { label: "Perfect Egg", value: "Pre-registration reward on aniimo.com" },
-      { label: "Starter list", value: "Subject to change per developer as of 2026-08-29" },
-      { label: "Movement priority", value: "Pick a starter with at least one relevant movement type" },
+      { label: "Susuta egg", value: "Official-site pre-registration claim; roster support" },
+      { label: "Perfect Egg", value: "Random egg from multi-day logins" },
     ],
     modules: [
+      {
+        id: "starter-roster",
+        type: "data-table",
+        heading: "Named Aniimo Forms in Pre-Launch Coverage",
+        columns: [
+          { key: "name", label: "Aniimo" },
+          { key: "described", label: "How coverage describes it" },
+          { key: "movement", label: "Movement / early use" },
+          { key: "source", label: "Named by" },
+        ],
+        rows: [
+          { name: "Budclaw", described: "Crab-like Aniimo that is great at burrowing", movement: "Burrow — soft-terrain shortcuts and blocked routes", source: "CBR interview" },
+          { name: "Celestis", described: "Example of a flying Aniimo", movement: "Fly — vertical puzzles and Astra traversal", source: "CBR interview" },
+          { name: "Nimbi", described: "Example of a flying Aniimo", movement: "Fly — glide routes and floating-island approaches", source: "CBR interview" },
+          { name: "Emberpup", described: "A fiery little bruiser with serious attitude; a team fan-favourite", movement: "Ground pressure — the fiery front-line pick", source: "ComicBook.com preview, CBR interview" },
+          { name: "Chirpi", described: "A feisty bird", movement: "Bird form — early aerial pressure", source: "ComicBook.com preview" },
+        ],
+      },
       {
         id: "starter-pick",
         type: "prose",
         heading: "How the Aniimo starter picks work",
         body:
-          "The Steam store page presents Aniimo as an open-world creature-catching RPG, with starter choice framed as the first big player decision. The official site at aniimo.com confirms that early-game choices are designed to shape the first hours without locking you out of late-game evolutions, since each form follows the same Lumin to Gamma to Nova pipeline. The starter list itself is subject to change per developer as of 2026-08-29, so treat published starter picks as the current plan rather than a permanent roster.\n\nStarter forms split across the nine elements of the Idyll continent and the five combat roles (DPS, Heal, Support, Break, Regen). Pre-launch coverage from ComicBook.com and the Steam store page points to starter forms leaning DPS or Break, with Heal and Support players expected to lean on early catches of wild Aniimo for their first healer.\n\nYour starter is the first Aniimo you can Twine into, and it sets the merged role you will use most often in the early game. Twining into the starter lets you cross the first set of exploration puzzles, which is why picking a starter with at least one relevant movement type (fly, burrow, swim, climb, dash) is more useful than chasing the highest damage number.",
+          "The Steam store page presents Aniimo as an open-world creature-catching RPG, with starter choice framed as the first big player decision. The official site at aniimo.com frames that first pick as a rare Prismana Form Aniimo selected as a Junior Wayfarer, and confirms that early-game choices are designed to shape the first hours without locking you out of late-game evolutions, since each form follows the same Lumin to Gamma to Nova pipeline. The starter list itself is subject to change per developer as of 2026-09-02, so treat published starter picks as the current plan rather than a permanent roster.\n\nStarter forms split across the nine elements of the Idyll continent and the five combat roles (DPS, Heal, Support, Break, Regen). Pre-launch coverage from ComicBook.com and the Steam store page points to starter forms leaning DPS or Break — Emberpup is described as a bruiser rather than a support — with Heal and Support players expected to lean on early catches of wild Aniimo for their first healer.\n\nYour starter is the first Aniimo you can Twine into, and it sets the merged role you will use most often in the early game. Twining into the starter lets you cross the first set of exploration puzzles, which is why picking a starter with at least one relevant movement type (fly, burrow, swim, climb, dash) is more useful than chasing the highest damage number.",
+      },
+      {
+        id: "starter-movement-map",
+        type: "prose",
+        heading: "Matching the named forms to early Idyll puzzles",
+        body:
+          "Movement type is the practical tiebreaker between the named forms, because the Idyll continent gates early routes behind traversal rather than damage.\n\nBudclaw is the burrowing answer: CBR describes it as a crab-like Aniimo that is great at burrowing, which is the tool for soft terrain and shortcut tunnels that the human moveset cannot cross. Celestis and Nimbi are the flying answers, and flight is the traversal tool previews single out most often — it is how you handle verticality, wind currents, and the approach to the Astra sky metropolis. Emberpup and Chirpi read as combat-forward picks: a fiery bruiser and a feisty bird rather than dedicated traversal tools.\n\nIf your first region is coastal or vertical, a flying form pays off immediately. If you expect to push through grassland and cave routes, the burrowing option removes more walls. Either way you can catch the others later with an Aniipod, so the starter only has to cover the first hour cleanly. Full movement-type detail is on the [Aniimo Twining system](/twining-system) page, and role definitions are on the [Aniimo elements and roles](/elements-and-roles) page.",
+      },
+      {
+        id: "starter-emberpup-line",
+        type: "prose",
+        heading: "Worked example: the Emberpup evolution line",
+        body:
+          "Emberpup is the clearest published example of how far a single pick travels. In the CBR interview the developer states that Emberpup evolves to Flameruff and then Scorchhowl, with Interlupa now part of that family too — the only Aniimo evolution chain named end-to-end in pre-launch coverage.\n\nRead against the standard pipeline, that line is a Lumin form advancing through Gamma to Nova, with the family extended by Interlupa. It matters for starter planning for two reasons: the fiery bruiser you pick in hour one is the same creature carrying your damage slot several stages later, and a Prismana version of that form would follow the same chain while keeping its alternate colouring.\n\nExact evolution requirements for each step are not fully confirmed as of 2026-09-02. Stage mechanics are covered on the [Aniimo evolution and stages](/evolution-and-stages) page.",
       },
       {
         id: "prismana-explained",
         type: "prose",
         heading: "Prismana forms explained",
         body:
-          "Prismana forms are alternate-color Aniimo that resemble a 'shiny' or palette-swapped version of a standard form, with the same body and role but a different look and a slightly different stat spread. They are not a separate evolution stage; they sit alongside the Lumin, Gamma, and Nova pipeline and can advance through it on the same triggers as a normal form.\n\nPrismana forms are tied to a few specific sources: pre-registration reward chains, the Perfect Egg reward for early participants, and certain encounter conditions that the developer is still testing. As of 2026-08-29 the official list of Prismana forms is still subject to change per developer, so do not treat any third-party Prismana catalog as a final roster.\n\nOnce you have a Prismana form, it follows the same Lumin to Gamma to Nova evolution path as a standard form. Weather, regional, and Sparkling variants are layered on top of Prismana; a Prismana form is its own visual variant, while weather, regional, and Sparkling variants describe when the form appears.",
+          "Prismana forms are alternate-color Aniimo that resemble a 'shiny' or palette-swapped version of a standard form, with the same body and role but a different look and a slightly different stat spread. They are not a separate evolution stage; they sit alongside the Lumin, Gamma, and Nova pipeline and can advance through it on the same triggers as a normal form.\n\nThe official site describes the Prismana Form Aniimo as a rare creature the player selects as a Junior Wayfarer, and Prismana forms are also tied to encounter conditions the developer is still testing. As of 2026-09-02 the official list of Prismana forms is still subject to change per developer, so do not treat any third-party Prismana catalog as a final roster.\n\nOnce you have a Prismana form, it follows the same Lumin to Gamma to Nova evolution path as a standard form. Weather, regional, and Sparkling variants are layered on top of Prismana; a Prismana form is its own visual variant, while weather, regional, and Sparkling variants describe when the form appears.",
       },
       {
         id: "starter-eggs",
         type: "prose",
         heading: "How the Susuta egg and Perfect Egg rewards fit in",
         body:
-          "The Susuta egg is a quest reward that hatches into a strong early-game Aniimo that complements most starter picks. The Perfect Egg comes from pre-registration on the official site; if you claimed it during the live pre-registration window, it is delivered in-game through your Aniimo account after the global unlock on 15-16 September 2026, and it hatches into a Prismana-friendly form. Both eggs roll into the same team-building plan as your starter rather than replacing it.",
+          "Neither egg replaces your starter, and they do not come from the same place.\n\nThe Susuta egg is the mysterious egg tied to pre-registering on the official aniimo.com site. It is an account-level claim that lands in the launch build, so it arrives as a second body for your roster after you have already chosen a starter.\n\nThe Perfect Egg is a random egg earned through multi-day logins rather than through the pre-registration form, so it depends on playing across several days at launch rather than on signing up early.\n\nBoth roll into the same team-building plan as your starter: use them to cover the roles and movement types your starter does not, not to redo the first pick. Claim mechanics and the full milestone ladder are on the [Aniimo pre-order and editions](/pre-order-and-editions) page.",
       },
       {
         id: "starter-checklist",
         type: "steps",
         heading: "Beginner progression checklist",
         items: [
-          { title: "Pick the movement type you will use most", body: "Before you fixate on damage, pick the movement type you will lean on for the first hour: flying for vertical puzzles, burrowing for shortcut routes, swimming for water routes, climbing for walls, or dash for high-speed gaps. Your starter should give you at least one of those movement options." },
-          { title: "Cover the missing roles within the first two hours", body: "Starter picks tend to skew DPS or Break, and the open world adds Heal, Support, and Regen encounters early. Spend the first two hours chasing wild catches or quest rewards that cover the missing roles before you push story content." },
-          { title: "Decide whether the Perfect Egg fits your roster", body: "The Perfect Egg is a Prismana-friendly form that drops into your lineup as a pre-registration reward. If you claimed it, give it a slot in your early roster so you can see how it evolves before the open-world progression unlocks heavier variants." },
+          { title: "Pick the movement type you will use most", body: "Before you fixate on damage, pick the movement type you will lean on for the first hour: flying (Celestis, Nimbi) for vertical puzzles, burrowing (Budclaw) for shortcut routes, swimming for water routes, climbing for walls, or dash for high-speed gaps. Your starter should give you at least one of those movement options." },
+          { title: "Cover the missing roles within the first two hours", body: "Starter picks tend to skew DPS or Break — Emberpup and Chirpi read as combat-forward forms — and the open world adds Heal, Support, and Regen encounters early. Spend the first two hours chasing wild catches or quest rewards that cover the missing roles before you push story content." },
+          { title: "Follow one evolution line all the way", body: "Use the published Emberpup to Flameruff to Scorchhowl line as your reference chain. Keeping one form in the lineup long enough to advance stages teaches you the pipeline faster than rotating a dozen half-levelled catches." },
+          { title: "Slot the eggs where your roster is thin", body: "The Susuta egg arrives from official-site pre-registration and the Perfect Egg comes from multi-day logins. Give each a slot where your starter is weakest so you can see how it evolves before heavier variants unlock." },
         ],
       },
       {
         id: "starter-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-08-29",
+        title: "Fact boundary — 2026-09-02",
         body:
-          "The Aniimo starter list is subject to change per developer as of 2026-08-29; treat any leaked starter pairings as provisional. The Perfect Egg was a pre-registration reward on aniimo.com; reward availability may shift between beta and launch. Prismana forms are confirmed as a variant layer, but the full roster has not been officially published as of 2026-08-29. Aniimo is a new IP; there is no legacy Aniimo starter list or Prismana catalog to inherit.",
+          "Budclaw, Celestis, Nimbi, Emberpup, and Chirpi are named in the CBR interview and the ComicBook.com preview as Aniimo visible in pre-launch coverage; neither source publishes an official starter-selection screen, so which of them is actually offered as a starter is not announced as of 2026-09-02. Element assignments and combat roles for these specific forms are not announced as of 2026-09-02; the movement notes follow the descriptions in those sources. The Emberpup to Flameruff to Scorchhowl line and the addition of Interlupa are quoted from the CBR interview; per-step evolution requirements are not confirmed as of 2026-09-02. The Susuta egg is the official-site pre-registration claim and the Perfect Egg is a multi-day login reward per aniimo.com; reward availability may shift before launch. Prismana forms are confirmed as a variant layer, but the full roster has not been officially published as of 2026-09-02. Aniimo is a new IP; there is no legacy Aniimo starter list or Prismana catalog to inherit.",
       },
       {
         id: "starter-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo official site](https://www.aniimo.com/) — `official/store` — checked `2026-08-29` — starter framing, pre-registration and Perfect Egg ladder.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-08-29` — open-world creature-catching framing and evolution stages.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-08-29` — starter role and element framing.\n- [Aniidex: Aniimo catalog](https://aniidex.com/) — `community/wiki` — checked `2026-08-29` — orientation only.",
+          "- [Aniimo official site](https://www.aniimo.com/) — `official/store` — checked `2026-09-02` — Prismana Form Aniimo as the Junior Wayfarer pick, the Susuta egg pre-registration claim, and the Perfect Egg multi-day login track.\n- [CBR: Aniimo interview](https://www.cbr.com/aniimo-interview-upcoming-creature-catching-rpg-co-op-gorgeous-visuals/) — `media/interview` — checked `2026-09-02` — names Budclaw as a crab-like burrowing Aniimo, Celestis and Nimbi as flying Aniimo, and states that Emberpup evolves to Flameruff and then Scorchhowl, and now Interlupa too.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-09-02` — names Chirpi as a feisty bird and Emberpup as a fiery little bruiser, plus starter role and element framing.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-02` — open-world creature-catching framing and evolution stages.",
       },
     ],
     faqIds: [
       "starter-which-pick",
+      "starter-named-roster",
+      "starter-emberpup-line",
       "prismana-form-meaning",
       "perfect-egg-pre-register",
       "susuta-egg-replace-starter",
@@ -753,10 +916,11 @@ export const fixedPages: PageContent[] = [
       "fixed-twining-system-en-us",
       "fixed-evolution-and-stages-en-us",
       "fixed-catching-and-aniipods-en-us",
+      "fixed-pre-order-and-editions-en-us",
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-08-29",
+    lastReviewed: "2026-09-02",
   },
   {
     id: "fixed-evolution-and-stages-en-us",
@@ -771,13 +935,13 @@ export const fixedPages: PageContent[] = [
     seoTitle:
       "Aniimo evolution guide: Lumin, Gamma, Nova, and Prismana variants",
     metaDescription:
-      "Understand Aniimo evolution stages (Lumin, Gamma, Nova), weather, regional, and Prismana variants, and how to reach higher forms.",
+      "Understand Aniimo evolution stages (Lumin, Gamma, Nova), the named Emberpup to Flameruff to Scorchhowl line, Closed Beta 3 roster additions, and variant layers.",
     summary:
-      "Aniimo evolution flows Lumin to Gamma to Nova, with weather, regional, Sparkling, and Prismana variants layered on top. Specific evolution conditions are not fully confirmed as of 2026-08-29.",
+      "Aniimo evolution flows Lumin to Gamma to Nova, with weather, regional, Sparkling, and Prismana variants layered on top. Emberpup to Flameruff to Scorchhowl (now with Interlupa) is the one line named end-to-end in coverage, and Closed Beta 3 added Bubbeep, Popapus, Mophling, Sausite plus the Budsquire and Thornblade forms. Specific evolution conditions are not fully confirmed as of 2026-09-02.",
     hero: {
       eyebrow: "Evolution & stages",
       subtitle:
-        "Every Aniimo follows the same Lumin to Gamma to Nova evolution pipeline. Weather, regional, Sparkling, and Prismana variants describe when the form appears, not a separate evolution stage.",
+        "Every Aniimo follows the same Lumin to Gamma to Nova evolution pipeline. Emberpup to Flameruff to Scorchhowl is the named worked example, and Closed Beta 3 widened the roster the pipeline applies to.",
       ctas: [
         { label: "Twining System", href: "/twining-system" },
         { label: "Starter & Prismana", href: "/starter-and-prismana" },
@@ -786,14 +950,14 @@ export const fixedPages: PageContent[] = [
       ],
     },
     quickAnswer:
-      "Aniimo evolution flows Lumin to Gamma to Nova. Weather, regional, Sparkling, and Prismana variants are layered on top of that pipeline; they describe how and when the form appears, not a separate evolution stage. Specific evolution conditions are not fully confirmed as of 2026-08-29.",
+      "Aniimo evolution flows Lumin to Gamma to Nova. The only chain named end-to-end in pre-launch coverage is Emberpup to Flameruff to Scorchhowl, with Interlupa now part of the same family. Weather, regional, Sparkling, and Prismana variants are layered on top of that pipeline; they describe how and when the form appears, not a separate evolution stage. Closed Beta 3 added Bubbeep, Popapus, Mophling, and Sausite as new species plus the Budsquire and Thornblade forms. Specific evolution conditions are not fully confirmed as of 2026-09-02.",
     keyFacts: [
       { label: "Pipeline", value: "Lumin → Gamma → Nova" },
+      { label: "Named line", value: "Emberpup → Flameruff → Scorchhowl (+ Interlupa)" },
       { label: "Variant layers", value: "Weather, regional, Sparkling, Prismana" },
-      { label: "Prismana relation", value: "Same pipeline as standard forms" },
-      { label: "Evolution conditions", value: "Not fully confirmed as of 2026-08-29" },
-      { label: "Higher forms", value: "Reached via encounter conditions or rewards" },
-      { label: "Source base", value: "Pawprint Studio + preview coverage" },
+      { label: "Beta 3 species", value: "Bubbeep, Popapus, Mophling, Sausite" },
+      { label: "Beta 3 forms", value: "Budsquire, Thornblade" },
+      { label: "Evolution conditions", value: "Not fully confirmed as of 2026-09-02" },
     ],
     modules: [
       {
@@ -801,47 +965,83 @@ export const fixedPages: PageContent[] = [
         type: "prose",
         heading: "Lumin → Gamma → Nova pipeline",
         body:
-          "Every Aniimo begins as a Lumin form, the base body you catch or pick at the start. Gamma is the second evolution stage reached through encounter conditions, and Nova is the third and highest standard stage. CBR and ComicBook.com previews describe Gamma and Nova as 'more powerful' variants of the same body, with the visual differences leaning on palette and silhouette rather than a wholesale redesign.\n\nSpecific evolution conditions for moving from Lumin to Gamma and from Gamma to Nova are not fully confirmed as of 2026-08-29. Treat any leaked evolution requirements as provisional.",
+          "Every Aniimo begins as a Lumin form, the base body you catch or pick at the start. Gamma is the second evolution stage reached through encounter conditions, and Nova is the third and highest standard stage. CBR and ComicBook.com previews describe Gamma and Nova as 'more powerful' variants of the same body, with the visual differences leaning on palette and silhouette rather than a wholesale redesign.\n\nSpecific evolution conditions for moving from Lumin to Gamma and from Gamma to Nova are not fully confirmed as of 2026-09-02. Treat any leaked evolution requirements as provisional.",
+      },
+      {
+        id: "evolution-named-line",
+        type: "prose",
+        heading: "Named example: Emberpup → Flameruff → Scorchhowl (+ Interlupa)",
+        body:
+          "Pre-launch coverage names exactly one chain end-to-end. In the CBR interview the developer states that Emberpup evolves to Flameruff and then Scorchhowl, and that Interlupa is now part of that family too. ComicBook.com independently describes Emberpup as a fiery little bruiser with serious attitude and a fan-favourite on the team.\n\nUse it as the reference shape for the pipeline: a base body you meet in the early game, a middle form, a top standard form, and a related family member added later. Interlupa is described as joining the family rather than as a confirmed fourth sequential stage, so do not read it as proof that some lines have four steps.\n\nNo other Aniimo line has published stage names as of 2026-09-02, so any full evolution chart circulating elsewhere is community reconstruction rather than an official table. Starter-side planning for this line lives on the [Aniimo starter and Prismana](/starter-and-prismana) page.",
+      },
+      {
+        id: "evolution-beta-roster",
+        type: "data-table",
+        heading: "Closed Beta 3 roster additions",
+        columns: [
+          { key: "name", label: "Added" },
+          { key: "kind", label: "Kind" },
+          { key: "stageStatus", label: "Stage / line status" },
+        ],
+        rows: [
+          { name: "Bubbeep", kind: "New Aniimo species", stageStatus: "Evolution line not published as of 2026-09-02" },
+          { name: "Popapus", kind: "New Aniimo species", stageStatus: "Evolution line not published as of 2026-09-02" },
+          { name: "Mophling", kind: "New Aniimo species", stageStatus: "Evolution line not published as of 2026-09-02" },
+          { name: "Sausite", kind: "New Aniimo species", stageStatus: "Evolution line not published as of 2026-09-02" },
+          { name: "Budsquire", kind: "Additional creature form", stageStatus: "Which body it belongs to is not published as of 2026-09-02" },
+          { name: "Thornblade", kind: "Additional creature form", stageStatus: "Which body it belongs to is not published as of 2026-09-02" },
+          { name: "Bubbask", kind: "Co-op boss creature", stageStatus: "Boss encounter, not a catchable evolution line as published" },
+          { name: "Coraliz", kind: "Co-op boss creature", stageStatus: "Boss encounter, not a catchable evolution line as published" },
+        ],
+      },
+      {
+        id: "evolution-beta-context",
+        type: "prose",
+        heading: "What the Beta 3 additions mean for the pipeline",
+        body:
+          "Twisted Voxel's Closed Beta 3 coverage lists Bubbeep, Popapus, Mophling, and Sausite as new Aniimo species and Budsquire and Thornblade as additional creature forms, alongside the co-op bosses Bubbask and Coraliz. The names widen the roster the Lumin to Gamma to Nova pipeline applies to; they do not add a new stage to it.\n\nThe distinction matters when you read community lists. A 'new species' is a new base body that should have its own line, while an 'additional form' is published as a form rather than as a named stage, and the source does not say which body Budsquire or Thornblade belongs to. Bubbask and Coraliz are described as creatures you team up to fight, so treat them as encounter content until the developer publishes catch or evolution data. Beta-build context for all of these is on the [Aniimo closed beta and sign-ups](/closed-beta-and-signups) page.",
       },
       {
         id: "evolution-variants",
         type: "prose",
         heading: "Weather, regional, Sparkling, and Prismana variants",
         body:
-          "Beyond the Lumin to Nova pipeline, four variant layers describe how a given Aniimo appears:\n\n- Weather variants tie to specific weather conditions such as rain, snow, fog, or aurora events. They evolve through the same pipeline.\n- Regional variants tie to specific regions of the Idyll continent and Astra. They are typically harder to find than standard forms.\n- Sparkling variants are rare palette-swapped forms with a shifted appearance. They are not yet a confirmed roster as of 2026-08-29.\n- Prismana variants are alternate-color Aniimo with slightly different stats. They are not a separate evolution stage and evolve along the same pipeline.",
+          "Beyond the Lumin to Nova pipeline, four variant layers describe how a given Aniimo appears:\n\n- Weather variants tie to specific weather conditions such as rain, snow, fog, or aurora events. They evolve through the same pipeline.\n- Regional variants tie to specific regions of the Idyll continent and Astra. They are typically harder to find than standard forms.\n- Sparkling variants are rare palette-swapped forms with a shifted appearance. They are not yet a confirmed roster as of 2026-09-02.\n- Prismana variants are alternate-color Aniimo with slightly different stats. They are not a separate evolution stage and evolve along the same pipeline.",
       },
       {
         id: "evolution-prismana",
         type: "prose",
         heading: "How Prismana fits the evolution pipeline",
         body:
-          "Prismana is its own visual variant, while weather, regional, and Sparkling variants describe when the form appears. A Prismana form can still evolve from Lumin to Gamma to Nova, with Prismana remaining the visual layer. Aniidex and community references track known Prismana encounters, but as of 2026-08-29 the official list is subject to change per developer.",
+          "Prismana is its own visual variant, while weather, regional, and Sparkling variants describe when the form appears. A Prismana form can still evolve from Lumin to Gamma to Nova, with Prismana remaining the visual layer — a Prismana Emberpup would run the same Flameruff and Scorchhowl steps while keeping its alternate colouring. Aniidex and community references track known Prismana encounters, but as of 2026-09-02 the official list is subject to change per developer.",
       },
       {
         id: "evolution-reach",
         type: "prose",
         heading: "How to reach higher forms",
         body:
-          "Higher forms are reached through encounter conditions, weather, regional location, and reward tracks. Specific triggers are not fully confirmed as of 2026-08-29, so the safest approach is to keep a balanced roster of forms and visit each region under its native weather conditions to maximize variant encounters.",
+          "Higher forms are reached through encounter conditions, weather, regional location, and reward tracks. Specific triggers are not fully confirmed as of 2026-09-02, so the safest approach is to keep a balanced roster of forms and visit each region under its native weather conditions to maximize variant encounters.",
       },
       {
         id: "evolution-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-08-29",
+        title: "Fact boundary — 2026-09-02",
         body:
-          "Specific evolution conditions for moving between Lumin, Gamma, and Nova are not fully confirmed as of 2026-08-29. Sparkling variant roster is not officially published as of 2026-08-29. Prismana forms are confirmed as a variant layer but the full roster has not been officially published. Aniimo is a new IP from Pawprint Studio; there is no legacy Aniimo evolution table to inherit.",
+          "The Emberpup to Flameruff to Scorchhowl line and Interlupa joining that family are quoted from the CBR interview; per-step requirements for those evolutions are not confirmed as of 2026-09-02. The Closed Beta 3 names come from Twisted Voxel's beta coverage and describe the beta roster; their elements, roles, stages, and evolution lines are not published as of 2026-09-02, and whether every one ships at launch is not announced. Specific evolution conditions for moving between Lumin, Gamma, and Nova are not fully confirmed as of 2026-09-02. The Sparkling variant roster is not officially published as of 2026-09-02. Prismana forms are confirmed as a variant layer but the full roster has not been officially published. Aniimo is a new IP from Pawprint Studio; there is no legacy Aniimo evolution table to inherit.",
       },
       {
         id: "evolution-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-08-29` — evolution stage framing.\n- [CBR: Aniimo interview](https://www.cbr.com/aniimo-interview-upcoming-creature-catching-rpg-co-op-gorgeous-visuals/) — `media/interview` — checked `2026-08-29` — evolution stage coverage.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-08-29` — variant layer context.\n- [Zeroluck: Aniimo gameplay](https://zeroluck.gg/aniimo/gameplay) — `community/wiki` — checked `2026-08-29` — orientation only.",
+          "- [CBR: Aniimo interview](https://www.cbr.com/aniimo-interview-upcoming-creature-catching-rpg-co-op-gorgeous-visuals/) — `media/interview` — checked `2026-09-02` — states that Emberpup evolves to Flameruff and then Scorchhowl, and now Interlupa too; also names Budclaw, Celestis, and Nimbi.\n- [Twisted Voxel: Aniimo Closed Beta 3](https://twistedvoxel.com/aniimo-set-for-q3-2026-launch-new-beta-announced/) — `media/interview` — checked `2026-09-02` — names Bubbeep, Popapus, Mophling, and Sausite as new species, Budsquire and Thornblade as additional forms, and Bubbask and Coraliz as co-op bosses.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-02` — evolution stage framing.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-09-02` — variant layer context and Emberpup description.",
       },
     ],
     faqIds: [
       "evolution-pipeline",
+      "evolution-emberpup-line",
+      "evolution-beta-additions",
       "evolution-prismana",
       "evolution-sparkling",
       "evolution-trigger",
@@ -851,10 +1051,11 @@ export const fixedPages: PageContent[] = [
       "fixed-starter-and-prismana-en-us",
       "fixed-catching-and-aniipods-en-us",
       "fixed-elements-and-roles-en-us",
+      "fixed-closed-beta-and-signups-en-us",
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-08-29",
+    lastReviewed: "2026-09-02",
   },
   {
     id: "fixed-catching-and-aniipods-en-us",
@@ -1160,27 +1361,28 @@ export const fixedPages: PageContent[] = [
     seoTitle:
       "Aniimo Heist of the Lost Isles: 3-player squad PvPvE mode",
     metaDescription:
-      "Learn how Aniimo's Heist of the Lost Isles PvPvE mode works, including the 3-player squad, real-time searching, and battle objectives.",
+      "Build an Aniimo Heist of the Lost Isles squad: 3-player role coverage, the six-team Diamond Egg Heist format, egg-cache priority, and Bubbask and Coraliz co-op bosses.",
     summary:
-      "Heist of the Lost Isles is Aniimo's headline seasonal PvPvE mode. Matches use a 3-player squad, real-time searching for high-value egg caches, and live combat against both environment enemies and rival squads. Reward structure and rank system are not announced as of 2026-08-29.",
+      "Heist of the Lost Isles is Aniimo's headline seasonal PvPvE mode, built on a 3-player squad that searches for high-value egg caches while fighting environment enemies and rival squads. The Diamond Egg Heist scales that up to six teams of three contesting one diamond egg, and Closed Beta 3 added the coordinated co-op bosses Bubbask and Coraliz. Reward structure and rank system are not announced as of 2026-09-02.",
     hero: {
       eyebrow: "Heist of the Lost Isles",
       subtitle:
-        "Seasonal 3-player squad PvPvE mode with real-time egg searching and rival-squad combat. Reward structure and rank system are not announced as of 2026-08-29.",
+        "Seasonal 3-player squad PvPvE with real-time egg searching, plus the Diamond Egg Heist where up to six teams of three contest a single diamond egg. Role coverage, element coverage, and cache priority decide close matches; the reward structure is still unannounced.",
       ctas: [
         { label: "Elements & Roles", href: "/elements-and-roles" },
         { label: "Idyll Regions", href: "/idyll-regions" },
+        { label: "Closed Beta", href: "/closed-beta-and-signups" },
       ],
     },
     quickAnswer:
-      "Heist of the Lost Isles is Aniimo's headline seasonal PvPvE mode. Matches use a 3-player squad, with real-time searching for high-value egg caches and live combat against both environment enemies and rival squads. Reward structure and rank system are not announced as of 2026-08-29.",
+      "Heist of the Lost Isles is Aniimo's headline seasonal PvPvE mode. Matches use a 3-player squad that searches in real time for high-value egg caches while fighting environment enemies and rival squads. The Diamond Egg Heist variant added in Closed Beta 3 pits up to six teams of three players against one another: teams must secure a valuable diamond egg and escort it safely while rival groups try to steal it. Build the squad around role coverage (one DPS, one Heal or Support, one Break or Regen), spread element coverage across the three players, and decide cache priority before the match. Reward structure and rank system are not announced as of 2026-09-02.",
     keyFacts: [
       { label: "Mode", value: "PvPvE seasonal" },
       { label: "Squad size", value: "3 players" },
-      { label: "Objectives", value: "Search egg caches + battle rival squads" },
-      { label: "Rotation", value: "Seasonal" },
-      { label: "Reward structure", value: "Not announced as of 2026-08-29" },
-      { label: "Rank system", value: "Not announced as of 2026-08-29" },
+      { label: "Diamond Egg Heist", value: "Up to six teams of three" },
+      { label: "Objectives", value: "Search egg caches, secure and escort the diamond egg" },
+      { label: "Co-op bosses", value: "Bubbask, Coraliz (coordinated group play)" },
+      { label: "Reward structure", value: "Not announced as of 2026-09-02" },
     ],
     modules: [
       {
@@ -1188,21 +1390,52 @@ export const fixedPages: PageContent[] = [
         type: "prose",
         heading: "3-player squad basics",
         body:
-          "Each Heist match uses a 3-player squad. The squad moves together through the Lost Isles region, splitting only when objectives call for parallel searches. ComicBook.com preview coverage describes the squad as the natural combat unit; solo play is supported through the open-world PvE loop rather than Heist.",
+          "Each Heist match uses a 3-player squad. The squad moves together through the Lost Isles region, splitting only when objectives call for parallel searches. ComicBook.com preview coverage describes the squad as the natural combat unit; solo play is supported through the open-world PvE loop rather than Heist.\n\nThree slots is a tight budget: every role you take is a role no one else can cover, so decide composition before the match instead of improvising after the first fight.",
+      },
+      {
+        id: "heist-diamond-egg",
+        type: "prose",
+        heading: "Diamond Egg Heist: six teams of three",
+        body:
+          "The Diamond Egg Heist, shown in Closed Beta 3, scales the squad format into a larger competitive bracket. Twisted Voxel describes it as pitting up to six teams of three players against one another in a competitive objective-based challenge, where teams must secure a valuable diamond egg and safely escort it while defending against rival groups attempting to steal it.\n\nThat changes the shape of the match in two ways. First, the population: with up to eighteen players on one objective, contested fights are the default rather than the exception, so a squad that can disengage matters as much as one that can win a straight fight. Second, the objective: securing the egg is only the first half — the escort leg is when your squad is slowest, most predictable, and most exposed to the other five teams.\n\nWhether the Diamond Egg Heist is a permanent rotation inside Heist of the Lost Isles or a separate seasonal mode is not announced as of 2026-09-02; Twisted Voxel's beta coverage does not tie the two names together.",
       },
       {
         id: "heist-objectives",
         type: "prose",
         heading: "Real-time search and battle objectives",
         body:
-          "The core Heist objective is real-time searching for high-value egg caches scattered through the Lost Isles. Squads compete against rival squads for the same caches while environment enemies pressure both teams. The combination of PvE threat and PvP competition defines the mode's pacing.\n\nThe reward structure, including rare unlocks, currency payouts, and rank-based bonuses, is not announced as of 2026-08-29.",
+          "The core Heist objective is real-time searching for high-value egg caches scattered through the Lost Isles. Squads compete against rival squads for the same caches while environment enemies pressure both teams. The combination of PvE threat and PvP competition defines the mode's pacing.\n\nCache priority is the practical decision: caches that sit on open ground are cheap to grab but expensive to hold, while caches behind PvE pressure cost time but tend to be uncontested early. In a six-team Diamond Egg Heist, the diamond egg itself is the highest-value target on the map, so expect the remaining caches to go quiet once it is claimed.\n\nThe reward structure, including rare unlocks, currency payouts, and rank-based bonuses, is not announced as of 2026-09-02.",
+      },
+      {
+        id: "heist-role-map",
+        type: "data-table",
+        heading: "Mapping the five roles onto Heist phases",
+        columns: [
+          { key: "phase", label: "Phase" },
+          { key: "pressure", label: "What pressures you" },
+          { key: "roles", label: "Roles that carry the phase" },
+        ],
+        rows: [
+          { phase: "Search", pressure: "Clock and map coverage; light PvE contact", roles: "Support for movement and vision uptime; Regen to keep the squad topped up without stopping" },
+          { phase: "PvE clear at a cache", pressure: "Environment enemies guarding the cache", roles: "DPS to shorten the clear; Break to stagger anything that can interrupt the grab" },
+          { phase: "Contested cache fight", pressure: "A rival squad arriving mid-clear", roles: "Break to disrupt the enemy opener; DPS to punish the stagger; Heal to survive being caught between PvE and PvP" },
+          { phase: "Diamond egg secure", pressure: "Up to five rival teams converging on one objective", roles: "Break plus DPS to contest the pick-up; Heal for the burst window" },
+          { phase: "Escort", pressure: "Slow, predictable route with rival interception", roles: "Heal and Regen to survive sustained chip damage; Support to keep the carrier moving; Break to peel interceptors" },
+        ],
       },
       {
         id: "heist-tips",
         type: "prose",
         heading: "Role and element tips for Heist squads",
         body:
-          "A balanced Heist squad typically includes one DPS, one healer or support, and one Break or Regen slot. Element coverage matters because both environment enemies and rival squads lean on a mix of elements, and matching element coverage can swing the fight in close encounters.\n\nFor more on the role and element taxonomy, see the [Aniimo elements and roles](/elements-and-roles) page.",
+          "A balanced Heist squad typically includes one DPS, one healer or support, and one Break or Regen slot. That covers the three things a match asks for: a damage answer, a survival answer, and a disruption answer.\n\nElement coverage is the second axis. Because both environment enemies and rival squads lean on a mix of elements, three players stacking one element gives a rival squad a single answer to all of you. Spread coverage across the squad rather than optimizing each player individually, and remember that Twining swaps you into a caught Aniimo's element mid-fight, so each player's roster is really a small pool of element options rather than one fixed type.\n\nDuring the search phase, use element coverage to pick which caches you take first: send the squad at caches whose guarding enemies your merged forms answer cleanly, and leave the ones you would have to grind through until the map thins out. Specific element-versus-element multipliers are not announced as of 2026-09-02, so treat coverage as insurance rather than as a calculated advantage. For the role and element taxonomy, see the [Aniimo elements and roles](/elements-and-roles) page.",
+      },
+      {
+        id: "heist-co-op-bosses",
+        type: "prose",
+        heading: "Bubbask and Coraliz: coordinated co-op encounters",
+        body:
+          "Closed Beta 3 added two boss creatures, Bubbask and Coraliz, which Twisted Voxel describes as creatures players team up to battle, with challenges designed around group play. They are the clearest signal of what a coordinated squad is expected to handle: encounters built for a group rather than for a solo player with an AI-controlled roster.\n\nFor squad building, that reinforces the same three-slot logic — a Break slot to interrupt boss patterns, a Heal or Regen slot to survive them, and a DPS slot to convert the openings. Their placement is the open question: the source presents them as co-op boss content added in the beta build and does not say whether they appear inside Heist of the Lost Isles, the Diamond Egg Heist, or a separate co-op activity as of 2026-09-02.\n\nThe full Closed Beta 3 addition list, including the trading system and the new creature roster, is on the [Aniimo closed beta and sign-ups](/closed-beta-and-signups) page.",
       },
       {
         id: "heist-region",
@@ -1215,30 +1448,35 @@ export const fixedPages: PageContent[] = [
         id: "heist-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-08-29",
+        title: "Fact boundary — 2026-09-02",
         body:
-          "Reward structure and rank system for Heist of the Lost Isles are not announced as of 2026-08-29. Solo play support and match length are not announced as of 2026-08-29. The Lost Isles map layout is not announced as of 2026-08-29.",
+          "The Diamond Egg Heist format (up to six teams of three, secure and escort the diamond egg) and the co-op bosses Bubbask and Coraliz come from Twisted Voxel's Closed Beta 3 coverage and describe the beta build; the source does not state that either is part of Heist of the Lost Isles, and whether they ship unchanged at launch is not announced as of 2026-09-02. Reward structure and rank system for Heist of the Lost Isles are not announced as of 2026-09-02. The phase-by-phase role mapping and cache-priority guidance on this page are reasoning from the confirmed 3-player squad, the five-role taxonomy, and the published objectives — not an official strategy guide. Specific element-versus-element multipliers, boss mechanics, match length, solo play support, and the Lost Isles map layout are not announced as of 2026-09-02.",
       },
       {
         id: "heist-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-08-29` — Heist of the Lost Isles mode framing.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-08-29` — squad and objective coverage.",
+          "- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-02` — Heist of the Lost Isles mode framing and 3-player co-op.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-09-02` — squad-as-combat-unit and objective coverage.\n- [Twisted Voxel: Aniimo Closed Beta 3](https://twistedvoxel.com/aniimo-set-for-q3-2026-launch-new-beta-announced/) — `media/interview` — checked `2026-09-02` — confirms the Diamond Egg Heist as up to six teams of three securing and escorting a diamond egg, and Bubbask and Coraliz as co-op bosses designed around group play.\n- [Aniimo official site](https://www.aniimo.com/) — `official/store` — checked `2026-09-02` — five-role taxonomy used for the phase mapping.",
       },
     ],
     faqIds: [
       "heist-squad-size",
+      "heist-diamond-egg-format",
+      "heist-squad-composition",
+      "heist-co-op-bosses",
       "heist-rewards",
       "heist-solo-play",
     ],
     relatedPageIds: [
       "fixed-elements-and-roles-en-us",
       "fixed-idyll-regions-en-us",
+      "fixed-closed-beta-and-signups-en-us",
+      "fixed-twining-system-en-us",
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-08-29",
+    lastReviewed: "2026-09-02",
   },
   {
     id: "fixed-homeland-and-housing-en-us",
