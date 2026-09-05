@@ -1,0 +1,202 @@
+[
+  {
+    "id": "home",
+    "translationKey": "home",
+    "locale": "en-US",
+    "routeKind": "home",
+    "url": "/",
+    "alternates": {
+      "en-US": "/"
+    }
+  },
+  {
+    "id": "about",
+    "translationKey": "about",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/about",
+    "alternates": {
+      "en-US": "/about"
+    }
+  },
+  {
+    "id": "fixed-catching-and-aniipods-en-us",
+    "translationKey": "catching-and-aniipods",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/catching-and-aniipods",
+    "alternates": {
+      "en-US": "/catching-and-aniipods"
+    }
+  },
+  {
+    "id": "fixed-closed-beta-and-signups-en-us",
+    "translationKey": "closed-beta-and-signups",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/closed-beta-and-signups",
+    "alternates": {
+      "en-US": "/closed-beta-and-signups"
+    }
+  },
+  {
+    "id": "contact",
+    "translationKey": "contact",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/contact",
+    "alternates": {
+      "en-US": "/contact"
+    }
+  },
+  {
+    "id": "fixed-elements-and-roles-en-us",
+    "translationKey": "elements-and-roles",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/elements-and-roles",
+    "alternates": {
+      "en-US": "/elements-and-roles"
+    }
+  },
+  {
+    "id": "fixed-evolution-and-stages-en-us",
+    "translationKey": "evolution-and-stages",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/evolution-and-stages",
+    "alternates": {
+      "en-US": "/evolution-and-stages"
+    }
+  },
+  {
+    "id": "faq",
+    "translationKey": "faq",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/faq",
+    "alternates": {
+      "en-US": "/faq"
+    }
+  },
+  {
+    "id": "fixed-heist-of-the-lost-isles-en-us",
+    "translationKey": "heist-of-the-lost-isles",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/heist-of-the-lost-isles",
+    "alternates": {
+      "en-US": "/heist-of-the-lost-isles"
+    }
+  },
+  {
+    "id": "fixed-homeland-and-housing-en-us",
+    "translationKey": "homeland-and-housing",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/homeland-and-housing",
+    "alternates": {
+      "en-US": "/homeland-and-housing"
+    }
+  },
+  {
+    "id": "fixed-idyll-regions-en-us",
+    "translationKey": "idyll-regions",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/idyll-regions",
+    "alternates": {
+      "en-US": "/idyll-regions"
+    }
+  },
+  {
+    "id": "fixed-platforms-and-versions-en-us",
+    "translationKey": "platforms-and-versions",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/platforms-and-versions",
+    "alternates": {
+      "en-US": "/platforms-and-versions"
+    }
+  },
+  {
+    "id": "fixed-pre-order-and-editions-en-us",
+    "translationKey": "pre-order-and-editions",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/pre-order-and-editions",
+    "alternates": {
+      "en-US": "/pre-order-and-editions"
+    }
+  },
+  {
+    "id": "privacy-policy",
+    "translationKey": "privacy-policy",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/privacy-policy",
+    "alternates": {
+      "en-US": "/privacy-policy"
+    }
+  },
+  {
+    "id": "fixed-release-overview-en-us",
+    "translationKey": "release-overview",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/release-overview",
+    "alternates": {
+      "en-US": "/release-overview"
+    }
+  },
+  {
+    "id": "fixed-review-and-reception-en-us",
+    "translationKey": "review-and-reception",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/review-and-reception",
+    "alternates": {
+      "en-US": "/review-and-reception"
+    }
+  },
+  {
+    "id": "fixed-starter-and-prismana-en-us",
+    "translationKey": "starter-and-prismana",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/starter-and-prismana",
+    "alternates": {
+      "en-US": "/starter-and-prismana"
+    }
+  },
+  {
+    "id": "fixed-system-requirements-en-us",
+    "translationKey": "system-requirements",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/system-requirements",
+    "alternates": {
+      "en-US": "/system-requirements"
+    }
+  },
+  {
+    "id": "terms",
+    "translationKey": "terms",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/terms",
+    "alternates": {
+      "en-US": "/terms"
+    }
+  },
+  {
+    "id": "fixed-twining-system-en-us",
+    "translationKey": "twining-system",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/twining-system",
+    "alternates": {
+      "en-US": "/twining-system"
+    }
+  }
+]

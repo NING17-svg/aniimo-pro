@@ -6,7 +6,7 @@ export const faqItems: FAQItem[] = [
     id: "home-when-release",
     question: "When does Aniimo release?",
     answer:
-      "The game releases globally on 15-16 September 2026, depending on time zone. Steam lists 15 September 2026, and regional coverage reports a 16 September 2026 unlock for Asia-Pacific players.",
+      "Aniimo launches in two confirmed September 2026 windows. PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC (Steam and Epic) launch on 16 September 2026; iOS and Android launch one week later, on 23 September 2026. The earlier single 15-16 September 2026 window is superseded.",
     pageIds: ["home", "faq"],
     category: "release",
     schemaEligible: true,
@@ -36,7 +36,7 @@ export const faqItems: FAQItem[] = [
     id: "home-platforms",
     question: "What platforms run Aniimo?",
     answer:
-      "Aniimo launches on PS5, Xbox Series X|S, PC via Steam and Epic Games Store, iOS, and Android. Cloud-streaming and a Nintendo Switch version are not part of the confirmed launch lineup as of 2026-08-29.",
+      "Aniimo launches on PS5, Xbox Series X|S, Xbox Cloud Gaming, PC via Steam and Epic Games Store, iOS, and Android. PS5, Xbox, Xbox Cloud, and PC ship on 16 September 2026; iOS and Android ship one week later, on 23 September 2026. A Nintendo Switch version is not announced as of 2026-09-05.",
     pageIds: ["home", "faq"],
     category: "platform",
     schemaEligible: true,
@@ -57,7 +57,17 @@ export const faqItems: FAQItem[] = [
     id: "release-when-exact",
     question: "When exactly does Aniimo release?",
     answer:
-      "Aniimo releases 15-16 September 2026. Steam lists 15 September; APAC coverage lists 16 September for the regional unlock.",
+      "Aniimo releases in two windows in September 2026. PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC (Steam and Epic) launch on 16 September 2026; iOS and Android launch on 23 September 2026. The earlier 15-16 September 2026 single-window framing is superseded.",
+    pageIds: ["fixed-release-overview-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "release-mobile-date",
+    question: "When does Aniimo release on iOS and Android?",
+    answer:
+      "Aniimo releases on iOS and Android on 23 September 2026, one week after the PS5, Xbox, Xbox Cloud, and PC launch on 16 September 2026.",
     pageIds: ["fixed-release-overview-en-us"],
     category: "release",
     schemaEligible: true,
@@ -87,7 +97,7 @@ export const faqItems: FAQItem[] = [
     id: "release-language-support",
     question: "What languages does Aniimo support?",
     answer:
-      "The launch interface supports English plus twelve non-English languages (Simplified Chinese, Traditional Chinese, Japanese, Korean, French, German, Spanish (Latin America), Portuguese (Brazil), Russian, Indonesian, Thai, Vietnamese). Full audio and subtitle support outside English are not announced as of 2026-08-29.",
+      "The launch interface supports English plus twelve non-English languages (Simplified Chinese, Traditional Chinese, Japanese, Korean, French, German, Spanish (Latin America), Portuguese (Brazil), Russian, Indonesian, Thai, Vietnamese). The main-story voiceover ships in multiple languages alongside English, with nine interface languages (Simplified / Traditional Chinese, Japanese, Korean, French, German, Spanish (Latin America), Portuguese (Brazil)) receiving main-story VO. Russian, Indonesian, Thai, and Vietnamese remain interface-only at launch.",
     pageIds: ["fixed-release-overview-en-us"],
     category: "release",
     schemaEligible: true,
@@ -128,7 +138,17 @@ export const faqItems: FAQItem[] = [
     id: "platforms-cloud-streaming",
     question: "Does Aniimo support cloud streaming?",
     answer:
-      "Cloud-streaming availability is not announced as of 2026-08-29. The launch lineup covers direct installs only.",
+      "Xbox Cloud Gaming is a confirmed day-one track on 16 September 2026. GeForce Now and PlayStation Plus Premium streaming availability are not announced as of 2026-09-05.",
+    pageIds: ["fixed-platforms-and-versions-en-us"],
+    category: "platform",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "platforms-xbox-cloud",
+    question: "Does Aniimo run on Xbox Cloud Gaming?",
+    answer:
+      "Yes. Aniimo is a confirmed day-one title on Xbox Cloud Gaming alongside the direct Xbox Series X|S install, both launching on 16 September 2026.",
     pageIds: ["fixed-platforms-and-versions-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -348,6 +368,36 @@ export const faqItems: FAQItem[] = [
     schemaEligible: true,
     sourceStatus: "official",
   },
+  {
+    id: "twining-rune-system-removed",
+    question: "Was the Aniimo rune system removed?",
+    answer:
+      "Yes. The 2026-09-03 dev letter removed the carried-item rune system, including random rune slots and the per-creature Rune Slot, in favor of a simplified training layer. Earlier coverage and pre-launch material that described a rune-equipped Aniipod is superseded.",
+    pageIds: ["fixed-twining-system-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "twining-training-simplification",
+    question: "What replaced the Aniimo rune system?",
+    answer:
+      "A simplified training layer replaced the rune system. Capability unlocks and stat growth now sit on the simplified training progression rather than on rune drops, as part of the same 2026-09-03 dev-letter rework that introduced the Prismana lucky strike flow and the Umbral Aniimo via Wild Surges.",
+    pageIds: ["fixed-twining-system-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "twining-capability-awakening-reset",
+    question: "Can I reset Aniimo Capability Awakening?",
+    answer:
+      "Yes. Under the 2026-09-03 dev letter, Capability Awakening can be reset for Aniimo below level 60 without penalty, so players can re-plan capability allocations on early-game forms.",
+    pageIds: ["fixed-twining-system-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
   // Starter and Prismana
   {
     id: "starter-which-pick",
@@ -383,7 +433,37 @@ export const faqItems: FAQItem[] = [
     id: "prismana-form-meaning",
     question: "What is a Prismana form in Aniimo?",
     answer:
-      "A Prismana form is an alternate-color variant of an Aniimo with a shifted palette and slightly different stats. It follows the same Lumin to Gamma to Nova evolution path as a standard form.",
+      "A Prismana form is an alternate-color variant of an Aniimo with a shifted palette and slightly different stats. It follows the same Lumin to Gamma to Nova evolution path as a standard form. Under the 2026-09-03 dev letter, Prismana catches resolve through a flat-base trigger chance plus a lucky strike on season-exclusive spawn windows.",
+    pageIds: ["fixed-starter-and-prismana-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "prismana-flat-base-trigger",
+    question: "How do Prismana encounters trigger in Aniimo?",
+    answer:
+      "Prismana encounters trigger on a flat-base chance that fires during a catch attempt against an eligible wild form. The flat-base chance replaces the older 'rare catalog of Prismana variants' framing.",
+    pageIds: ["fixed-starter-and-prismana-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "prismana-lucky-strike",
+    question: "What is the Aniimo Prismana lucky strike?",
+    answer:
+      "Lucky strike is the catching-side roll that lands a Prismana when the flat-base trigger fires. A successful lucky strike resolves the encounter as a Prismana catch; a failed lucky strike on the same catch counts as a normal catch without the Prismana outcome. The exact trigger value is not announced as of 2026-09-05.",
+    pageIds: ["fixed-starter-and-prismana-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "prismana-season-spawn",
+    question: "Are Prismana encounters season-exclusive?",
+    answer:
+      "Yes. The 2026-09-03 dev letter reworked Prismana encounters onto season-exclusive spawn windows during which the flat-base trigger is active for eligible forms. Season-exclusive spawns run alongside — not in place of — the standard weather, regional, and Sparkling variant layers.",
     pageIds: ["fixed-starter-and-prismana-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -454,8 +534,28 @@ export const faqItems: FAQItem[] = [
     id: "evolution-sparkling",
     question: "What is a Sparkling variant?",
     answer:
-      "A Sparkling variant is a rare palette-swapped form with a shifted appearance. The full Sparkling roster is not officially published as of 2026-09-02.",
+      "A Sparkling variant is a rare palette-swapped form with a shifted appearance. The full Sparkling roster is not officially published as of 2026-09-05.",
     pageIds: ["fixed-evolution-and-stages-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "evolution-umbral-variant",
+    question: "What is the Aniimo Umbral variant?",
+    answer:
+      "Umbral is a top-end visual variant introduced in the 2026-09-03 dev letter, with a distinctive coloration and a Perfect Potential stat outcome. Umbral forms are reached through Wild Surges and rare open-world encounters, and they still evolve through the Lumin to Gamma to Nova pipeline while keeping the Umbral colouring.",
+    pageIds: ["fixed-evolution-and-stages-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "evolution-legendary-irisalis",
+    question: "How do I catch Irisalis in Aniimo?",
+    answer:
+      "Irisalis is a Legendary Aniimo caught through a redesigned token-craft flow: gather Legendary Aniipod tokens from exploration and story content, craft a personal Legendary Aniipod, trigger the one-time exclusive Irisalis encounter, defeat Irisalis in combat, and throw the crafted Legendary Aniipod to secure the catch. The flow replaces the earlier gacha-style ball-spam loop.",
+    pageIds: ["fixed-evolution-and-stages-en-us", "fixed-catching-and-aniipods-en-us"],
     category: "gameplay",
     schemaEligible: true,
     sourceStatus: "official",
@@ -506,6 +606,36 @@ export const faqItems: FAQItem[] = [
     question: "What is the sneak bonus?",
     answer:
       "Approaching a wild Aniimo without alerting it grants a sneak bonus to the catch chance.",
+    pageIds: ["fixed-catching-and-aniipods-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "catch-sparkling-cube-perfect-potential",
+    question: "Does the Sparkling Cube guarantee Perfect Potential?",
+    answer:
+      "Yes. Under the 2026-09-03 dev letter, any catch resolved through a launch-day Sparkling Cube lands on the maximum individual-values spread for the resulting form, so every Sparkling Cube outcome is a top-stat catch.",
+    pageIds: ["fixed-catching-and-aniipods-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "catch-legendary-aniipod-craft",
+    question: "How do I craft a Legendary Aniipod in Aniimo?",
+    answer:
+      "Legendary Aniipods are crafted at the Legendary Aniipod bench from Legendary tokens earned through exploration and story content. The crafted Aniipod is the personal capture device you throw to resolve the Legendary encounter — for Irisalis specifically, the encounter is one-time and exclusive.",
+    pageIds: ["fixed-catching-and-aniipods-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "catch-irisalis-flow",
+    question: "Can I win the Irisalis encounter on the first try?",
+    answer:
+      "Yes. The 2026-09-03 dev letter put Irisalis on a deterministic token-craft flow: gather tokens, craft a personal Legendary Aniipod, trigger the one-time exclusive encounter, defeat Irisalis, and throw the crafted Aniipod. Because the Aniipod is crafted rather than random, players who plan ahead can win Irisalis on the first try.",
     pageIds: ["fixed-catching-and-aniipods-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -628,7 +758,17 @@ export const faqItems: FAQItem[] = [
     id: "heist-solo-play",
     question: "Can I play Heist of the Lost Isles solo?",
     answer:
-      "Solo play support is not announced as of 2026-09-02. Solo play is supported through the open-world PvE loop rather than Heist.",
+      "Solo play support is not announced as of 2026-09-05. Solo play is supported through the open-world PvE loop rather than Heist.",
+    pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "heist-chaos-mode",
+    question: "What is Aniimo Heist Chaos Mode?",
+    answer:
+      "Chaos Mode is a new mode layered on the six-team Diamond Egg Heist format. It adds a wider egg-type pool and rebalances squad and element priorities toward higher-pressure contested-cache play, with the Break slot in particular gaining importance.",
     pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
     category: "gameplay",
     schemaEligible: true,
@@ -659,7 +799,47 @@ export const faqItems: FAQItem[] = [
     id: "homeland-region-placement",
     question: "Where can I place my Homeland?",
     answer:
-      "Your Homeland sits in one of the Idyll regions. Placement rules and region limits are not announced as of 2026-08-29.",
+      "Your Homeland sits in one of the Idyll regions. Placement rules and region limits are not announced as of 2026-09-05.",
+    pageIds: ["fixed-homeland-and-housing-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "homeland-multi-area",
+    question: "Can I build multiple areas in my Aniimo Homeland?",
+    answer:
+      "Yes. The 2026-09-03 dev letter expanded the Homeland into a multi-area base where houses, gardens, RV bays, and social spaces each have their own buildable footprint.",
+    pageIds: ["fixed-homeland-and-housing-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "homeland-furniture-codes",
+    question: "How do I share Aniimo furniture layouts?",
+    answer:
+      "Furniture selections and full area layouts are packaged into a shareable group code. A friend can paste the code into their own multi-area base to inherit the same arrangement; the receiving player still needs the underlying furniture pieces in their own catalog for the layout to render fully.",
+    pageIds: ["fixed-homeland-and-housing-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "homeland-petting-ai",
+    question: "Can I pet Home Aniimo in Aniimo?",
+    answer:
+      "Yes. The 2026-09-03 dev letter introduced a Home Aniimo petting AI that reacts to player presence and to furniture state inside the Homeland. Petting is a Homeland-only behaviour and does not extend into open-world exploration.",
+    pageIds: ["fixed-homeland-and-housing-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "homeland-rv-dispatch-prismana-eggs",
+    question: "Can the Aniimo RV return Prismana eggs?",
+    answer:
+      "Yes. Under the 2026-09-03 dev letter, RV dispatch routes may return Prismana-trait eggs, so the RV is now a planned input into the Prismana catch flow. Specific routes, per-route egg tables, and Prismana-trait rates are not announced as of 2026-09-05.",
     pageIds: ["fixed-homeland-and-housing-en-us"],
     category: "gameplay",
     schemaEligible: true,

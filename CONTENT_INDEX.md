@@ -19,6 +19,14 @@ hreflang, sitemap, and route-manifest validation.
 | `/contact` | `src/data/pages/site-pages.ts` | Utility | contact Template Game Guide | Corrections and source updates | About | Trust | Contact channel pending. |
 | `/privacy-policy` | `src/data/pages/site-pages.ts` | Legal | privacy policy | Privacy and analytics | Terms | Trust | GA4 only when configured. |
 | `/terms` | `src/data/pages/site-pages.ts` | Legal | terms of use | Site use expectations | Privacy Policy | Trust | Keep unofficial disclaimer clear. |
+| `/release-overview` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo launch-date split (16 Sep PC/console/Xbox cloud, 23 Sep mobile) | Confirm launch date per platform | Pre-order & Editions / Platforms & Versions | Launch-status hub | Carries the per-platform status table, multi-language main-story VO, and FAQ links. |
+| `/platforms-and-versions` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo platform lineup incl. Xbox Cloud | Compare console/PC/mobile availability | System Requirements / Pre-order & Editions | Launch-status support | Reflects the platform split and controller improvements. |
+| `/twining-system` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo Twining and rune-system removal | Understand merge modes and simplified training | Starter & Prismana / Evolution & Stages | Mechanics hub | Documents the 2026-09-03 rune removal and training simplification. |
+| `/starter-and-prismana` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo Prismana flat-base + lucky strike + season spawn | Plan Prismana acquisition | Twining / Evolution | Acquisition hub | Carries the flat-base, lucky strike, and season spawn rework. |
+| `/evolution-and-stages` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo Umbral variant + Irisalis Legendary | Plan top-end variant acquisition | Starter & Prismana / Catching & Aniipods | Variant hub | Carries Umbral Perfect Potential via Wild Surges and the Irisalis Legendary flow. |
+| `/catching-and-aniipods` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo Sparkling Cube Perfect Potential + Irisalis Legendary flow | Catch top-tier Aniimo deterministically | Starter & Prismana / Evolution | Catch-flow hub | Carries the Sparkling Cube guarantee and the Legendary token-craft flow. |
+| `/homeland-and-housing` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo multi-area Homeland + RV dispatch Prismana eggs | Build and share a multi-area base | Starter & Prismana / Catching | Base hub | Carries the multi-area base, shareable furniture codes, petting AI, soil-tilling, and RV dispatch. |
+| `/heist-of-the-lost-isles` | `src/data/pages/fixed-pages.ts` | Guide | Aniimo Chaos Mode on the Diamond Egg Heist | Build a Chaos Mode squad | Elements & Roles / Idyll Regions | PvPvE hub | Carries Chaos Mode layered on the six-team Diamond Egg Heist format. |
 
 ## Generated Route Families
 

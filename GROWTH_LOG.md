@@ -6,6 +6,19 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-09-05 - Five-cluster content update: launch-date split, carried-item rework, Irisalis, Homeland expansion, Chaos Mode
+
+- Task: Refresh the launch, carried-item, Irisalis, Homeland, and Heist pages against the 2026-09-03 dev letter and the 2026-08-26 platform-split announcement.
+- Files changed: `src/data/pages/fixed-pages.ts`, `src/data/pages/home.ts`, `src/data/faq.ts`, `CONTENT_INDEX.md`, and this log.
+- URLs affected: `/`, `/release-overview`, `/platforms-and-versions`, `/twining-system`, `/starter-and-prismana`, `/evolution-and-stages`, `/catching-and-aniipods`, `/homeland-and-housing`, `/heist-of-the-lost-isles`. No URLs added or removed.
+- Launch date split: PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC launch on 16 September 2026; iOS and Android launch on 23 September 2026. The earlier 15-16 September 2026 single-window framing is superseded across `/release-overview`, `/platforms-and-versions`, `/pre-order-and-editions`, `/closed-beta-and-signups`, `/system-requirements`, `/review-and-reception`, `/twining-system`, and `/twining-system`. Multi-language main-story VO confirmed and added to the language table.
+- Carried-item rework: documented the rune-system removal, the simplified training layer, the Capability Awakening reset for sub-Lv.60 Aniimo, the Prismana flat-base trigger, the Prismana lucky strike mechanic, the reworked season-exclusive spawn rules, the Sparkling Cube Perfect Potential guarantee, and the Umbral variant with Perfect Potential via Wild Surges.
+- Irisalis Legendary redesign: token collection from exploration and story, crafted Legendary Aniipod, one-time exclusive encounter, defeat Irisalis, throw the crafted Legendary Aniipod. Documented on `/catching-and-aniipods` and `/evolution-and-stages`.
+- Homeland multi-area expansion: documented the multi-area base, shareable furniture codes, interactive furniture, Home Aniimo petting AI, soil-tilling social interaction, RV dispatch Prismana-trait eggs, and the rebalanced upgrade pacing on `/homeland-and-housing`.
+- Chaos Mode: documented on `/heist-of-the-lost-isles` as layered on the six-team Diamond Egg Heist format with a wider egg-type pool and rebalanced squad and element priorities.
+- FAQ growth: added `release-mobile-date`, `platforms-xbox-cloud`, `twining-rune-system-removed`, `twining-training-simplification`, `twining-capability-awakening-reset`, `prismana-flat-base-trigger`, `prismana-lucky-strike`, `prismana-season-spawn`, `evolution-umbral-variant`, `evolution-legendary-irisalis`, `catch-sparkling-cube-perfect-potential`, `catch-legendary-aniipod-craft`, `catch-irisalis-flow`, `homeland-multi-area`, `homeland-furniture-codes`, `homeland-petting-ai`, `homeland-rv-dispatch-prismana-eggs`, and `heist-chaos-mode`. Updated `home-when-release`, `home-platforms`, `release-when-exact`, `release-language-support`, `platforms-cloud-streaming`, `prismana-form-meaning`, `evolution-sparkling`, `catch-irisalis-flow`, `homeland-region-placement`, and `heist-solo-play`.
+- Verification: `npm run verify` (typecheck, lint, template validation, content validation, IndexNow URL validation, static export, rendered SEO validation) before push.
+
 ### 2026-09-02 - Pre-launch hub refresh: starter, evolution, pre-order, Heist, PC specs, beta-trading
 
 - Task: Refresh five pre-launch answer pages with public-source evidence captured on 2026-09-02; add a homepage pre-launch hub linking the updated pages.

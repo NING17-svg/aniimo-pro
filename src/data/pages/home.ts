@@ -11,28 +11,29 @@ export const homePage: PageContent = {
   presentation: { shell: "home", variant: "split-panel" },
   h1: "Aniimo Launch Hub: Everything Confirmed Before Release",
   seoTitle:
-    "Aniimo Launch Guide: Release Date, Platforms, and Mechanics",
-  metaDescription:
-    "Get the confirmed Aniimo launch details: 15-16 September 2026 release, supported platforms, Twining system, starter and Prismana mechanics, and PvPvE Heist events.",
+    "Aniimo Launch Guide: 16 September PC/Console + 23 September Mobile",
+    metaDescription:
+    "Get the confirmed Aniimo launch details: 16 September 2026 PC/console/Xbox cloud release, 23 September 2026 iOS and Android release, supported platforms, Twining system, starter and Prismana mechanics, and PvPvE Heist events.",
   summary:
-    "Find Aniimo launch date, supported platforms, the Twining merge system, starter and Prismana basics, the Heist of the Lost Isles PvPvE mode, and pre-launch reception in one US English reference hub.",
+    "Find Aniimo launch dates, supported platforms, the Twining merge system, starter and Prismana basics, the Heist of the Lost Isles PvPvE mode with Chaos Mode, and pre-launch reception in one US English reference hub.",
   hero: {
     eyebrow: "Aniimo pre-launch reference",
     subtitle:
-      "Aniimo (Pawprint Studio) is an open-world creature-catching RPG launching 15-16 September 2026 on PS5, Xbox Series X|S, PC, iOS, and Android. Use this hub to confirm launch timing, platform support, the Twining merge mechanic, and the seasonal Heist of the Lost Isles PvPvE mode.",
+      "Aniimo (Pawprint Studio) is an open-world creature-catching RPG launching 16 September 2026 on PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC, and 23 September 2026 on iOS and Android. Use this hub to confirm launch timing, platform support, the Twining merge mechanic, and the seasonal Heist of the Lost Isles PvPvE mode.",
     ctas: [
       { label: "Release Overview", href: "/release-overview" },
       { label: "Twining System", href: "/twining-system" },
     ],
   },
   quickAnswer:
-    "Aniimo is an open-world creature-catching RPG from Pawprint Studio launching 15-16 September 2026 across PS5, Xbox Series X|S, PC (Steam and Epic), iOS, and Android with a free-to-play model. The headline mechanic is Twining — you throw an Aniipod to catch a wild Aniimo, then merge with that already-caught Aniimo to use its movement type, element, and combat kit. Seasonal PvPvE content ships as Heist of the Lost Isles, a 3-player squad mode.",
+    "Aniimo is an open-world creature-catching RPG from Pawprint Studio launching in two confirmed September 2026 windows: PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC (Steam and Epic) on 16 September 2026, with iOS and Android one week later on 23 September 2026. The headline mechanic is Twining — you throw an Aniipod to catch a wild Aniimo, then merge with that already-caught Aniimo to use its movement type, element, and combat kit. Seasonal PvPvE content ships as Heist of the Lost Isles, a 3-player squad mode with Chaos Mode layered on top of the six-team Diamond Egg Heist bracket.",
   keyFacts: [
     { label: "Developer / Publisher", value: "Pawprint Studio" },
-    { label: "Launch window", value: "15-16 September 2026" },
+    { label: "Console + PC + cloud launch", value: "16 September 2026" },
+    { label: "Mobile (iOS, Android) launch", value: "23 September 2026" },
     {
       label: "Platforms",
-      value: "PS5, Xbox Series X|S, PC (Steam, Epic), iOS, Android",
+      value: "PS5, Xbox Series X|S, Xbox Cloud, PC (Steam, Epic), iOS, Android",
     },
     { label: "Business model", value: "Free-to-play with in-app purchases" },
     {
@@ -41,7 +42,7 @@ export const homePage: PageContent = {
     },
     {
       label: "PvPvE mode",
-      value: "Heist of the Lost Isles (3-player squad)",
+      value: "Heist of the Lost Isles (3-player squad) + Chaos Mode",
     },
   ],
   modules: [
@@ -50,7 +51,7 @@ export const homePage: PageContent = {
       type: "prose",
       heading: "Release Date and Confirmed Platforms",
       body:
-        "The global launch window is 15-16 September 2026, depending on time zone. The Steam store page lists 15 September 2026 as the unlock date, while regional coverage lists 16 September 2026 for players in Asia-Pacific and East Asia release windows.\n\nConfirmed platforms at launch are PlayStation 5, Xbox Series X|S, PC via Steam, PC via Epic Games Store, iOS, and Android. Pawprint Studio has not announced a Nintendo Switch version, and cloud-streaming availability is not part of the confirmed lineup.\n\nSee the [Aniimo release overview](/release-overview) page for the per-platform status table, pre-order state, and supported languages.",
+        "Aniimo launches in two confirmed September 2026 windows. PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC (Steam and Epic) launch on 16 September 2026; iOS and Android launch one week later, on 23 September 2026. The earlier single 15-16 September 2026 window is superseded.\n\nConfirmed platforms at launch are PlayStation 5, Xbox Series X|S, Xbox Cloud Gaming, PC via Steam, PC via Epic Games Store, iOS, and Android. A Nintendo Switch version is not announced as of 2026-09-05.\n\nSee the [Aniimo release overview](/release-overview) page for the per-platform status table, pre-order state, and supported languages.",
     },
     {
       id: "home-system-requirements",
@@ -85,29 +86,29 @@ export const homePage: PageContent = {
       type: "prose",
       heading: "Heist of the Lost Isles Event",
       body:
-        "Heist of the Lost Isles is the headline seasonal PvPvE mode. Matches are built around a 3-player squad, with real-time searching for high-value egg caches and live combat against both environment enemies and rival squads. The mode rotates seasonally, and the full reward structure, including rare unlocks, currency payouts, and rank-based bonuses, is not announced as of 2026-08-29.\n\nPvP is not the only way to progress; players who prefer pure PvE can ignore Heist and focus on open-world Twining, exploration, and story content. Mode-by-mode details are on the [Aniimo Heist of the Lost Isles](/heist-of-the-lost-isles) page.",
+        "Heist of the Lost Isles is the headline seasonal PvPvE mode. Matches are built around a 3-player squad, with real-time searching for high-value egg caches and live combat against both environment enemies and rival squads. The Diamond Egg Heist scales the format to six teams of three contesting a single diamond egg, and Chaos Mode layers a wider egg-type pool and rebalanced squad and element priorities on top of the same six-team bracket.\n\nPvP is not the only way to progress; players who prefer pure PvE can ignore Heist and focus on open-world Twining, exploration, and story content. Mode-by-mode details are on the [Aniimo Heist of the Lost Isles](/heist-of-the-lost-isles) page.",
     },
     {
       id: "home-reception",
       type: "prose",
       heading: "Review and Reception Status",
       body:
-        "The game has not launched yet, so full review coverage is not available. Preview coverage from CBR, ComicBook.com, GamingBible, and Loot Level Chill has focused on the Twining system, visual style, and co-op loop. Final review coverage will begin after the global unlock on 15-16 September 2026.\n\nLive preview impressions and post-launch reviews are tracked on the [Aniimo review and reception](/review-and-reception) page.",
+        "The game has not launched yet, so full review coverage is not available. Preview coverage from CBR, ComicBook.com, GamingBible, and Loot Level Chill has focused on the Twining system, visual style, and co-op loop. Final review coverage will begin after the global unlock on 16 September 2026 for PC / console / Xbox cloud and 23 September 2026 for iOS / Android.\n\nLive preview impressions and post-launch reviews are tracked on the [Aniimo review and reception](/review-and-reception) page.",
     },
     {
       id: "home-fact-boundary",
       type: "callout",
       tone: "caution",
-      title: "Fact boundary — 2026-08-29",
+      title: "Fact boundary — 2026-09-05",
       body:
-        "Aniimo is a new IP from Pawprint Studio; no prior Aniimo game exists to inherit mechanics, lore, or roster data from. The launch window is 15-16 September 2026; exact unlock hour and minute per time zone are not announced as of 2026-08-29. Starter list, full Prismana roster, cross-play status, Nintendo Switch release, and cloud-streaming availability are not announced as of 2026-08-29. Review and reception content does not exist yet because Aniimo has not launched; preview impressions are attributed to the original outlets and do not represent final review verdicts.",
+        "Aniimo is a new IP from Pawprint Studio; no prior Aniimo game exists to inherit mechanics, lore, or roster data from. The launch window is split: PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC on 16 September 2026; iOS and Android on 23 September 2026. Exact unlock hour and minute per time zone are not announced as of 2026-09-05. Starter list, full Prismana roster, cross-play status, and Nintendo Switch release are not announced as of 2026-09-05. Review and reception content does not exist yet because Aniimo has not launched; preview impressions are attributed to the original outlets and do not represent final review verdicts.",
     },
     {
       id: "home-sources",
       type: "prose",
       heading: "Sources",
       body:
-        "- [Aniimo Official Site](https://www.aniimo.com/) — `official/store` — checked `2026-08-29` — confirms global launch date, platform lineup, Twining system, and pre-registration rewards.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-08-29` — confirms 15 September 2026 release, Steam spec, and free-to-play model.\n- [Pawprint Studio](https://www.pawprintstudio.com/) — `official/store` — checked `2026-08-29` — developer studio page, used to attribute the Aniimo IP and Twining system to Pawprint Studio.\n- [Game Trader Aniimo coverage](https://www.gametrader.sg/blog/tag/aniimo) — `media/interview` — checked `2026-08-29` — regional preview coverage of mechanics, starter, and platform lineup.\n- [GameHaunt release overview](https://gamehaunt.com/aniimo-release-date-platforms-and-everything-we-know-2026) — `media/interview` — checked `2026-08-29` — secondary confirmation of 15-16 September 2026 launch window and platform list.",
+        "- [Aniimo Official Site](https://www.aniimo.com/) — `official/store` — checked `2026-09-05` — confirms the platform split (16 September 2026 PC/console/Xbox cloud, 23 September 2026 iOS/Android), multi-language main-story VO, Twining system, and pre-registration rewards.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-05` — confirms 16 September 2026 PC release, Steam spec, and free-to-play model.\n- [Aniimo Dev Letter (2026-09-03)](https://www.aniimo.com/newslist/detail/100051) — `official/news` — checked `2026-09-05` — confirms the rune-system removal, the Prismana flat-base + lucky strike + season spawn rework, the Umbral variant with Perfect Potential via Wild Surges, the Irisalis Legendary redesign, the multi-area Homeland expansion, and Chaos Mode.\n- [Pawprint Studio](https://www.pawprintstudio.com/) — `official/store` — checked `2026-09-05` — developer studio page, used to attribute the Aniimo IP and Twining system to Pawprint Studio.\n- [CBR — Aniimo official September 2026](https://www.cbr.com/free-open-world-pokemon-replacement-official-september-2026) — `media/interview` — checked `2026-09-05` — secondary confirmation of the platform split.",
     },
   ],
   faqIds: [
@@ -130,5 +131,5 @@ export const homePage: PageContent = {
   ],
   schemaTypes: ["WebSite", "BreadcrumbList", "FAQPage"],
   sourceStatus: "official",
-  lastReviewed: "2026-09-02",
+  lastReviewed: "2026-09-05",
 };
