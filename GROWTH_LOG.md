@@ -6,6 +6,17 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-09-14 - Pre-order packs, Companion Handbook, current Steam PC spec, and per-timezone launch unlock
+
+- Task: Rewrite `/pre-order-and-editions` to document the PS5 and Xbox Advanced ($9.99) and Collector's ($19.99) pre-order packs with the Companion Handbook battle pass; refresh `/system-requirements` and the can-my-PC-run FAQ against the current English Steam spec; add a per-timezone launch-unlock table (10:00 UTC+8 anchor) on `/release-overview` and the FAQ.
+- Files changed: `src/data/pages/fixed-pages.ts`, `src/data/pages/home.ts`, `src/data/faq.ts`, `CONTENT_INDEX.md`, and this log.
+- URLs affected: `/`, `/pre-order-and-editions`, `/system-requirements`, `/release-overview`, `/faq`. No URLs added or removed; homepage now links the new pre-order and timezone blocks.
+- Pre-order packs: documented the Advanced ($9.99) and Collector's ($19.99) editions on PS5 and Xbox with the PS5 Fluffy Friend and Xbox Doggo Dude platform-exclusive accessories; the Companion Handbook battle pass with the Companion Handbook-Exclusive Prismana Aniimo Egg (Prismana Form Aniimo with Perfect Potential at the Outpost Hatchinator) and the Companion Handbook-Exclusive Evolution Material; the Collector's Primegy Battery granted immediately and the exclusive Doll plus Avatar Frame inside the Collector's Companion Handbook; and the 16 September 2026 09:59 UTC+8 pre-order window cutoff. Free pre-registration reward tracks (Susuta egg, Perfect Egg, 10M-30M milestone ladder) remain alongside the paid editions.
+- System requirements: refreshed `/system-requirements` to the current English Steam minimum (Intel Core i7-4770 / AMD Ryzen 7 2700, NVIDIA GTX 970 / AMD Radeon RX 5600, 8 GB, 40 GB) and recommended (Intel Core i7-10700 / AMD Ryzen 5 5600, NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700, 16 GB, 40 GB) on DirectX 11 / 64-bit Windows 10+ / broadband. The can-my-PC-run FAQ mirrors the same update. Older regional Steam pages still surface prior wording (12 GB / 45 GB or 8 GB / 30 GB) and are superseded.
+- Per-timezone unlock: added a 10:00 UTC+8 simultaneous global unlock anchor to `/release-overview` and a per-timezone table (PT 19:00 Sep 15, CT 21:00 Sep 15, ET 22:00 Sep 15, BRT 23:00 Sep 15, BST 02:00 Sep 16, CEST 03:00 Sep 16, CST 10:00 Sep 16, KST 11:00 Sep 16, JST 11:00 Sep 16, AET 13:00 Sep 16, NZST 15:00 Sep 16). Mobile (iOS and Android) unlocks on 23 September 2026 at the same 10:00 UTC+8 anchor. The FAQ now exposes the same table via `release-unlock-timezones`.
+- FAQ growth: added `preorder-advanced-edition`, `preorder-collectors-edition`, `preorder-companion-handbook`, `preorder-platform-exclusives`, `preorder-pre-order-window`, and `release-unlock-timezones`. Updated `home-pc-spec`, `release-unlock-hour`, `preorder-cost`, `preorder-edition`, `preorder-rewards`, and `preorder-monetization` to reflect the new content.
+- Verification: `npm run verify` (typecheck, lint, template validation, content validation, IndexNow URL validation, static export, rendered SEO validation) before push.
+
 ### 2026-09-05 - Five-cluster content update: launch-date split, carried-item rework, Irisalis, Homeland expansion, Chaos Mode
 
 - Task: Refresh the launch, carried-item, Irisalis, Homeland, and Heist pages against the 2026-09-03 dev letter and the 2026-08-26 platform-split announcement.

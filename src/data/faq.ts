@@ -46,7 +46,7 @@ export const faqItems: FAQItem[] = [
     id: "home-pc-spec",
     question: "Can my PC run Aniimo?",
     answer:
-      "The current English Steam page lists an Intel i7-9700 or AMD Ryzen 5 3600X with a GTX 1060 or Radeon RX 6600 and 12 GB of RAM as the minimum, and an Intel Core i7-12700F or AMD Ryzen 7700X with an RTX 3070 8G or Radeon RX 6800 and 16 GB of RAM as the recommended spec. Both tiers need 45 GB of storage, and older regional pages showing 8 GB / 30 GB no longer reflect the official spec.",
+      "The current English Steam page lists an Intel Core i7-4770 or AMD Ryzen 7 2700 with an NVIDIA GTX 970 or AMD Radeon RX 5600 and 8 GB of RAM as the minimum, and an Intel Core i7-10700 or AMD Ryzen 5 5600 with an NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 and 16 GB of RAM as the recommended spec. Both tiers need 40 GB of storage, and older regional pages showing 12 GB / 45 GB or 8 GB / 30 GB still surface prior wording.",
     pageIds: ["home", "faq"],
     category: "platform",
     schemaEligible: true,
@@ -107,8 +107,18 @@ export const faqItems: FAQItem[] = [
     id: "release-unlock-hour",
     question: "Is the Aniimo launch hour announced?",
     answer:
-      "Exact unlock hour and minute per time zone are not announced as of 2026-08-29.",
+      "Yes. The simultaneous global unlock anchors on 10:00 UTC+8 on 16 September 2026 for PS5, Xbox Series X|S, Xbox Cloud Gaming, and PC (Steam and Epic). Per-timezone conversions: PT 19:00 Sep 15, CT 21:00 Sep 15, ET 22:00 Sep 15, BRT 23:00 Sep 15, BST 02:00 Sep 16, CEST 03:00 Sep 16, CST 10:00 Sep 16, KST 11:00 Sep 16, JST 11:00 Sep 16, AET 13:00 Sep 16, NZST 15:00 Sep 16. Mobile (iOS and Android) players unlock on 23 September 2026 at the same 10:00 UTC+8 anchor. See the [Aniimo release overview](/release-overview) page for the full table.",
     pageIds: ["fixed-release-overview-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "release-unlock-timezones",
+    question: "What time does Aniimo unlock in my time zone?",
+    answer:
+      "Aniimo unlocks simultaneously across PC, PS5, and Xbox Series X|S at 10:00 UTC+8 on 16 September 2026. Per-timezone conversions: PT 19:00 Sep 15, CT 21:00 Sep 15, ET 22:00 Sep 15, BRT 23:00 Sep 15, BST 02:00 Sep 16, CEST 03:00 Sep 16, CST 10:00 Sep 16, KST 11:00 Sep 16, JST 11:00 Sep 16, AET 13:00 Sep 16, NZST 15:00 Sep 16. Mobile (iOS and Android) unlocks one week later on 23 September 2026 at the same 10:00 UTC+8 anchor.",
+    pageIds: ["fixed-release-overview-en-us", "home", "faq"],
     category: "release",
     schemaEligible: true,
     sourceStatus: "official",
@@ -169,7 +179,7 @@ export const faqItems: FAQItem[] = [
     id: "spec-min-ram",
     question: "What is the minimum RAM for Aniimo on PC?",
     answer:
-      "The current English Steam page lists 12 GB of RAM for the minimum spec and 16 GB of RAM for the recommended spec. Minimum RAM is no longer unannounced, and older regional pages showing 8 GB are superseded.",
+      "The current English Steam page lists 8 GB of RAM for the minimum spec and 16 GB of RAM for the recommended spec. Older regional pages still surface prior wording (12 GB / 45 GB or 8 GB / 30 GB) and are superseded by the current English Steam page.",
     pageIds: ["fixed-system-requirements-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -179,7 +189,7 @@ export const faqItems: FAQItem[] = [
     id: "spec-cpu-gpu",
     question: "Which CPU and GPU does Aniimo need on PC?",
     answer:
-      "The minimum spec asks for an Intel i7-9700 or AMD Ryzen 5 3600X or above with a GTX 1060 or AMD Radeon RX 6600. The recommended spec asks for an Intel Core i7-12700F or AMD Ryzen 7700X or above with an NVIDIA GeForce RTX 3070 8G or above or an AMD Radeon RX 6800 or above. Both tiers require a 64-bit processor and operating system.",
+      "The minimum spec asks for an Intel Core i7-4770 or AMD Ryzen 7 2700 or above with an NVIDIA GTX 970 or AMD Radeon RX 5600. The recommended spec asks for an Intel Core i7-10700 or AMD Ryzen 5 5600 or above with an NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700. Both tiers require a 64-bit processor and operating system on DirectX 11 with a broadband internet connection.",
     pageIds: ["fixed-system-requirements-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -189,7 +199,7 @@ export const faqItems: FAQItem[] = [
     id: "spec-storage",
     question: "How much storage does Aniimo need on PC?",
     answer:
-      "The current English Steam page lists 45 GB of available space for both the minimum and recommended tiers, raised from 30 GB on older regional pages. An SSD is recommended for shader and streaming performance.",
+      "The current English Steam page lists 40 GB of available space for both the minimum and recommended tiers. Older regional pages still surface prior wording (45 GB or 30 GB) and are superseded. An SSD is recommended for shader and streaming performance.",
     pageIds: ["fixed-system-requirements-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -209,7 +219,7 @@ export const faqItems: FAQItem[] = [
     id: "spec-regional-pages",
     question: "Which Steam page is authoritative for Aniimo PC specs?",
     answer:
-      "The current English Steam page is authoritative; older regional pages still show 8 GB of RAM and 30 GB of storage, sometimes with blank CPU and GPU rows, and are not current.",
+      "The current English Steam page is authoritative. Older regional pages still surface prior wording — some show 8 GB / 30 GB, others show 12 GB / 45 GB — sometimes with blank CPU and GPU rows, and are not current.",
     pageIds: ["fixed-system-requirements-en-us"],
     category: "platform",
     schemaEligible: true,
@@ -220,7 +230,7 @@ export const faqItems: FAQItem[] = [
     id: "preorder-cost",
     question: "Does Aniimo cost money?",
     answer:
-      "Aniimo is free-to-play with optional in-app purchases. There is no paid Standard or Deluxe edition.",
+      "Aniimo's base game is free-to-play. The PlayStation Store and Xbox Store also list paid Advanced ($9.99) and Collector's ($19.99) pre-order packs that bundle a platform-exclusive accessory and the Companion Handbook battle pass. Steam does not list a paid pre-order edition.",
     pageIds: ["fixed-pre-order-and-editions-en-us"],
     category: "release",
     schemaEligible: true,
@@ -230,7 +240,57 @@ export const faqItems: FAQItem[] = [
     id: "preorder-edition",
     question: "Is there a paid Aniimo edition?",
     answer:
-      "A paid Standard, Deluxe, or Premium edition is not announced as of 2026-08-29. The base game is free.",
+      "Yes. Two paid pre-order packs are listed on the PlayStation Store and Xbox Store: the Advanced Edition ($9.99) and the Collector's Edition ($19.99). Both include the platform-exclusive accessory (PS5 Fluffy Friend or Xbox Doggo Dude) and the Companion Handbook battle pass. The Collector's Edition adds the Primegy Battery granted immediately and the exclusive Doll and Avatar Frame inside the Collector's Companion Handbook. The pre-order window closes on 16 September 2026 at 09:59 UTC+8.",
+    pageIds: ["fixed-pre-order-and-editions-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "preorder-advanced-edition",
+    question: "What is in the Aniimo Advanced Edition?",
+    answer:
+      "The Aniimo Advanced Edition is a $9.99 pre-order pack on PS5 and Xbox. It bundles the platform-exclusive accessory (PS5 Fluffy Friend or Xbox Doggo Dude) and the Advanced Companion Handbook battle pass. The Advanced Companion Handbook unlocks rewards as it levels up, including the Companion Handbook-Exclusive Prismana Aniimo Egg and the Companion Handbook-Exclusive Evolution Material.",
+    pageIds: ["fixed-pre-order-and-editions-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "preorder-collectors-edition",
+    question: "What is in the Aniimo Collector's Edition?",
+    answer:
+      "The Aniimo Collector's Edition is a $19.99 pre-order pack on PS5 and Xbox. It includes the platform-exclusive accessory (PS5 Fluffy Friend or Xbox Doggo Dude), the Collector's Companion Handbook battle pass, the Primegy Battery granted immediately, and the exclusive Doll and Avatar Frame inside the Collector's Companion Handbook. The Collector's pass is the longer Companion Handbook track; the exclusive Doll and Avatar Frame sit on it rather than on the Advanced pass.",
+    pageIds: ["fixed-pre-order-and-editions-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "preorder-companion-handbook",
+    question: "What is the Aniimo Companion Handbook?",
+    answer:
+      "The Companion Handbook is an in-game battle pass included with both the Advanced ($9.99) and Collector's ($19.99) editions on PS5 and Xbox. Rewards unlock as the Companion Handbook levels up rather than all at purchase. Its signature items are the Companion Handbook-Exclusive Prismana Aniimo Egg — which hatches a Prismana Form Aniimo with Perfect Potential at the Outpost Hatchinator — and the Companion Handbook-Exclusive Evolution Material, which is used in the standard Lumin to Gamma to Nova evolution pipeline.",
+    pageIds: ["fixed-pre-order-and-editions-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "preorder-platform-exclusives",
+    question: "Which platform-exclusive accessory comes with the Aniimo editions?",
+    answer:
+      "The Aniimo Advanced and Collector's editions each include a platform-exclusive accessory that is locked to the storefront you pre-order from. PS5 pre-orders include the Fluffy Friend accessory; Xbox pre-orders include the Doggo Dude accessory. The accessory is the only platform-locked piece inside the paid pack; the Companion Handbook battle pass and its contents are the same on both platforms.",
+    pageIds: ["fixed-pre-order-and-editions-en-us"],
+    category: "release",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "preorder-pre-order-window",
+    question: "When does the Aniimo pre-order window close?",
+    answer:
+      "The pre-order window for the Advanced ($9.99) and Collector's ($19.99) editions on PS5 and Xbox closes on 16 September 2026 at 09:59 UTC+8 — one minute before the 10:00 UTC+8 simultaneous global unlock on PC, PlayStation 5, and Xbox Series X|S. After the cutoff the paid editions come off the storefront; the free base game stays free.",
     pageIds: ["fixed-pre-order-and-editions-en-us"],
     category: "release",
     schemaEligible: true,
@@ -240,7 +300,7 @@ export const faqItems: FAQItem[] = [
     id: "preorder-rewards",
     question: "What does pre-registering for Aniimo unlock?",
     answer:
-      "Pre-registering on the official aniimo.com site claims the Susuta egg, and every pre-registered player shares the global milestone ladder: Glimmer x200 at 10M sign-ups, Aniipod Ultra x2 at 15M, the \"Companion Promise\" limited avatar frame at 20M, and the \"Sunlit Meadow\" limited outfit at 30M. The Perfect Egg is separate and comes from multi-day logins rather than from pre-registration.",
+      "Pre-registering on the official aniimo.com site claims the Susuta egg, and every pre-registered player shares the global milestone ladder: Glimmer x200 at 10M sign-ups, Aniipod Ultra x2 at 15M, the \"Companion Promise\" limited avatar frame at 20M, and the \"Sunlit Meadow\" limited outfit at 30M. The Perfect Egg is separate and comes from multi-day logins rather than from pre-registration. The paid Advanced and Collector's editions do not replace these tracks.",
     pageIds: ["fixed-pre-order-and-editions-en-us"],
     category: "release",
     schemaEligible: true,
@@ -250,7 +310,7 @@ export const faqItems: FAQItem[] = [
     id: "preorder-platform-links",
     question: "Where do I pre-register for Aniimo on my platform?",
     answer:
-      "The official site links six storefronts: the PlayStation Store concept page, the Xbox Store listing, Steam (AppID 4126040), the Epic Games Store page, the Apple App Store listing, and an official Google Play link. Storefront pre-registration queues the free-to-play download; it does not replace the aniimo.com form that claims the Susuta egg.",
+      "The official site links six storefronts for the free-to-play pre-registration: the PlayStation Store concept page, the Xbox Store listing, Steam (AppID 4126040), the Epic Games Store page, the Apple App Store listing, and an official Google Play link. Storefront pre-registration queues the free-to-play download; it does not replace the aniimo.com form that claims the Susuta egg.",
     pageIds: ["fixed-pre-order-and-editions-en-us"],
     category: "release",
     schemaEligible: true,
@@ -270,7 +330,7 @@ export const faqItems: FAQItem[] = [
     id: "preorder-monetization",
     question: "How does Aniimo monetize?",
     answer:
-      "Aniimo is free-to-play with optional in-app purchases. The store stocks cosmetics and convenience items; specific paid bundles and season pass plans are not announced as of 2026-09-02.",
+      "Aniimo is free-to-play with optional in-app purchases. On PS5 and Xbox, the Advanced ($9.99) and Collector's ($19.99) pre-order packs are the primary launch paid tiers and bundle a platform-exclusive accessory and the Companion Handbook battle pass. Steam does not list a paid pre-order edition as of 2026-09-14. Specific IAP bundles and any post-launch battle pass structure beyond the Companion Handbook are not announced.",
     pageIds: ["fixed-pre-order-and-editions-en-us"],
     category: "release",
     schemaEligible: true,
