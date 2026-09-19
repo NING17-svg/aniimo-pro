@@ -701,6 +701,46 @@ export const faqItems: FAQItem[] = [
     schemaEligible: true,
     sourceStatus: "official",
   },
+  {
+    id: "catch-chance-formula",
+    question: "How is the Aniimo catch chance calculated?",
+    answer:
+      "The aniimo.com/formula-multipliers page publishes a multiplier stack: Catch Chance = Base Chance (set by area tier) × Aniipod tier × Tumbler × level-difference multiplier × HP multiplier × Back Attack (×1.5 if applicable) × Special Status multiplier. Each modifier multiplies into the next, so stacking an Aniipod Ultra, a Tumbler, a level-difference bonus, an HP-band bonus, a Back Attack, and a Special Status can lift a low Base Chance encounter into a comfortable catch band.",
+    pageIds: ["fixed-catching-and-aniipods-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "catch-nurture-pity",
+    question: "What are the Nurture Prismana numbers in Aniimo?",
+    answer:
+      "Nurture is the per-roll chance that an Aniipod resolution produces a Prismana form on the caught body. The published numbers on aniimo.com/formula-multipliers are 3% per roll, a 480-roll soft pity where the per-roll chance starts rising, and a 10,500 hard pity where the catch is forced into a Prismana outcome regardless of the roll.",
+    pageIds: ["fixed-catching-and-aniipods-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "catch-sparkling-style-probability",
+    question: "What are the Sparkling Style probabilities in Aniimo?",
+    answer:
+      "On a standard Sparkling Cube catch, Sparkling Style resolves 99% Dazzling and 1% Shadow. On Egg Heist drops the table is inverted: 99% Shadow and 1% Dazzling. Treat the standard Sparkling Style outcome as the Dazzling-leaning one and Egg Heist drops as the Shadow-leaning one when planning variant farming.",
+    pageIds: ["fixed-catching-and-aniipods-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "catch-alpha-held-items",
+    question: "How do Alpha held items work in Aniimo?",
+    answer:
+      "Alpha rolls follow the published Alpha held-item drop table indexed by Title Level on aniimo.com/formula-multipliers; the pool widens as Title Level rises. Omega rolls override the Alpha table and resolve from the separate Omega pool. Alpha and Omega do not stack — a roll resolves on one table or the other, never both.",
+    pageIds: ["fixed-catching-and-aniipods-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
   // Elements and roles
   {
     id: "elements-count",
@@ -834,6 +874,36 @@ export const faqItems: FAQItem[] = [
     schemaEligible: true,
     sourceStatus: "official",
   },
+  {
+    id: "heist-rank-ladder",
+    question: "What is the Operation: Egg Heist rank ladder in Aniimo?",
+    answer:
+      "The published Operation: Egg Heist rank ladder starts at Rising Egg Scout and climbs to Expert Egg Raider. Intermediate ranks are reserved for the in-game ladder that the developer has not enumerated in public materials as of 2026-09-20. Treat Rising Egg Scout as the early gate and Expert Egg Raider as the higher gate, both of which carry trophy thresholds.",
+    pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "heist-prismana-hoard",
+    question: "How do I earn the Prismana Hoard trophy in Aniimo?",
+    answer:
+      "The Prismana Hoard trophy is gated on five Prismatic collectibles captured across Heist runs. Prismatic collectibles drop from the wider Chaos Mode egg-type pool and from rare Diamond Egg Heist caches; the trophy fires once you have logged five such captures through the Aniilog on your account.",
+    pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "heist-safe-and-sound",
+    question: "How do I earn the Safe and Sound trophy in Aniimo?",
+    answer:
+      "The Safe and Sound trophy is gated on winning a Heist run in Nightmare Team Mode without losing a squad member. The no-loss condition is the binding constraint — squad wipe at any point in the run disqualifies the trophy even if the diamond egg is otherwise secured and escorted.",
+    pageIds: ["fixed-heist-of-the-lost-isles-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
   // Homeland
   {
     id: "homeland-skill-tree",
@@ -901,6 +971,148 @@ export const faqItems: FAQItem[] = [
     answer:
       "Yes. Under the 2026-09-03 dev letter, RV dispatch routes may return Prismana-trait eggs, so the RV is now a planned input into the Prismana catch flow. Specific routes, per-route egg tables, and Prismana-trait rates are not announced as of 2026-09-05.",
     pageIds: ["fixed-homeland-and-housing-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  // Companion Mode
+  {
+    id: "companion-mode-reach-friend",
+    question: "How do I reach a friend in Aniimo Companion Mode?",
+    answer:
+      "Reach a friend by sitting on the same regional shard and linking through the Aniimo Pass. The shard determines which server pool you both match into, and the Aniimo Pass link is the social handshake that lets the two accounts see each other in the open world and at social hubs. Without the same shard or the Aniimo Pass link, the social layer does not pair the two accounts.",
+    pageIds: ["fixed-companion-mode-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "companion-mode-trophies",
+    question: "What are the Companion Mode trophies in Aniimo?",
+    answer:
+      "The published Companion Mode trophy list is A Buddy for My Buddy (gift one Aniimo), Treasured Trade (complete one exchange), Hearts in Tune (reach Twin Bond Level 5), Friends in Focus (take a Photo Studio shot with a friend), and A Match Made Through Music (play the flute with a friend nearby). The In the Same Frame photo trophy is the same Photo Studio setup framed on the friend.",
+    pageIds: ["fixed-companion-mode-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "companion-mode-twin-bond-level",
+    question: "How do I reach Twin Bond Level 5 in Aniimo?",
+    answer:
+      "Twin Bonds raise as you play with the same friend. Stacking gifting, trading, photo shots, and co-op encounters in one session is the fastest path to Level 5. Concentrate the social actions on one friend rather than spreading them across many friends if you want any single bond to reach Level 5 quickly.",
+    pageIds: ["fixed-companion-mode-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "companion-mode-gifting-path",
+    question: "What is the easiest way to fill the gifting trophy in Aniimo?",
+    answer:
+      "The Companion Handbook battle pass on the Advanced and Collector's editions drops the Companion Handbook-Exclusive Prismana Aniimo Egg, which hatches a Prismana Form Aniimo with Perfect Potential at the Outpost Hatchinator. That egg is a clean Prismana body for gifting because it does not pull from your active roster.",
+    pageIds: ["fixed-companion-mode-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "companion-mode-treasured-trade",
+    question: "How is Treasured Trade different from standard trading?",
+    answer:
+      "Treasured Trade is the named, one-shot exchange action tied to the Companion Mode trophy. Unlike the standard Trading system described on the closed-beta-and-signups page, Treasured Trade resolves as a single named exchange rather than as a roster-for-roster swap, and the trophy fires once the exchange resolves on both sides.",
+    pageIds: ["fixed-companion-mode-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "companion-mode-photo-studio",
+    question: "What is the Photo Studio trophy setup in Aniimo?",
+    answer:
+      "The Photo Studio is the in-game capture space where two players can pose together. The Friends in Focus trophy fires when the shot is taken with the friend visible in the frame. The In the Same Frame trophy is the same setup framed on the friend. Take both trophies in one Photo Studio visit.",
+    pageIds: ["fixed-companion-mode-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "companion-mode-flute",
+    question: "What is the A Match Made Through Music trophy in Aniimo?",
+    answer:
+      "The A Match Made Through Music trophy fires when you play the flute with a friend nearby on the same shard. The flute action is intentionally lightweight, so sequence it with the other four Companion Mode trophies in one session rather than reconnecting for each trophy.",
+    pageIds: ["fixed-companion-mode-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  // Potential and Personality
+  {
+    id: "potential-mbti-axes",
+    question: "What are the four MBTI-style personality axes in Aniimo?",
+    answer:
+      "Aniimo uses four MBTI-style axes to define personality: Energy (E / I), Perception (S / N), Judgment (T / F), and Lifestyle (J / P). Each axis pairs two poles, and the caught Aniimo's personality resolves as a combination of those poles. The combination picks which stat from the P.ATK, M.ATK, damage, crit, P.DEF, M.DEF, HP, and gusto pool the appraisal bonus lands on.",
+    pageIds: ["fixed-potential-and-personality-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "potential-appraisal-tiers",
+    question: "What are the Aniimo appraisal tiers and bonuses?",
+    answer:
+      "The appraisal tiers are Somewhat (+3%), Relatively (+6%), and Very (+10%). Most catches resolve at the Somewhat tier; the Relatively and Very tiers are weighted by how aligned the catch is with the personality axes. The tier is decided at catch time on the Innate Potential layer.",
+    pageIds: ["fixed-potential-and-personality-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "potential-named-personalities",
+    question: "What are the named personalities in Aniimo?",
+    answer:
+      "The four named personalities are Clingy (I / F leaning), Practical (S / T leaning), Aloof (I / N leaning), and Faithful (E / J leaning). Each leans on a different stat from the published pool; exact stat mappings for each named personality are partially published and the bespoke bonus surface is the public detail.",
+    pageIds: ["fixed-potential-and-personality-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "potential-stat-pool",
+    question: "Which stats does Aniimo Potential modify?",
+    answer:
+      "The published stat pool is P.ATK (physical attack), M.ATK (magic attack), damage, crit, P.DEF (physical defence), M.DEF (magic defence), HP, and gusto. The appraisal tier (+3% / +6% / +10%) lands on the stat the personality axes pick, so a Very Practical appraisal lands +10% on a Practical-axis stat from that pool.",
+    pageIds: ["fixed-potential-and-personality-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "potential-innate-acquired",
+    question: "What is the difference between Innate and Acquired Potential in Aniimo?",
+    answer:
+      "Innate Potential is locked at catch time and rides with the body forever. Acquired Potential is added through the simplified training progression and the Capability Awakening system, and it sits on top of the Innate layer. The two stack on the same axis, or land on two different stats if the Acquired roll picks a different axis from the Innate roll.",
+    pageIds: ["fixed-potential-and-personality-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "potential-reroll-free-path",
+    question: "How do I reroll Aniimo Potential without spending money?",
+    answer:
+      "The free-path reroll uses in-game consumables rather than paid currency. Use the consumables to reroll the Acquired appraisal until it lands on the axis and tier you want. The Innate appraisal is locked at catch time and cannot be rerolled; the reroll only touches the Acquired layer.",
+    pageIds: ["fixed-potential-and-personality-en-us"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "potential-stacking-sparkling-prismana",
+    question: "Does Aniimo Potential stack with Sparkling Cube and Prismana?",
+    answer:
+      "Yes. Sparkling Cube Perfect Potential lands the body on the maximum individual-values spread, the Prismana flat-base trigger shifts the base stats upward on the alternate-color variant, and the personality appraisal adds +3% / +6% / +10% on top of those two layers. The three layers combine on the same body rather than replacing each other.",
+    pageIds: ["fixed-potential-and-personality-en-us"],
     category: "gameplay",
     schemaEligible: true,
     sourceStatus: "official",

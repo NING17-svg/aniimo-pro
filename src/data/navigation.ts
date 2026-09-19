@@ -20,6 +20,8 @@ export const primaryNavigation: LocalizedNavigationItem[] = [
   { href: "/idyll-regions", labels: { "en-US": "Regions" } },
   { href: "/heist-of-the-lost-isles", labels: { "en-US": "Heist" } },
   { href: "/homeland-and-housing", labels: { "en-US": "Homeland" } },
+  { href: "/companion-mode", labels: { "en-US": "Companion Mode" } },
+  { href: "/potential-and-personality", labels: { "en-US": "Personality" } },
   { href: "/review-and-reception", labels: { "en-US": "Reception" } },
 ];
 

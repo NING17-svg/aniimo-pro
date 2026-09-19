@@ -111,6 +111,13 @@ export const homePage: PageContent = {
         "The game has not launched yet, so full review coverage is not available. Preview coverage from CBR, ComicBook.com, GamingBible, and Loot Level Chill has focused on the Twining system, visual style, and co-op loop. Final review coverage will begin after the 10:00 UTC+8 simultaneous global unlock on 16 September 2026 for PC / PS5 / Xbox Series X|S (Xbox Cloud Gaming included) and on 23 September 2026 for iOS / Android.\n\nLive preview impressions and post-launch reviews are tracked on the [Aniimo review and reception](/review-and-reception) page.",
     },
     {
+      id: "home-companion-mode",
+      type: "prose",
+      heading: "Companion Mode and Personality Layers",
+      body:
+        "Two social and build layers ship alongside the open-world catch loop. Companion Mode is the social path: five trophies map onto gifting one Aniimo (A Buddy for My Buddy), one Treasured Trade exchange, Twin Bond Level 5 (Hearts in Tune), one Photo Studio shot (Friends in Focus), and one flute play (A Match Made Through Music). The Personality layer is the build path: the four MBTI-style axes (E/I, S/N, T/F, J/P) with +3% / +6% / +10% tiers feed directly into P.ATK, M.ATK, damage, crit, P.DEF, M.DEF, HP, and gusto, and the free-path reroll keeps you from spending money to chase the named personalities Clingy, Practical, Aloof, and Faithful.\n\nSee the [Aniimo Companion Mode](/companion-mode) and [Aniimo Potential and Personality](/potential-and-personality) pages for the full loops.",
+    },
+    {
       id: "home-fact-boundary",
       type: "callout",
       tone: "caution",
@@ -143,6 +150,8 @@ export const homePage: PageContent = {
     "fixed-starter-and-prismana-en-us",
     "fixed-pre-order-and-editions-en-us",
     "fixed-closed-beta-and-signups-en-us",
+    "fixed-companion-mode-en-us",
+    "fixed-potential-and-personality-en-us",
     "fixed-review-and-reception-en-us",
   ],
   schemaTypes: ["WebSite", "BreadcrumbList", "FAQPage"],

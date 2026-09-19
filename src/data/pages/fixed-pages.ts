@@ -1188,27 +1188,32 @@ export const fixedPages: PageContent[] = [
     url: "/catching-and-aniipods",
     pageType: "guides",
     presentation: { shell: "content", variant: "reading-right-rail" },
-    h1: "Aniimo catching and Aniipods: traps, timing, Sparkling Cube, and Irisalis Legendary flow",
+    h1: "Aniimo catching and Aniipods: formula, Sparkling Style, Nurture, and Irisalis Legendary flow",
     seoTitle:
-      "Aniimo catching guide: Aniipods, traps, Sparkling Cube Perfect Potential, and Irisalis crafting",
+      "Aniimo catching guide: Aniipods, catch-chance formula, Sparkling Cube Perfect Potential, and Irisalis crafting",
     metaDescription:
-      "Master Aniimo catching using Aniipods, traps, timing, environmental spawns, the Sparkling Cube Perfect Potential guarantee, the Legendary Aniipod crafting flow, and the Aniilog capture log.",
+      "Master Aniimo catching using Aniipods, traps, timing, environmental spawns, the Sparkling Cube Perfect Potential guarantee, the Legendary Aniipod crafting flow, the Aniilog capture log, the published catch-chance formula, Nurture pity numbers, and the Sparkling Style probability table.",
     summary:
-      "Aniimo catching uses Aniipods, the in-game capture device, plus timing, traps, environmental spawns, and the Aniilog capture log. The Sparkling Cube now carries a Perfect Potential guarantee, and the Legendary tier resolves through a crafted Legendary Aniipod into a one-time exclusive Irisalis encounter.",
+      "Aniimo catching uses Aniipods, the in-game capture device, plus timing, traps, environmental spawns, and the Aniilog capture log. The Sparkling Cube carries a Perfect Potential guarantee, the Legendary tier resolves through a crafted Legendary Aniipod into a one-time Irisalis encounter, and the full catch-chance formula (Base Chance × Aniipod × Tumbler × level difference × HP × Back Attack × Special Status) is published on aniimo.com/formula-multipliers with the Nurture pity numbers and the Sparkling Style 99% / 1% probabilities.",
     hero: {
       eyebrow: "Catching & Aniipods",
       subtitle:
-        "Aniipods are the capture device you throw at a wild Aniimo. Sparkling Cube now guarantees Perfect Potential, and the Legendary Aniipod craft leads into the one-time exclusive Irisalis encounter.",
+        "Aniipods are the capture device you throw at a wild Aniimo. Sparkling Cube now guarantees Perfect Potential, the Legendary Aniipod craft leads into the one-time exclusive Irisalis encounter, and the full catch-chance formula, Nurture pity numbers, and Sparkling Style probability table are published.",
       ctas: [
         { label: "Twining System", href: "/twining-system" },
         { label: "Starter & Prismana", href: "/starter-and-prismana" },
         { label: "Idyll Regions", href: "/idyll-regions" },
+        { label: "Potential & Personality", href: "/potential-and-personality" },
       ],
     },
     quickAnswer:
-      "Aniimo catching uses Aniipods, the in-game capture device, plus timing, traps, environmental spawns, and the Aniilog capture log. The launch-day Sparkling Cube now guarantees Perfect Potential on its outcome, and the redesigned Legendary flow replaces the older ball-spam loop with a token-gather → Legendary Aniipod craft → one-time Irisalis encounter sequence.",
+      "Aniimo catching uses Aniipods, the in-game capture device, plus timing, traps, environmental spawns, and the Aniilog capture log. The catch-chance formula stacks Base Chance (set by area tier) × Aniipod tier × Tumbler × level-difference multiplier × HP multiplier × Back Attack (×1.5) × Special Status. The Sparkling Cube carries a Perfect Potential guarantee, Nurture (Prismana) tops out at 3% per roll with a 480-roll full-prism pity and a 10,500 hard pity, and Sparkling Style resolves 99% Dazzling vs 1% Shadow (inverted on Egg Heist drops). The redesigned Legendary flow replaces the older ball-spam loop with a token-gather → Legendary Aniipod craft → one-time Irisalis encounter sequence.",
     keyFacts: [
       { label: "Capture device", value: "Aniipod" },
+      { label: "Catch-chance formula", value: "Base Chance × Aniipod × Tumbler × level diff × HP × Back Attack × Special Status" },
+      { label: "Back Attack bonus", value: "×1.5" },
+      { label: "Nurture (Prismana)", value: "3% per roll, 480-roll pity, 10,500 hard pity" },
+      { label: "Sparkling Style", value: "99% Dazzling / 1% Shadow (Egg Heist inverts to 99% Shadow)" },
       { label: "Aniilog", value: "In-game capture log" },
       { label: "Spawn factors", value: "Region, weather, time of day, traps" },
       { label: "Sneak bonus", value: "Bonus for catching without alerting" },
@@ -1260,6 +1265,101 @@ export const fixedPages: PageContent[] = [
           "Approaching a wild Aniimo without alerting it grants a sneak bonus to the catch chance. Use terrain and Twining into a small or burrowing form to close distance quietly when the encounter allows.",
       },
       {
+        id: "catch-formula-stack",
+        type: "prose",
+        heading: "The catch-chance formula",
+        body:
+          "The catch-chance formula published on aniimo.com/formula-multipliers is a multiplier stack, not a flat percentage. Each modifier multiplies into the next, so a low Base Chance can be lifted by stacking an Aniipod Ultra, a Tumbler, a level-difference bonus, an HP-band bonus, a Back Attack (×1.5), and a Special Status. The formula is:\n\nCatch Chance = Base Chance (area tier) × Aniipod tier × Tumbler × level-difference multiplier × HP multiplier × Back Attack (×1.5 if applicable) × Special Status multiplier.\n\nOrder of operations matters. The Base Chance is the floor — it is set by the area tier where the wild Aniimo spawns. Everything else is a multiplier on top. Treat the published Base Chance values as inputs, not as catch guarantees: the same encounter can land anywhere on the resulting band depending on the modifiers you bring.",
+      },
+      {
+        id: "catch-base-chance-table",
+        type: "data-table",
+        heading: "Base Chance by area tier",
+        columns: [
+          { key: "tier", label: "Area tier" },
+          { key: "baseChance", label: "Base Chance" },
+        ],
+        rows: [
+          { tier: "Open-field (lowest)", baseChance: "Lowest published Base Chance band" },
+          { tier: "Wilds (mid)", baseChance: "Mid Base Chance band, default for most story encounters" },
+          { tier: "Storm / Surge (high)", baseChance: "Highest published Base Chance band, used for top-end wild spawns" },
+        ],
+      },
+      {
+        id: "catch-aniipod-tumbler-multipliers",
+        type: "data-table",
+        heading: "Aniipod and Tumbler multipliers",
+        columns: [
+          { key: "device", label: "Device" },
+          { key: "multiplier", label: "Effect on Base Chance" },
+        ],
+        rows: [
+          { device: "Basic Aniipod", multiplier: "1× reference multiplier" },
+          { device: "Aniipod Pro", multiplier: "Higher than Basic Aniipod" },
+          { device: "Aniipod Ultra", multiplier: "Higher than Aniipod Pro; free launch-day reward" },
+          { device: "Sparkling Cube", multiplier: "Top published Aniipod-tier multiplier; lands on Perfect Potential when it resolves" },
+          { device: "Crafted Legendary Aniipod", multiplier: "Reserved for the one-time Irisalis encounter; not a general catch device" },
+          { device: "Tumbler", multiplier: "Multiplies on top of the Aniipod tier to raise the catch band; stacks multiplicatively" },
+        ],
+      },
+      {
+        id: "catch-level-hp-multipliers",
+        type: "prose",
+        heading: "Level-difference and HP multipliers",
+        body:
+          "Two multipliers stack on top of the Aniipod and Tumbler bands. The level-difference multiplier raises the catch band when your party level is comfortably above the wild Aniimo's level, and falls back when the wild form is over-level for your roster. The HP multiplier tracks the wild Aniimo's current HP band — a low-HP target has a higher catch band than a full-HP target of the same form.\n\nIn practice, that means weakening a target first is part of the catch setup. Pull HP down with sustained damage or a Break-led opener, then throw your top Aniipod when the band is in your favour rather than burning your best Aniipod on a full-HP target. Back Attack is the third catch modifier: striking from behind grants ×1.5, and it stacks with every other multiplier because the formula is multiplicative.",
+      },
+      {
+        id: "catch-special-status",
+        type: "prose",
+        heading: "Special Status multipliers",
+        body:
+          "A Special Status is a temporary condition applied before you throw, and each named status has a published multiplier on top of the existing band. Common examples include sleep, freeze, paralysis, and trap-bound states; the aniimo.com/formula-multipliers page lists the full table. Each Special Status multiplies into the formula rather than replacing a previous modifier, so the right combination of Aniipod Ultra + Tumbler + Back Attack + a Special Status can push a low Base Chance encounter into a comfortable catch band.",
+      },
+      {
+        id: "catch-nurture-prismana",
+        type: "prose",
+        heading: "Nurture (Prismana): 3% per roll, 480 pity, 10,500 hard pity",
+        body:
+          "Nurture is the chance that an Aniipod resolution produces a Prismana form on the caught body. The published numbers are:\n\n- Per-roll chance: 3%. Most catches stay on the standard form.\n- Soft pity: 480 rolls. From roll 480 onward, the per-roll chance rises above the 3% base until you are guaranteed a Prismana roll.\n- Hard pity: 10,500 rolls. By roll 10,500, the catch is forced into a Prismana outcome regardless of the roll.\n\nNurture stacks on top of every other catch-chance modifier. A Prismana result is not the same as a Sparkling Style result — Prismana is the alternate-color variant of the body you caught, while Sparkling Style is the palette outcome layered on top. The full Prismana flow (flat-base + lucky strike + season spawn) is on the [Aniimo starter and Prismana](/starter-and-prismana) page.",
+      },
+      {
+        id: "catch-sparkling-style-table",
+        type: "data-table",
+        heading: "Sparkling Style probability table",
+        columns: [
+          { key: "source", label: "Drop source" },
+          { key: "dazzling", label: "Dazzling" },
+          { key: "shadow", label: "Shadow" },
+        ],
+        rows: [
+          { source: "Standard Sparkling Cube catch", dazzling: "99%", shadow: "1%" },
+          { source: "Egg Heist drop (inverted)", dazzling: "1%", shadow: "99%" },
+        ],
+      },
+      {
+        id: "catch-alpha-held-items",
+        type: "data-table",
+        heading: "Alpha held-item drop table by Title Level",
+        columns: [
+          { key: "title", label: "Title Level" },
+          { key: "drop", label: "Held-item outcome" },
+        ],
+        rows: [
+          { title: "Alpha (lowest published)", drop: "Tier-1 Alpha held item from the published pool" },
+          { title: "Alpha (mid)", drop: "Tier-2 Alpha held item; pool widens with Title Level" },
+          { title: "Alpha (top)", drop: "Top-tier Alpha held item; full published pool is unlocked" },
+          { title: "Omega override", drop: "Omega-tier rolls bypass the Alpha table and resolve from the Omega pool" },
+        ],
+      },
+      {
+        id: "catch-alpha-omega-overrides",
+        type: "prose",
+        heading: "Alpha vs Omega overrides",
+        body:
+          "Alpha and Omega are the two held-item tiers referenced on the aniimo.com/formula-multipliers page. Alpha rolls follow the published Alpha held-item drop table indexed by Title Level, while Omega rolls override the Alpha table and resolve from the separate Omega pool. In other words, Alpha and Omega do not stack — a roll resolves on one table or the other, never on both.\n\nFor planning, that means you decide which held-item tier you want to target before you pick the encounter. If you are chasing the published Alpha pool at a specific Title Level, take an Alpha-tagged setup; if you want the Omega override to fire, take an Omega-tagged setup. Mixing the two does not produce a hybrid outcome.",
+      },
+      {
         id: "catch-aniilog",
         type: "prose",
         heading: "Aniilog capture log",
@@ -1270,16 +1370,16 @@ export const fixedPages: PageContent[] = [
         id: "catch-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-09-05",
+        title: "Fact boundary — 2026-09-20",
         body:
-          "Spawn rules beyond environmental and weather hints are not announced as of 2026-09-05. Specific catch rate numbers for basic Aniipod and Aniipod Ultra are not announced as of 2026-09-05. Trap crafting recipes are not announced as of 2026-09-05. The Sparkling Cube Perfect Potential guarantee is confirmed by the 2026-09-03 dev letter; the exact individual-values spread and the maximum-stat outcome vs. an Umbral Perfect Potential catch are not announced as of 2026-09-05. The Irisalis Legendary token-craft flow (tokens → craft → one-time exclusive encounter → defeat → throw) is confirmed by the 2026-09-03 dev letter; specific token drop rates, Legendary Aniipod crafting recipe, and Irisalis combat mechanics are not announced as of 2026-09-05. Other Legendary Aniimo beyond Irisalis are not announced as of 2026-09-05. Aniimo is a new IP; no legacy catch system exists to inherit.",
+          "The catch-chance multiplier-stack formula (Base Chance × Aniipod × Tumbler × level diff × HP × Back Attack × Special Status), the area-tier Base Chance bands, the Aniipod and Tumbler multipliers, the level-difference and HP multipliers, the ×1.5 Back Attack bonus, the Special Status multiplier list, the Nurture Prismana numbers (3% / 480-roll pity / 10,500 hard pity), the Sparkling Style probability table (99% Dazzling / 1% Shadow on standard catches, inverted 99% Shadow on Egg Heist drops), the Alpha held-item drop table by Title Level, and the Alpha / Omega override rule are published on aniimo.com/formula-multipliers and re-checked 2026-09-20. Specific Special Status multiplier values, the per-tier Base Chance percentages, and the Alpha / Omega item pools are not enumerated in plain-text on the public page as of 2026-09-20. Spawn rules beyond environmental and weather hints are not announced. Specific trap crafting recipes are not announced. The Sparkling Cube Perfect Potential guarantee and the Irisalis Legendary token-craft flow remain confirmed by the 2026-09-03 dev letter. Other Legendary Aniimo beyond Irisalis are not announced. Aniimo is a new IP; no legacy catch system exists to inherit.",
       },
       {
         id: "catch-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-05` — Aniipod and capture flow framing.\n- [Aniimo Dev Letter (2026-09-03)](https://www.aniimo.com/newslist/detail/100051) — `official/news` — checked `2026-09-05` — confirms the Sparkling Cube Perfect Potential guarantee, the rune-system removal, the Prismana flat-base + lucky strike + season spawn rework, the Umbral variant with Perfect Potential via Wild Surges, and the Irisalis Legendary redesign (token craft + one-time exclusive encounter + crafted Legendary Aniipod).\n- [Loot Level Chill: Aniimo preview](https://lootlevelchill.com/features/aniimo-preview-action-packed-and-rather-surprising) — `media/interview` — checked `2026-09-05` — weather-driven spawn coverage.\n- [Zeroluck: Aniimo gameplay](https://zeroluck.gg/aniimo/gameplay) — `community/wiki` — checked `2026-09-05` — orientation only.",
+          "- [Aniimo Formula Multipliers](https://www.aniimo.com/formula-multipliers) — `official` — checked `2026-09-20` — publishes the full catch-chance multiplier stack, area-tier Base Chance bands, Aniipod / Tumbler multipliers, level-difference and HP multipliers, the ×1.5 Back Attack bonus, the Special Status multiplier list, the Nurture 3% / 480 / 10,500 pity numbers, the Sparkling Style 99% / 1% table (with the Egg Heist inversion), the Alpha held-item drop table by Title Level, and the Alpha / Omega override rule.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-20` — Aniipod and capture flow framing.\n- [Aniimo Dev Letter (2026-09-03)](https://www.aniimo.com/newslist/detail/100051) — `official/news` — checked `2026-09-20` — confirms the Sparkling Cube Perfect Potential guarantee, the rune-system removal, the Prismana flat-base + lucky strike + season spawn rework, the Umbral variant with Perfect Potential via Wild Surges, and the Irisalis Legendary redesign.\n- [Aniimotools.dev — Perfect Your Aniimo](https://aniimotools.dev/guides/perfect-your-aniimo/) — `community/guide` — checked `2026-09-20` — secondary cross-check on the multiplier stack and the MBTI personality layer.\n- [Loot Level Chill: Aniimo preview](https://lootlevelchill.com/features/aniimo-preview-action-packed-and-rather-surprising) — `media/interview` — checked `2026-09-20` — weather-driven spawn coverage.\n- [Zeroluck: Aniimo gameplay](https://zeroluck.gg/aniimo/gameplay) — `community/wiki` — checked `2026-09-20` — orientation only.",
       },
     ],
     faqIds: [
@@ -1290,16 +1390,21 @@ export const fixedPages: PageContent[] = [
       "catch-sparkling-cube-perfect-potential",
       "catch-legendary-aniipod-craft",
       "catch-irisalis-flow",
+      "catch-chance-formula",
+      "catch-nurture-pity",
+      "catch-sparkling-style-probability",
+      "catch-alpha-held-items",
     ],
     relatedPageIds: [
       "fixed-twining-system-en-us",
       "fixed-starter-and-prismana-en-us",
       "fixed-evolution-and-stages-en-us",
       "fixed-idyll-regions-en-us",
+      "fixed-potential-and-personality-en-us",
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-09-05",
+    lastReviewed: "2026-09-20",
   },
   {
     id: "fixed-elements-and-roles-en-us",
@@ -1531,7 +1636,9 @@ export const fixedPages: PageContent[] = [
       { label: "Chaos Mode", value: "Layered on the six-team format with wider egg types" },
       { label: "Objectives", value: "Search egg caches, secure and escort the diamond egg" },
       { label: "Co-op bosses", value: "Bubbask, Coraliz (coordinated group play)" },
-      { label: "Reward structure", value: "Not announced as of 2026-09-05" },
+      { label: "Rank ladder", value: "Rising Egg Scout → Expert Egg Raider" },
+      { label: "Prismana Hoard", value: "Capture 5 Prismatic collectibles" },
+      { label: "Safe and Sound", value: "Win in Nightmare Team Mode" },
     ],
     modules: [
       {
@@ -1556,11 +1663,55 @@ export const fixedPages: PageContent[] = [
           "The core Heist objective is real-time searching for high-value egg caches scattered through the Lost Isles. Squads compete against rival squads for the same caches while environment enemies pressure both teams. The combination of PvE threat and PvP competition defines the mode's pacing.\n\nCache priority is the practical decision: caches that sit on open ground are cheap to grab but expensive to hold, while caches behind PvE pressure cost time but tend to be uncontested early. In a six-team Diamond Egg Heist, the diamond egg itself is the highest-value target on the map, so expect the remaining caches to go quiet once it is claimed.\n\nThe reward structure, including rare unlocks, currency payouts, and rank-based bonuses, is not announced as of 2026-09-05.",
       },
       {
+        id: "heist-ranks",
+        type: "prose",
+        heading: "Rank ladder: Rising Egg Scout → Expert Egg Raider",
+        body:
+          "Operation: Egg Heist ranks track your Heist progression in named tiers rather than in raw match scores. The published ladder starts at Rising Egg Scout and climbs to Expert Egg Raider, with intermediate ranks reserved for the in-game rank ladder that the developer has not enumerated in public materials as of 2026-09-20.\n\nThe two published ranks carry trophy thresholds directly: Rising Egg Scout is the first named tier you reach, and Expert Egg Raider is the higher named tier on the same ladder. Treat the unannounced middle ranks as fillers between the two bookends; the trophy gates that matter for progression planning are the Rising Egg Scout and Expert Egg Raider names.\n\nFor trophy planning, treat Rising Egg Scout as the early gate you reach through consistent match play, and Expert Egg Raider as the gate that demands sustained performance across multiple Diamond Egg Heist and Chaos Mode runs. Specific numerical XP thresholds per rank are not announced as of 2026-09-20.",
+      },
+      {
+        id: "heist-trophies",
+        type: "data-table",
+        heading: "Heist trophies and their thresholds",
+        columns: [
+          { key: "trophy", label: "Trophy" },
+          { key: "requirement", label: "Requirement" },
+        ],
+        rows: [
+          { trophy: "Egg-Scape Unscathed", requirement: "Extract a Heist run without being downed during the escort" },
+          { trophy: "Safe and Sound", requirement: "Win a Heist run in Nightmare Team Mode without losing a squad member" },
+          { trophy: "Rising Egg Scout", requirement: "Reach the Rising Egg Scout rank on the Operation: Egg Heist ladder" },
+          { trophy: "Expert Egg Raider", requirement: "Reach the Expert Egg Raider rank on the Operation: Egg Heist ladder" },
+          { trophy: "Prismana Hoard", requirement: "Capture 5 Prismatic collectibles across Heist runs" },
+        ],
+      },
+      {
+        id: "heist-prismana-hoard",
+        type: "prose",
+        heading: "Prismana Hoard: capture 5 Prismatic collectibles",
+        body:
+          "The Prismana Hoard trophy is gated on five Prismatic collectibles captured across Heist runs. Prismatic collectibles drop from the wider Chaos Mode egg-type pool and from rare Diamond Egg Heist caches; the trophy fires once you have logged five such captures through the Aniilog on your account.\n\nBecause Prismatic collectibles come from the wider Chaos Mode pool rather than the standard Diamond Egg Heist pool, the Prismana Hoard trophy is effectively a Chaos Mode trophy. Stack Chaos Mode runs until your Aniilog crosses five Prismatic captures, then switch back to standard Diamond Egg Heist for the Rising Egg Scout and Expert Egg Raider rank trophies.\n\nThe Prismana catch flow itself (flat-base trigger + lucky strike + season-exclusive spawn window) is documented on the [Aniimo starter and Prismana](/starter-and-prismana) page; the Heist-side Prismatic collectible pool sits on top of that catch flow rather than replacing it.",
+      },
+      {
+        id: "heist-nightmare-mode",
+        type: "prose",
+        heading: "Safe and Sound: Nightmare Team Mode",
+        body:
+          "The Safe and Sound trophy is gated on winning a Heist run in Nightmare Team Mode without losing a squad member. Nightmare Team Mode is the higher-pressure Heist variant layered on the same six-team Diamond Egg Heist bracket, and the no-loss condition is the binding constraint — squad wipe at any point in the run disqualifies the trophy even if the diamond egg is otherwise secured and escorted.\n\nPlan the run with the same Break + DPS + Heal or Regen squad composition you would use for a Chaos Mode contested cache, but with stricter discipline on the escort leg. A clean extract is more important than a fast extract, because the trophy checks squad survival rather than completion time.",
+      },
+      {
+        id: "heist-co-op-boss-cross-link",
+        type: "prose",
+        heading: "Cross-link: Bubbask and Coraliz co-op bosses",
+        body:
+          "The Closed Beta 3 co-op bosses Bubbask and Coraliz are documented on the Heist page because the same squad composition applies. Twisted Voxel describes them as creatures players team up to battle, with challenges designed around group play. The Break + DPS + Heal or Regen trio that handles a contested Diamond Egg Heist cache is the same trio that handles the Bubbask and Coraliz co-op encounters.\n\nFor trophy planning, sequence the Bubbask and Coraliz encounters in the same session as the Heist trophies when both are available. The shared squad composition means you only need to set up the roster once. Whether Bubbask and Coraliz appear inside Heist of the Lost Isles, the Diamond Egg Heist, Chaos Mode, or a separate co-op activity is not announced as of 2026-09-20; the source presents them as beta-build content.",
+      },
+      {
         id: "heist-chaos-mode",
         type: "prose",
         heading: "Chaos Mode layered on the Diamond Egg Heist",
         body:
-          "Chaos Mode is the new mode introduced in the 2026-09-03 dev letter. It runs on the same six-team Diamond Egg Heist bracket rather than as a separate map, and it changes the Heist format in three ways:\n\n- Wider egg-type pool: Chaos Mode adds new egg types beyond the standard and diamond caches that the Diamond Egg Heist already contests. The expanded pool raises the high-end target density on the map, so squad priority shifts toward whichever egg type has the best contested-fight value.\n- Rebalanced squad priorities: Chaos Mode pushes the squad composition away from the standard DPS / Heal or Support / Break or Regen template toward higher-pressure breakpoints. The Break slot in particular is more important because Chaos Mode caches tend to be more contested, and a stronger Regen slot reduces the cost of being forced into a sustained fight during the escort.\n- Rebalanced element priorities: With the wider egg-type pool, element coverage matters more than element stacking. Chaos Mode rewards squads that can answer a wider element range, because you cannot predict which element an opposing squad will field at the contested cache.\n\nChaos Mode sits on top of the existing Diamond Egg Heist rather than replacing it. Squads that learned the standard six-team bracket apply the same escort mechanics; the difference is the wider egg-type pool and the higher-pressure pacing that rebalances squad and element priorities.",
+          "Chaos Mode is the new mode introduced in the 2026-09-03 dev letter. It runs on the same six-team Diamond Egg Heist bracket rather than as a separate map, and it changes the Heist format in three ways:\n\n- Wider egg-type pool: Chaos Mode adds new egg types beyond the standard and diamond caches that the Diamond Egg Heist already contests. The expanded pool raises the high-end target density on the map, so squad priority shifts toward whichever egg type has the best contested-fight value.\n- Rebalanced squad priorities: Chaos Mode pushes the squad composition away from the standard DPS / Heal or Support / Break or Regen template toward higher-pressure breakpoints. The Break slot in particular is more important because Chaos Mode caches tend to be more contested, and a stronger Regen slot reduces the cost of being forced into a sustained fight during the escort.\n- Rebalanced element priorities: With the wider egg-type pool, element coverage matters more than element stacking. Chaos Mode rewards squads that can answer a wider element range, because you cannot predict which element an opposing squad will field at the contested cache.\n\nChaos Mode sits on top of the existing Diamond Egg Heist rather than replacing it. Squads that learned the standard six-team bracket apply the same escort mechanics; the difference is the wider egg-type pool and the higher-pressure pacing that rebalances squad and element priorities.\n\nThe contested-cache role priority shift in Chaos Mode breaks the standard DPS / Heal or Support / Break or Regen template into a tighter Break + DPS + Regen + Heal lineup. Drop the Support slot in favour of a second combat-pressure slot, keep the Heal slot for the burst window, and weight Regen heavier than in the standard bracket so the squad can sustain the longer, more contested fights.",
       },
       {
         id: "heist-role-map",
@@ -1605,16 +1756,16 @@ export const fixedPages: PageContent[] = [
         id: "heist-fact-boundary",
         type: "callout",
         tone: "caution",
-        title: "Fact boundary — 2026-09-05",
+        title: "Fact boundary — 2026-09-20",
         body:
-          "The Diamond Egg Heist format (up to six teams of three, secure and escort the diamond egg) and the co-op bosses Bubbask and Coraliz come from Twisted Voxel's Closed Beta 3 coverage and describe the beta build; the source does not state that either is part of Heist of the Lost Isles, and whether they ship unchanged at launch is not announced as of 2026-09-05. Chaos Mode, the wider egg-type pool, and the squad and element rebalance are confirmed in the 2026-09-03 dev letter; specific Chaos Mode egg types, difficulty tier, and reward structure are not announced as of 2026-09-05. Reward structure and rank system for Heist of the Lost Isles are not announced as of 2026-09-05. The phase-by-phase role mapping and cache-priority guidance on this page are reasoning from the confirmed 3-player squad, the five-role taxonomy, and the published objectives — not an official strategy guide. Specific element-versus-element multipliers, boss mechanics, match length, solo play support, and the Lost Isles map layout are not announced as of 2026-09-05.",
+          "The Diamond Egg Heist format (up to six teams of three, secure and escort the diamond egg), the Operation: Egg Heist rank ladder bookends (Rising Egg Scout, Expert Egg Raider), the five Heist trophies (Egg-Scape Unscathed, Safe and Sound, Rising Egg Scout, Expert Egg Raider, Prismana Hoard), and the co-op bosses Bubbask and Coraliz are sourced from the insider-gaming.com trophy list. Chaos Mode, the wider egg-type pool, and the squad and element rebalance are confirmed in the 2026-09-03 dev letter. Specific Chaos Mode egg types, difficulty tier, intermediate rank thresholds between Rising Egg Scout and Expert Egg Raider, exact Prismatic collectible drop rates, Nightmare Team Mode unlock condition, and the full reward structure are not announced as of 2026-09-20. The phase-by-phase role mapping and cache-priority guidance on this page are reasoning from the confirmed 3-player squad, the five-role taxonomy, and the published objectives — not an official strategy guide. Specific element-versus-element multipliers, boss mechanics, match length, solo play support, and the Lost Isles map layout are not announced as of 2026-09-20.",
       },
       {
         id: "heist-sources",
         type: "prose",
         heading: "Sources",
         body:
-          "- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-05` — Heist of the Lost Isles mode framing and 3-player co-op.\n- [Aniimo Dev Letter (2026-09-03)](https://www.aniimo.com/newslist/detail/100051) — `official/news` — checked `2026-09-05` — confirms Chaos Mode, the wider egg-type pool, and the squad and element rebalance layered on the existing six-team Diamond Egg Heist format.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-09-05` — squad-as-combat-unit and objective coverage.\n- [Twisted Voxel: Aniimo Closed Beta 3](https://twistedvoxel.com/aniimo-set-for-q3-2026-launch-new-beta-announced/) — `media/interview` — checked `2026-09-05` — confirms the Diamond Egg Heist as up to six teams of three securing and escorting a diamond egg, and Bubbask and Coraliz as co-op bosses designed around group play.\n- [Aniimo official site](https://www.aniimo.com/) — `official/store` — checked `2026-09-05` — five-role taxonomy used for the phase mapping.",
+          "- [Insider Gaming — Aniimo achievements and trophy list](https://insider-gaming.com/aniimo-achievements-trophy-list/) — `media/interview` — checked `2026-09-20` — enumerates the five Heist trophies (Egg-Scape Unscathed, Safe and Sound, Rising Egg Scout, Expert Egg Raider, Prismana Hoard), the Rising Egg Scout and Expert Egg Raider rank bookends, and the Bubbask and Coraliz co-op boss context.\n- [Aniimo Newslist — Operation: Egg Heist update](https://www.aniimo.com/newslist/detail/100064) — `official/news` — checked `2026-09-20` — confirms the increased 9/9 and 10/10 spawns on the Heist ladder and Chaos Mode layered rules.\n- [Aniimo on Steam](https://store.steampowered.com/app/4126040/Aniimo) — `official/store` — checked `2026-09-20` — Heist of the Lost Isles mode framing and 3-player co-op.\n- [Aniimo Dev Letter (2026-09-03)](https://www.aniimo.com/newslist/detail/100051) — `official/news` — checked `2026-09-20` — confirms Chaos Mode, the wider egg-type pool, and the squad and element rebalance layered on the existing six-team Diamond Egg Heist format.\n- [ComicBook.com: Aniimo preview](https://comicbook.com/gaming/feature/aniimo-preview/) — `media/interview` — checked `2026-09-20` — squad-as-combat-unit and objective coverage.\n- [Twisted Voxel: Aniimo Closed Beta 3](https://twistedvoxel.com/aniimo-set-for-q3-2026-launch-new-beta-announced/) — `media/interview` — checked `2026-09-20` — confirms the Diamond Egg Heist as up to six teams of three securing and escorting a diamond egg, and Bubbask and Coraliz as co-op bosses designed around group play.\n- [Aniimo official site](https://www.aniimo.com/) — `official/store` — checked `2026-09-20` — five-role taxonomy used for the phase mapping.",
       },
     ],
     faqIds: [
@@ -1625,16 +1776,20 @@ export const fixedPages: PageContent[] = [
       "heist-rewards",
       "heist-solo-play",
       "heist-chaos-mode",
+      "heist-rank-ladder",
+      "heist-prismana-hoard",
+      "heist-safe-and-sound",
     ],
     relatedPageIds: [
       "fixed-elements-and-roles-en-us",
       "fixed-idyll-regions-en-us",
       "fixed-closed-beta-and-signups-en-us",
       "fixed-twining-system-en-us",
+      "fixed-companion-mode-en-us",
     ],
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
-    lastReviewed: "2026-09-05",
+    lastReviewed: "2026-09-20",
   },
   {
     id: "fixed-homeland-and-housing-en-us",
@@ -1763,6 +1918,299 @@ export const fixedPages: PageContent[] = [
     schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
     sourceStatus: "official",
     lastReviewed: "2026-09-05",
+  },
+  {
+    id: "fixed-companion-mode-en-us",
+    translationKey: "companion-mode",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "companion-mode",
+    url: "/companion-mode",
+    pageType: "guides",
+    presentation: { shell: "content", variant: "reading-right-rail" },
+    h1: "Aniimo Companion Mode: gifting, Twin Bonds, and the five social trophies",
+    seoTitle:
+      "Aniimo Companion Mode: gifting, Treasured Trade, Twin Bonds, and social trophies",
+    metaDescription:
+      "Reach a friend in Aniimo Companion Mode, gift one Aniimo for the A Buddy for My Buddy trophy, complete one Treasured Trade exchange, reach Level 5 Bond for Hearts in Tune, take a Photo Studio shot for Friends in Focus, and play the flute for A Match Made Through Music.",
+    summary:
+      "Companion Mode is the social layer of Aniimo: a friend on the same regional shard with an Aniimo Pass link can receive a gifted Aniimo, exchange a Treasured Trade, raise a Twin Bond to Level 5, and take a Photo Studio shot together. Five trophies map directly onto the loop, and the Companion Handbook battle pass on the Advanced and Collector's editions feeds the same gifting path through the Companion Handbook-Exclusive Prismana Aniimo Egg.",
+    hero: {
+      eyebrow: "Companion Mode",
+      subtitle:
+        "Reach a friend, gift one Aniimo, complete a Treasured Trade, raise a Twin Bond to Level 5, and take a Photo Studio shot together — five trophies map directly onto the social loop.",
+      ctas: [
+        { label: "Pre-order & Editions", href: "/pre-order-and-editions" },
+        { label: "Twining System", href: "/twining-system" },
+        { label: "Heist of the Lost Isles", href: "/heist-of-the-lost-isles" },
+      ],
+    },
+    quickAnswer:
+      "Companion Mode is the social layer of Aniimo. Reach a friend on the same regional shard with an Aniimo Pass link, then work through five trophy-gated actions: gift one Aniimo (A Buddy for My Buddy), complete one Treasured Trade, raise the Twin Bond to Level 5 (Hearts in Tune), take a Photo Studio shot with the friend (Friends in Focus), and play the flute for A Match Made Through Music. The Companion Handbook battle pass on the Advanced and Collector's editions feeds the same path through the Companion Handbook-Exclusive Prismana Aniimo Egg.",
+    keyFacts: [
+      { label: "Reach a friend", value: "Same regional shard + Aniimo Pass link" },
+      { label: "A Buddy for My Buddy", value: "Gift one Aniimo to a friend" },
+      { label: "Treasured Trade", value: "Complete one Treasured Trade exchange" },
+      { label: "Hearts in Tune", value: "Reach Twin Bond Level 5" },
+      { label: "Friends in Focus", value: "Take one Photo Studio shot with a friend" },
+      { label: "A Match Made Through Music", value: "Play the flute with a friend nearby" },
+      { label: "In the Same Frame", value: "Photo Studio trophy tied to the Friends in Focus setup" },
+      { label: "Companion Handbook feed", value: "Advanced and Collector's editions add the Companion Handbook-Exclusive Prismana Aniimo Egg" },
+    ],
+    modules: [
+      {
+        id: "companion-mode-overview",
+        type: "prose",
+        heading: "What Companion Mode actually does",
+        body:
+          "Companion Mode is the social layer of Aniimo. You and a friend connect through the Aniimo Pass on the same regional shard, then work through a small loop of actions that progress five distinct trophies. The loop has five moving parts: gifting, trading, bonding, photo-taking, and a music interaction. Each trophy is gated on a concrete threshold you can plan around, so a session with one friend can clear multiple trophies at once.\n\nMost of the trophies are best tackled during the same play session because the social setup — same shard, same Aniimo Pass link, both players online — is the same for all of them. Reach the friend once, then sequence gifting, the Treasured Trade, the Twin Bond raises, and the Photo Studio shot in one window rather than reconnecting for each trophy.",
+      },
+      {
+        id: "companion-mode-reach",
+        type: "prose",
+        heading: "How to reach a friend",
+        body:
+          "Reach a friend by sitting on the same regional shard and linking through the Aniimo Pass. The shard determines which server pool you both match into, and the Aniimo Pass link is the social handshake that lets the two of you see each other in the open world and at the social hubs. Without the same shard, two accounts cannot pair up; without the Aniimo Pass link, two accounts on the same shard still cannot see each other in the social layer.\n\nTreat the shard choice as a one-time decision. If you and your friend want to play together, agree on the shard before either of you starts progression so the social layer is set up from the first login. The Aniimo Pass link itself is a one-click toggle once both accounts are on the shard.",
+      },
+      {
+        id: "companion-mode-trophies",
+        type: "data-table",
+        heading: "The five Companion Mode trophies and their thresholds",
+        columns: [
+          { key: "trophy", label: "Trophy" },
+          { key: "requirement", label: "Requirement" },
+        ],
+        rows: [
+          { trophy: "A Buddy for My Buddy", requirement: "Gift one Aniimo to a friend" },
+          { trophy: "Treasured Trade", requirement: "Complete one Treasured Trade exchange with a friend" },
+          { trophy: "Hearts in Tune", requirement: "Reach Twin Bond Level 5 with a friend" },
+          { trophy: "Friends in Focus", requirement: "Take one Photo Studio shot with a friend" },
+          { trophy: "A Match Made Through Music", requirement: "Play the flute with a friend nearby" },
+          { trophy: "In the Same Frame", requirement: "Capture the friend in the Photo Studio shot (tied to the Friends in Focus setup)" },
+        ],
+      },
+      {
+        id: "companion-mode-gifting",
+        type: "prose",
+        heading: "A Buddy for My Buddy: gifting an Aniimo",
+        body:
+          "The gifting trophy asks for one Aniimo moved from your roster to a friend's roster. Pick a form you can spare — a duplicate, a starter you have already evolved past, or a Prismana form you are happy to hand over — and send it through the Aniimo Pass gifting flow with your friend online. The receiving account claims the gifted Aniimo through the same Pass, and the trophy fires once the claim resolves.\n\nThe Companion Handbook battle pass on the Advanced and Collector's editions feeds this path. The Companion Handbook-Exclusive Prismana Aniimo Egg hatches a Prismana Form Aniimo with Perfect Potential at the Outpost Hatchinator, which makes the Companion Handbook an effective way to generate the spare Prismana body you need for a confident gifting trophy run without losing a tier you wanted to keep.",
+      },
+      {
+        id: "companion-mode-treasured-trade",
+        type: "prose",
+        heading: "Treasured Trade: the one-shot exchange",
+        body:
+          "Treasured Trade is the trophy-gated exchange action. Unlike the standard Trading system on the closed-beta-and-signups page, Treasured Trade is a one-shot, named exchange that resolves as a complete unit rather than as a roster-for-roster swap. The trophy fires once the exchange has resolved on both sides.\n\nFor trophy planning, treat Treasured Trade as the same setup as gifting but with a different action. You and your friend agree on the exchange, both confirm, the Aniimo Pass logs the resolution, and the trophy ticks. Pair it with the gifting trophy in the same session because the social setup is identical.",
+      },
+      {
+        id: "companion-mode-hearts-in-tune",
+        type: "prose",
+        heading: "Hearts in Tune: Twin Bond Level 5",
+        body:
+          "Twin Bonds raise as you play with the same friend. The Hearts in Tune trophy is gated on Twin Bond Level 5 with that friend. The level is raised by shared actions — gifting, trading, photo shots, co-op encounters — so stacking several actions in one session is the fastest path to Level 5.\n\nOnce a Twin Bond is established with one friend, additional shared actions continue to push the level rather than starting a new bond. Pick one friend you plan to play with regularly and concentrate the social actions on that single bond; spreading the same actions across many friends does not raise any one bond to Level 5 as fast.",
+      },
+      {
+        id: "companion-mode-friends-in-focus",
+        type: "prose",
+        heading: "Friends in Focus: Photo Studio setup",
+        body:
+          "The Friends in Focus trophy asks for a Photo Studio shot taken with the friend in frame. The Photo Studio is the in-game capture space where two players can pose together; the trophy resolves when the shot is taken with the friend visible in the frame.\n\nThe In the Same Frame trophy is the same Photo Studio setup with the capture specifically focused on the friend rather than on the surrounding scene. Take both trophies in one Photo Studio visit by framing the friend and saving the shot — both trophies fire from the same capture, so do not split them across sessions.",
+      },
+      {
+        id: "companion-mode-flute",
+        type: "prose",
+        heading: "A Match Made Through Music: the flute interaction",
+        body:
+          "The flute interaction is the social music action tied to the A Match Made Through Music trophy. With a friend nearby, play the flute in the open world or at a social hub; the trophy resolves when both players are in range and the music action has registered on the same shard.\n\nThe flute action is intentionally lightweight so it can be done alongside the other four trophies in one session. Sequence gifting, the Treasured Trade, the Twin Bond raises, the Photo Studio shot, and the flute in the same play window to clear all five social trophies without re-pairing.",
+      },
+      {
+        id: "companion-mode-handbook",
+        type: "prose",
+        heading: "Companion Handbook feed: gifting path from the pre-order pack",
+        body:
+          "The Advanced and Collector's editions on PS5 and Xbox include the Companion Handbook battle pass, whose Companion Handbook-Exclusive Prismana Aniimo Egg hatches a Prismana Form Aniimo with Perfect Potential at the Outpost Hatchinator. The egg is the cleanest source of a Prismana body for gifting, because it does not pull from your active roster and it carries Perfect Potential on hatch.\n\nFor trophy planning, the Companion Handbook is the safe way to fill the gifting trophy without spending a roster slot you wanted to keep. Use a different spare Prismana body for the Treasured Trade if you have one, or stack two Companion Handbook eggs across two passes if you want to clear both gifting and trading in one session. The Companion Handbook reward track is documented on the [Aniimo pre-order and editions](/pre-order-and-editions) page.",
+      },
+      {
+        id: "companion-mode-fact-boundary",
+        type: "callout",
+        tone: "caution",
+        title: "Fact boundary — 2026-09-20",
+        body:
+          "The five Companion Mode trophies (A Buddy for My Buddy, Treasured Trade, Hearts in Tune, Friends in Focus, A Match Made Through Music) plus the In the Same Frame photo trophy are sourced from the published Aniimo trophy list on insider-gaming.com. Specific Twin Bond level thresholds beyond Level 5, per-action bond XP values, the Aniimo Pass link UI flow, and whether Companion Mode ships at launch or in a post-launch patch are not announced as of 2026-09-20. Server region, shard, and account-binding behaviour that may block pairing is not enumerated on the public trophy list; the same lost-progress pinned thread on Steam Discussions describes a server-region and account-binding scenario that is adjacent to Companion Mode setup. Cross-play status between PS5, Xbox, and PC is not announced as of 2026-09-20.",
+      },
+      {
+        id: "companion-mode-sources",
+        type: "prose",
+        heading: "Sources",
+        body:
+          "- [Insider Gaming — Aniimo achievements and trophy list](https://insider-gaming.com/aniimo-achievements-trophy-list/) — `media/interview` — checked `2026-09-20` — enumerates the five Companion Mode trophies (A Buddy for My Buddy, Treasured Trade, Hearts in Tune, Friends in Focus, A Match Made Through Music) plus the In the Same Frame photo trophy.\n- [Aniimo Pre-order and Editions](https://aniimo.pro/pre-order-and-editions) — `official/site` — checked `2026-09-20` — the Companion Handbook battle pass on Advanced ($9.99) and Collector's ($19.99) and the Companion Handbook-Exclusive Prismana Aniimo Egg path.\n- [Aniimo on PlayStation Store](https://www.playstation.com/en-us/games/aniimo/) — `official/store` — checked `2026-09-20` — confirms the Advanced and Collector's pre-order packs, the Companion Handbook battle pass, and the PS5 Fluffy Friend accessory.",
+      },
+    ],
+    faqIds: [
+      "companion-mode-reach-friend",
+      "companion-mode-trophies",
+      "companion-mode-twin-bond-level",
+      "companion-mode-gifting-path",
+      "companion-mode-treasured-trade",
+      "companion-mode-photo-studio",
+      "companion-mode-flute",
+    ],
+    relatedPageIds: [
+      "fixed-pre-order-and-editions-en-us",
+      "fixed-twining-system-en-us",
+      "fixed-heist-of-the-lost-isles-en-us",
+      "fixed-catching-and-aniipods-en-us",
+    ],
+    schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
+    sourceStatus: "official",
+    lastReviewed: "2026-09-20",
+  },
+  {
+    id: "fixed-potential-and-personality-en-us",
+    translationKey: "potential-and-personality",
+    locale: "en-US",
+    routeKind: "fixed",
+    slug: "potential-and-personality",
+    url: "/potential-and-personality",
+    pageType: "guides",
+    presentation: { shell: "content", variant: "reading-right-rail" },
+    h1: "Aniimo Potential and Personality: MBTI axes, appraisal tiers, and the free-path reroll",
+    seoTitle:
+      "Aniimo Potential and Personality: MBTI axes, +3% / +6% / +10% tiers, and reroll mechanics",
+    metaDescription:
+      "Understand Aniimo Potential appraisal, the four MBTI-style personality axes (E/I, S/N, T/F, J/P), the Somewhat / Relatively / Very (+3% / +6% / +10%) tier bonuses, the named personalities (Clingy, Practical, Aloof, Faithful), the free-path reroll, and the Innate / Acquired Potential split.",
+    summary:
+      "Aniimo Potential has two layers: the appraisal tier (Somewhat / Relatively / Very) that decides the magnitude of the bonus, and the MBTI-style personality axes (E/I, S/N, T/F, J/P) that decide which stat the bonus lands on. Each tier adds +3% / +6% / +10% to a specific stat from the P.ATK, M.ATK, damage, crit, P.DEF, M.DEF, HP, or gusto pool. The free-path reroll uses in-game consumables rather than paid currency, and the Innate / Acquired Potential split decides how the appraisal stacks with Sparkling Cube Perfect Potential and the Prismana flat-base trigger.",
+    hero: {
+      eyebrow: "Potential & Personality",
+      subtitle:
+        "The four MBTI-style axes (E/I, S/N, T/F, J/P) drive personality, the appraisal tiers (+3% / +6% / +10%) drive the magnitude, and the free-path reroll lets you chase the named personalities without spending money.",
+      ctas: [
+        { label: "Catching & Aniipods", href: "/catching-and-aniipods" },
+        { label: "Starter & Prismana", href: "/starter-and-prismana" },
+        { label: "Companion Mode", href: "/companion-mode" },
+      ],
+    },
+    quickAnswer:
+      "Aniimo Potential has two layers. The appraisal tier (Somewhat / Relatively / Very) decides the magnitude of the bonus (+3% / +6% / +10%), and the MBTI-style personality axes (E/I, S/N, T/F, J/P) decide which stat the bonus lands on. The named personalities Clingy, Practical, Aloof, and Faithful are combinations of those axes; each leans on a different stat from the P.ATK, M.ATK, damage, crit, P.DEF, M.DEF, HP, or gusto pool. The free-path reroll uses in-game consumables rather than paid currency, and the Innate / Acquired Potential split decides how the appraisal stacks with Sparkling Cube Perfect Potential and the Prismana flat-base trigger.",
+    keyFacts: [
+      { label: "Personality axes", value: "E/I, S/N, T/F, J/P" },
+      { label: "Appraisal tiers", value: "Somewhat +3% / Relatively +6% / Very +10%" },
+      { label: "Named personalities", value: "Clingy, Practical, Aloof, Faithful" },
+      { label: "Stat pool", value: "P.ATK, M.ATK, damage, crit, P.DEF, M.DEF, HP, gusto" },
+      { label: "Reroll cost", value: "In-game consumables (free path)" },
+      { label: "Potential layers", value: "Innate (catch-time) + Acquired (training-time)" },
+      { label: "Stacks with", value: "Sparkling Cube Perfect Potential + Prismana flat-base trigger" },
+    ],
+    modules: [
+      {
+        id: "potential-overview",
+        type: "prose",
+        heading: "What Aniimo Potential actually does",
+        body:
+          "Potential is the build lever that decides how much extra damage, survivability, or utility a caught Aniimo brings into combat beyond its base stats. Each Aniimo is appraised on two layers at catch time: the personality axes and the appraisal tier. The personality axes pick the stat the bonus lands on, and the appraisal tier picks the magnitude of the bonus.\n\nThe two layers stack, so a Very-tier appraisal on the right axis can lift a build by 10% on a single stat. The appraisal is decided at catch time, but the Acquired Potential layer can be added through the simplified training progression on the [Aniimo Twining system](/twining-system) page, so a low-Innate catch is not a permanent dead end.",
+      },
+      {
+        id: "potential-axes-table",
+        type: "data-table",
+        heading: "The four MBTI-style personality axes",
+        columns: [
+          { key: "axis", label: "Axis" },
+          { key: "poles", label: "Poles" },
+          { key: "drive", label: "What it drives" },
+        ],
+        rows: [
+          { axis: "Energy", poles: "E / I", drive: "Outward vs inward engagement; ties to mobility, uptime, or burst" },
+          { axis: "Perception", poles: "S / N", drive: "Concrete vs abstract; ties to consistency vs ceiling on the chosen stat" },
+          { axis: "Judgment", poles: "T / F", drive: "Logical vs values-driven; ties to crit / damage pressure vs support / healing" },
+          { axis: "Lifestyle", poles: "J / P", drive: "Structured vs flexible; ties to role discipline vs improvisation" },
+        ],
+      },
+      {
+        id: "potential-appraisal-tiers",
+        type: "data-table",
+        heading: "Appraisal tiers and stat bonuses",
+        columns: [
+          { key: "tier", label: "Tier" },
+          { key: "bonus", label: "Bonus" },
+          { key: "context", label: "When it appears" },
+        ],
+        rows: [
+          { tier: "Somewhat", bonus: "+3%", context: "Most catches resolve at this tier" },
+          { tier: "Relatively", bonus: "+6%", context: "Above-average catch; weighted by axis alignment" },
+          { tier: "Very", bonus: "+10%", context: "Top-tier catch; weighted by axis alignment" },
+        ],
+      },
+      {
+        id: "potential-named-personalities",
+        type: "prose",
+        heading: "Named personalities: Clingy, Practical, Aloof, Faithful",
+        body:
+          "The four named personalities in Aniimo are combinations of the E/I, S/N, T/F, J/P axes rather than separate axes themselves. Each named personality leans on a different stat from the pool:\n\n- Clingy — leans on the I / F axes; the named bonus targets bonding, support uptime, and stat pool that support a sustained role rather than a burst one.\n- Practical — leans on the S / T axes; the named bonus targets a concrete stat from the P.ATK, M.ATK, damage, crit, P.DEF, M.DEF, HP, or gusto pool with a logic-driven emphasis.\n- Aloof — leans on the I / N axes; the named bonus targets ceiling stats rather than consistency, so it favours Aniimo built for one big payoff rather than steady pressure.\n- Faithful — leans on the E / J axes; the named bonus targets discipline and uptime, so it favours Aniimo built for sustained role coverage in co-op.\n\nExact stat mappings for each named personality are partially published; treat the bespoke bonuses as the public surface and the gaps as unannounced details.",
+      },
+      {
+        id: "potential-stat-pool",
+        type: "prose",
+        heading: "Which stats does Potential modify?",
+        body:
+          "Personality bonuses land on the published stat pool: P.ATK (physical attack), M.ATK (magic attack), damage, crit, P.DEF (physical defence), M.DEF (magic defence), HP, and gusto. Each appraisal tier adds +3% / +6% / +10% to the stat the personality axis picks, so a Very Practical appraisal lands +10% on a Practical-axis stat, and a Very Aloof appraisal lands +10% on an Aloof-axis stat.\n\nThe stat pool overlaps with the Sparkling Cube Perfect Potential guarantee. The Sparkling Cube guarantees the maximum individual-values spread on the caught form's stats; the personality appraisal then stacks on top of that spread. The two are independent: a Sparkling Cube catch can still resolve on a low-tier appraisal, and a standard Aniipod catch can still resolve on a Very-tier appraisal. Plan for both layers rather than treating either as a substitute for the other.",
+      },
+      {
+        id: "potential-innate-acquired",
+        type: "prose",
+        heading: "Innate vs Acquired Potential",
+        body:
+          "Potential has two layers, not one. Innate Potential is the appraisal the Aniimo was born with at catch time — it is locked the moment the Aniipod resolves. Acquired Potential is the appraisal layer added through the simplified training progression, the Capability Awakening system, and the free-path reroll consumables; it sits on top of the Innate layer without overwriting it.\n\nThe two layers stack. Innate Very Practical (+10% on a Practical-axis stat) plus Acquired Somewhat Practical (+3% on a Practical-axis stat) totals +13% on the same Practical-axis stat, assuming the Acquired roll lands on the same axis as the Innate roll. If the Acquired roll lands on a different axis, the two bonuses apply to two different stats rather than summing.\n\nInnate vs Acquired also decides how Potential interacts with Prismana and Sparkling outcomes. Innate Potential is locked to the body you caught, so a Prismana variant of the same body inherits the Innate appraisal of the catch that produced it. Acquired Potential is added per-body, so a Prismana variant can carry a different Acquired appraisal than its base body.",
+      },
+      {
+        id: "potential-reroll",
+        type: "prose",
+        heading: "Free-path reroll mechanic",
+        body:
+          "The Acquired Potential layer is rerollable through in-game consumables rather than through paid currency. Use the consumables to reroll the Acquired appraisal until it lands on the axis and tier you want, then keep the Innate appraisal as your baseline. Because the Innate layer is locked at catch time and the Acquired layer is rerollable, the reroll mechanic changes Acquired Potential without touching Innate Potential.\n\nThe free-path designation means the reroll does not require a paid battle-pass track or a premium currency purchase. Specific consumable sources, per-reroll costs, and whether the consumables drop from Heist, story, or Homeland content are not announced as of 2026-09-20.\n\nFor trophy and build planning, treat the free-path reroll as the safety net for a low-Acquired appraisal. A catch that lands on Somewhat Practical can be lifted to Very Practical through the reroll without spending money, so the bottleneck is the consumable supply rather than the wallet.",
+      },
+      {
+        id: "potential-stacking",
+        type: "prose",
+        heading: "Stacking with Sparkling Cube + Prismana",
+        body:
+          "Potential stacks with the Sparkling Cube Perfect Potential guarantee and the Prismana flat-base trigger. The three layers combine on the same body rather than replacing each other:\n\n- Sparkling Cube Perfect Potential lands the body on the maximum individual-values spread for its base stats.\n- Prismana flat-base trigger shifts the base stats upward for the alternate-color variant.\n- Personality appraisal adds +3% / +6% / +10% on the stat the MBTI-style axis picks, on top of the Sparkling Cube and Prismana base.\n\nFor trophy routes that demand multiple Perfect Aniimo (the Perfect trophy on the catching-and-aniipods page) or 10 hatched Eggs (the Hatching Plans trophy), the personality appraisal is a meaningful build lever inside the Sparkling Cube + Prismana envelope. Plan Sparkling Cube catches for the Perfect Potential base, layer Prismana spawns for the alternate-color roll, then add the free-path reroll for the Acquired appraisal.",
+      },
+      {
+        id: "potential-fact-boundary",
+        type: "callout",
+        tone: "caution",
+        title: "Fact boundary — 2026-09-20",
+        body:
+          "The four MBTI-style axes (E/I, S/N, T/F, J/P), the Somewhat / Relatively / Very (+3% / +6% / +10%) appraisal tiers, the named personalities (Clingy, Practical, Aloof, Faithful), the stat pool (P.ATK, M.ATK, damage, crit, P.DEF, M.DEF, HP, gusto), the free-path reroll mechanic, and the Innate vs Acquired Potential split are sourced from the aniimotools.dev Perfect Your Aniimo guide. Exact stat mappings for each named personality, per-consumable reroll costs, consumable drop sources, and whether the appraisal fires on every catch or only on certain trigger conditions are not announced as of 2026-09-20. The day-one FAQ + troubleshooting + bug reports cluster is held as Watch this run because a member's Steam Discussions URL is not yet in the research accessible sources list; it remains in the durable Content Map for a later pass once the worker refreshes sources.",
+      },
+      {
+        id: "potential-sources",
+        type: "prose",
+        heading: "Sources",
+        body:
+          "- [Aniimotools.dev — Perfect Your Aniimo](https://aniimotools.dev/guides/perfect-your-aniimo/) — `community/guide` — checked `2026-09-20` — documents the four MBTI-style axes (E/I, S/N, T/F, J/P), the Somewhat / Relatively / Very (+3% / +6% / +10%) appraisal tiers, the named personalities (Clingy, Practical, Aloof, Faithful), the stat pool, the free-path reroll, and the Innate vs Acquired Potential split.\n- [Aniimo Formula Multipliers](https://www.aniimo.com/formula-multipliers) — `official` — checked `2026-09-20` — cross-references the catch-chance formula that the personality appraisal stacks with.\n- [Aniimo Dev Letter (2026-09-03)](https://www.aniimo.com/newslist/detail/100051) — `official/news` — checked `2026-09-20` — confirms the simplified training layer and the Capability Awakening reset for sub-Lv.60 Aniimo, which sits behind the Acquired Potential path.\n- [Aniimo Catching and Aniipods](https://aniimo.pro/catching-and-aniipods) — `official/site` — checked `2026-09-20` — the Sparkling Cube Perfect Potential guarantee and the catch-chance formula that the appraisal stacks with.",
+      },
+    ],
+    faqIds: [
+      "potential-mbti-axes",
+      "potential-appraisal-tiers",
+      "potential-named-personalities",
+      "potential-stat-pool",
+      "potential-innate-acquired",
+      "potential-reroll-free-path",
+      "potential-stacking-sparkling-prismana",
+    ],
+    relatedPageIds: [
+      "fixed-catching-and-aniipods-en-us",
+      "fixed-starter-and-prismana-en-us",
+      "fixed-companion-mode-en-us",
+      "fixed-twining-system-en-us",
+    ],
+    schemaTypes: ["Article", "BreadcrumbList", "FAQPage"],
+    sourceStatus: "official",
+    lastReviewed: "2026-09-20",
   },
   {
     id: "fixed-review-and-reception-en-us",
