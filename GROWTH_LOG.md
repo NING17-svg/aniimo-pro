@@ -6,6 +6,13 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-10-10 - Adsterra placement codes filled for aniimo.pro
+
+- Task: Replace the empty Adsterra codes in `src/data/ads.ts` with the real placement codes collected from the publisher platform for the V4 horizontal layout (`page-top-728x90`, `page-top-468x60`, `page-top-320x50`, `home-after-entry-native`, `home-directory-end-468x60`, `home-directory-end-320x50`, `guide-native-native`, `guide-section-break-728x90`, `guide-section-break-468x60`, `guide-section-break-320x50`, `guide-before-faq-468x60`, `guide-before-faq-320x50`, `footer-sponsored-smartlink`). Each key targets exactly the format/size combination approved by `ad-placement-manifest.json`; shared platform codes (Popunder, Social Bar, additional Banner sizes) remain unrequested by the page inventory.
+- Files changed: `src/data/ads.ts` (placeholder replacement), this log.
+- Ad baseline: All 13 V4 inventory entries now hold JS-literal-escaped Adsterra placement codes; no component, slot, layout, route, SEO, ownership or deployment change.
+- Verification: `npm run verify` (typecheck + lint + build).
+
 ### 2026-10-10 - V4 launch rebuild of aniimo.pro
 
 - Task: Rebuild `aniimo.pro` from scratch on the V4 guide-page assembly with 12 routes (home + 11 guides) covering the Aniimo save setup, catching, combat, exploration, and endgame clusters. Reuse the existing GA4 property `properties/551850595` with data stream `properties/551850595/dataStreams/15524177010` and Google Search Console property `sc-domain:aniimo.pro`. Retire the previous V3 release/fixed-page cluster.
