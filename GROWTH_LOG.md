@@ -6,6 +6,14 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-10-28 - Restore three V4 legacy reference and trust routes
+
+- Task: Restore `/system-requirements/`, `/about/`, and `/privacy-policy/` as generated static pages after the V4 rebuild had removed the older root-level routes.
+- Files changed: Root fixed-page route, site/release page data, footer navigation, content index, trust-page ad rendering, and sitemap URL formatting.
+- Content: Added Steam-listed minimum/recommended Windows specifications; clarified Aniimo Guides is an independent unofficial guide; disclosed the site's analytics/ad/hosting integrations and linked provider policies.
+- Layout: Suppressed in-body display ad slots for `pageType: site` trust pages; the existing footer-sponsored placement remains governed by the site-wide ad inventory. Normalized sitemap URLs to match the site's trailing-slash canonical routes.
+- Verification: Required typecheck, lint, route manifest, static build, and final-HTML route/link/canonical checks before handoff.
+
 ### 2026-10-10 - Adsterra placement codes filled for aniimo.pro
 
 - Task: Replace the empty Adsterra codes in `src/data/ads.ts` with the real placement codes collected from the publisher platform for the V4 horizontal layout (`page-top-728x90`, `page-top-468x60`, `page-top-320x50`, `home-after-entry-native`, `home-directory-end-468x60`, `home-directory-end-320x50`, `guide-native-native`, `guide-section-break-728x90`, `guide-section-break-468x60`, `guide-section-break-320x50`, `guide-before-faq-468x60`, `guide-before-faq-320x50`, `footer-sponsored-smartlink`). Each key targets exactly the format/size combination approved by `ad-placement-manifest.json`; shared platform codes (Popunder, Social Bar, additional Banner sizes) remain unrequested by the page inventory.

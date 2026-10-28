@@ -32,6 +32,9 @@ export const footerNavigation: LocalizedNavigationItem[] = [
   { href: "/guides/beginner-guide/", labels: { "en-US": "Beginner guide" } },
   { href: "/guides/codes-and-rewards/", labels: { "en-US": "Codes" } },
   { href: "/guides/team-building/", labels: { "en-US": "Team building" } },
+  { href: "/system-requirements/", labels: { "en-US": "PC requirements" } },
+  { href: "/about/", labels: { "en-US": "About" } },
+  { href: "/privacy-policy/", labels: { "en-US": "Privacy" } },
 ];
 
 export function navigationLabel(
